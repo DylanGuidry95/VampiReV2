@@ -5,7 +5,7 @@
       "app_key": "application.generated.unity.vampirev2.exe",
       "launch_type": "url",
       "url": "steam://launch/",
-      "action_manifest_path": "C:\\Users\\s178062\\Documents\\GitHub\\VampiReV2\\actions.json",
+      "action_manifest_path": "C:\\Users\\dylan.guidry\\Desktop\\VampiReV2\\actions.json",
       "strings": {
         "en_us": {
           "name": "VampiReV2 [Testing]"
