@@ -5,7 +5,6 @@ namespace Ralenski
 {
     public class LerpBehaviour : MonoBehaviour
     {
-        public bool scrpitON;
         [Range(0, 10)]
         public float sliderVal;
         [HideInInspector]
@@ -15,18 +14,6 @@ namespace Ralenski
         public LerpOBJ lerpOBJ;
         public TimeOBJ timeOBJ;
 
-        void enableScript()
-        {
-            if (scrpitON == false)
-            {
-                throwableOBJ.GetComponent<LerpBehaviour>().enabled = false;
-            }
-
-            if (scrpitON == true)
-            {
-                throwableOBJ.GetComponent<LerpBehaviour>().enabled = true;
-            }
-        }
         [Serializable]
         public struct TimeOBJ
         {

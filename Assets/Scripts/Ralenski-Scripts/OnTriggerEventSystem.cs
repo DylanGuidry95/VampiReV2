@@ -1,6 +1,6 @@
 ﻿using System.Collections;
-//using System.Collections.Generic;
-//using Assets.Scripts.Brett;
+using System.Collections.Generic;
+using Assets.Scripts.Brett;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -9,14 +9,14 @@ using UnityEngine.Serialization;
 public class OnTriggerEventSystem : MonoBehaviour
 {
     public string playerTag;
-    //public GameEvent playerTriggerEnter;
-    //public GameEvent playerTriggerExit;
-    //public GameEvent playerTriggerStay;
+    public GameEvent playerTriggerEnter;
+    public GameEvent playerTriggerExit;
+    public GameEvent playerTriggerStay;
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag(playerTag)==true)
         {
-            //playerTriggerEnter.Raise();
+            playerTriggerEnter.Raise();
             Debug.Log("Trigger Beginning.");
         }
     }
@@ -24,7 +24,7 @@ public class OnTriggerEventSystem : MonoBehaviour
     {
         if (other.CompareTag(playerTag)==true)
         {
-            //playerTriggerExit.Raise();
+            playerTriggerExit.Raise();
             Debug.Log("Trigger Stop.");
         }
     }
@@ -32,7 +32,7 @@ public class OnTriggerEventSystem : MonoBehaviour
     {
         if (other.CompareTag(playerTag)== true)
         {
-            //playerTriggerStay.Raise();
+            playerTriggerStay.Raise();
             Debug.Log("Trigger Stay.");
         }
     }
