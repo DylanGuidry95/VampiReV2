@@ -3,7 +3,7 @@ namespace Ralenski
 {
     public class TriggerSoundDetection : MonoBehaviour
     {
-        public GameObject Enemy;
+        public GameObject Guard;
         void OnTriggerEnter(Collider other)
         {
             if (other.gameObject.CompareTag("Throwable"))
