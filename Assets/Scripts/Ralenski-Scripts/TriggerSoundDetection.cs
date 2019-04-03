@@ -1,25 +1,25 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class TriggerSoundDetection : MonoBehaviour
+﻿using UnityEngine;
+namespace Ralenski
 {
-    public GameObject Enemy;
-
-    void OnTriggerEnter(Collider other)
+    public class TriggerSoundDetection : MonoBehaviour
     {
-        if (other.gameObject.CompareTag("Throwable"))
+        public GameObject Enemy;
+        void OnTriggerEnter(Collider other)
         {
-            Debug.Log("Sound detected");
+            if (other.gameObject.CompareTag("Throwable"))
+            {
+                Debug.Log("Sound detected");
+            }
+        }
+        // Use this for initialization
+        void Start()
+        {
+
+        }
+        // Update is called once per frame
+        void Update()
+        {
+
         }
     }
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }
