@@ -1,6 +1,5 @@
 ﻿using System;
 using UnityEngine;
-
 namespace Ralenski
 {
     public class LerpBehaviour : MonoBehaviour
@@ -10,7 +9,7 @@ namespace Ralenski
         [HideInInspector]
         public GameObject throwableOBJ;
         [TextArea, SerializeField] private string Note;
-        public SphereCollider sphereCol;
+        public SphereCollider throwableObjCollider;
         public LerpOBJ lerpOBJ;
         public TimeOBJ timeOBJ;
 
@@ -79,8 +78,8 @@ namespace Ralenski
             };
             
             throwableOBJ.transform.SetParent(transform);
-            sphereCol = throwableOBJ.GetComponent<SphereCollider>();//add a collider and store the reference
-            sphereCol.radius = lerpOBJ.Result;//set the radius of the sphere collider
+            throwableObjCollider = throwableOBJ.GetComponent<SphereCollider>();//add a collider and store the reference
+            throwableObjCollider.radius = lerpOBJ.Result;//set the radius of the sphere collider
         }
         // Update is called once per frame
         void Update()
@@ -88,7 +87,7 @@ namespace Ralenski
             timeOBJ.Value += Time.deltaTime;//update the timer
             sliderVal = timeOBJ.Value;//set the slider to the time objects value
             lerpOBJ.Interprolant = sliderVal / timeOBJ.Max; //set the interprolant to the sliders value
-            sphereCol.radius = lerpOBJ.Result;//set the result to be the lerp result
+            throwableObjCollider.radius = lerpOBJ.Result;//set the result to be the lerp result
         }
     }
 }
