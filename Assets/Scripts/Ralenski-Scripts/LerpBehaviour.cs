@@ -1,33 +1,18 @@
 ﻿using System;
-using Assets.Scripts.Brett;
 using UnityEngine;
-
 namespace Ralenski
 {
     public class LerpBehaviour : MonoBehaviour
     {
-        public bool scrpitON;
         [Range(0, 10)]
         public float sliderVal;
         [HideInInspector]
         public GameObject throwableOBJ;
         [TextArea, SerializeField] private string Note;
-        public SphereCollider sphereCol;
+        public SphereCollider throwableObjCollider;
         public LerpOBJ lerpOBJ;
         public TimeOBJ timeOBJ;
 
-        void enableScript()
-        {
-            if (scrpitON == false)
-            {
-                throwableOBJ.GetComponent<LerpBehaviour>().enabled = false;
-            }
-
-            if (scrpitON == true)
-            {
-                throwableOBJ.GetComponent<LerpBehaviour>().enabled = true;
-            }
-        }
         [Serializable]
         public struct TimeOBJ
         {
@@ -93,8 +78,8 @@ namespace Ralenski
             };
             
             throwableOBJ.transform.SetParent(transform);
-            sphereCol = throwableOBJ.GetComponent<SphereCollider>();//add a collider and store the reference
-            sphereCol.radius = lerpOBJ.Result;//set the radius of the sphere collider
+            throwableObjCollider = throwableOBJ.GetComponent<SphereCollider>();//add a collider and store the reference
+            throwableObjCollider.radius = lerpOBJ.Result;//set the radius of the sphere collider
         }
         // Update is called once per frame
         void Update()
@@ -102,7 +87,7 @@ namespace Ralenski
             timeOBJ.Value += Time.deltaTime;//update the timer
             sliderVal = timeOBJ.Value;//set the slider to the time objects value
             lerpOBJ.Interprolant = sliderVal / timeOBJ.Max; //set the interprolant to the sliders value
-            sphereCol.radius = lerpOBJ.Result;//set the result to be the lerp result
+            throwableObjCollider.radius = lerpOBJ.Result;//set the result to be the lerp result
         }
     }
 }
