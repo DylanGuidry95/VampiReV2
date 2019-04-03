@@ -143,7 +143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 852d5ce00bd51ec4f8288118169b9354, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Enemy: {fileID: 48643179}
+  Guard: {fileID: 0}
 --- !u!136 &48643181
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -405,9 +405,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sliderVal: 0
-  throwableOBJ: {fileID: 0}
   Note: 
-  sphereCol: {fileID: 890475196}
+  throwableObjCollider: {fileID: 890475196}
   lerpOBJ:
     _result: 0
 --- !u!1 &1123499423
@@ -571,9 +570,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sliderVal: 0
-  throwableOBJ: {fileID: 0}
   Note: 
-  sphereCol: {fileID: 1299679336}
+  throwableObjCollider: {fileID: 1299679336}
   lerpOBJ:
     _result: 0
 --- !u!135 &1299679336
@@ -703,9 +701,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sliderVal: 0
-  throwableOBJ: {fileID: 0}
   Note: 
-  sphereCol: {fileID: 1474039616}
+  throwableObjCollider: {fileID: 1474039616}
   lerpOBJ:
     _result: 0
 --- !u!135 &1474039616
