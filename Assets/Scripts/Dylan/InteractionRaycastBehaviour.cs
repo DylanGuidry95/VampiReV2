@@ -4,68 +4,52 @@ using UnityEngine;
 
 namespace Assets.Scripts.Dylan
 {
+	[RequireComponent(typeof(LineRenderer))]
 	public class InteractionRaycastBehaviour : MonoBehaviour 
 	{		
 		public float MaxGrabDistance;
 		public GrabbableBehaviour HighLightedObject;
-		public GrabbableBehaviour GrabbedObject;		
 
-		public Assets.Scripts.Brett.GameEvent GrabEvent;
+		private LineRenderer LineRendererRef;
+		bool IsDrawingLine;
+
 		// Use this for initialization
-		void Start () {
+		void Awake () {
 			MaxGrabDistance = Mathf.Clamp(MaxGrabDistance, 0.01f, Mathf.Infinity);
-			LastPosition = transform.position;
+			LineRendererRef = GetComponent<LineRenderer>();			
 		}
 
-		public Vector3 LastPosition;
-		public Vector3 Velocity;
+		void Start()
+		{
+			LineRendererRef.SetPosition(1, transform.position);
+		}		
 
 		private void Update() 
 		{
-
-			RaycastHit hit;
-			if(GrabbedObject == null)
-				if(Physics.Raycast(transform.position, transform.forward, out hit, MaxGrabDistance))
+			RaycastHit hit;			
+			if(Physics.Raycast(transform.position, transform.forward, out hit, MaxGrabDistance))
+			{
+				if(hit.transform.GetComponent<GrabbableBehaviour>() || hit.transform.gameObject != HighLightedObject?.gameObject)
 				{
-					if(hit.transform.GetComponent<GrabbableBehaviour>() || hit.transform.gameObject != HighLightedObject?.gameObject)
-					{
-						HighLightedObject = hit.transform.GetComponent<GrabbableBehaviour>();
-						HighLightedObject?.HighLight(true);
-					}
+					HighLightedObject = hit.transform.GetComponent<GrabbableBehaviour>();
+					HighLightedObject?.HighLight(true);
 				}
-				else 
-				{					
-					HighLightedObject?.HighLight(false);
-					HighLightedObject = null;
-				}
-			if(GrabbedObject != null)
-				GrabbedObject.transform.position = this.transform.position;
-		}
+			}
+			else 
+			{					
+				HighLightedObject?.HighLight(false);
+				HighLightedObject = null;
+			}
 
-		void LateUpdate()
-		{
-			Velocity = transform.position - LastPosition;
-			LastPosition = transform.position;
-		}
-
-		public void OnGrabEvent()
-		{		
-			if(HighLightedObject == null)
-				return;
-			HighLightedObject.Grabbed(this.transform);
-			GrabbedObject = HighLightedObject;
-		}
-
-		public float ThrowForce;
-
-		public void OnLetGoEvent()
-		{
-			if(GrabbedObject == null)
-				return;			
-			GrabbedObject.LetGo(Velocity * ThrowForce);			
-			GrabbedObject = null;
+			LineRendererRef.SetPosition(0, transform.position);
+			LineRendererRef.SetPosition(1, (IsDrawingLine) ? transform.position + (transform.forward * MaxGrabDistance) : transform.position);
 		}
 		
+		public void ToggleLine()
+		{
+			IsDrawingLine = !IsDrawingLine;
+		}
+
 		private void OnDrawGizmos() 
 		{
 			Gizmos.color = Color.red;
