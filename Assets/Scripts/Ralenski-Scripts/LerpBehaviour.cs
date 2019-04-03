@@ -6,8 +6,7 @@ namespace Ralenski
     {
         [Range(0, 10)]
         public float sliderVal;
-        [HideInInspector]
-        public GameObject throwableOBJ;
+        
         [TextArea, SerializeField] private string Note;
         public SphereCollider throwableObjCollider;
         public LerpOBJ lerpOBJ;
@@ -77,8 +76,7 @@ namespace Ralenski
                 Interprolant = timeOBJ.Value //set the ending of the lerp object
             };
             
-            throwableOBJ.transform.SetParent(transform);
-            throwableObjCollider = throwableOBJ.GetComponent<SphereCollider>();//add a collider and store the reference
+            throwableObjCollider = GetComponent<SphereCollider>();//add a collider and store the reference
             throwableObjCollider.radius = lerpOBJ.Result;//set the radius of the sphere collider
         }
         // Update is called once per frame
