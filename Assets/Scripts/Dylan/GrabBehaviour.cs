@@ -11,6 +11,9 @@ namespace Assets.Scripts.Dylan{
 		public GrabbableBehaviour GrabbedObject;
 		private InteractionRaycastBehaviour RayCastBehaviourRef;
 
+		Vector3 GrabberVelocity;
+		Vector3 LastFramePosition;
+
 		/// <summary>
 		/// Awake is called when the script instance is being loaded.
 		/// </summary>
@@ -27,6 +30,17 @@ namespace Assets.Scripts.Dylan{
 			}
 		}
 
+		/// <summary>
+		/// LateUpdate is called every frame, if the Behaviour is enabled.
+		/// It is called after all Update functions have been called.
+		/// </summary>
+		public float maxVelocity;
+		void LateUpdate()
+		{			
+			GrabberVelocity = transform.position - LastFramePosition;
+			LastFramePosition = transform.position;	
+		}
+
 		public void GrabObject()
 		{
 			if(RayCastBehaviourRef.HighLightedObject == null)
@@ -39,7 +53,7 @@ namespace Assets.Scripts.Dylan{
 		{
 			if(GrabbedObject == null)
 				return;			
-			GrabbedObject.LetGo(Vector3.zero);
+			GrabbedObject.LetGo(GrabberVelocity * maxVelocity);
 			GrabbedObject = null;
 		}
 	}
