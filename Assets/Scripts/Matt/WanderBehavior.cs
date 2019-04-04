@@ -1,58 +1,76 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
-public class WanderBehavior : MonoBehaviour
+namespace Assets.Scripts.Matt
 {
-    public List<GameObject> WP;
-    private int currentWP, nextWP;
-    public GameObject npc;
-    float timer;
-    public float delay;
-    bool PH = true;
-
-    // Use this for initialization
-    void Start()
+    public class WanderBehavior : MonoBehaviour
     {
-        currentWP = Random.Range(0, WP.Count);
-    }
+        public List<GameObject> WP;
+        private int currentWP, nextWP;
+        public GameObject npc;
+        bool PH = true;
+        NavMeshAgent agent;
+        public Vector3 newDir;
 
-    // Update is called once per frame
-    void Update()
-    {
-        //for (timer = 0; timer <= delay; timer++)
-        //{
-        //    print(Time.deltaTime * Time.deltaTime);
-        //    if (timer >= delay)
-        //    {
-        //        MoveToNewPosition();
-        //        timer = 0;
-        //    }
+        NewWayPoint NWP;
 
-        //}
-        if(PH == true)
+        // Use this for initialization
+        void Start()
         {
-            MoveToNewPosition();
+            currentWP = Random.Range(0, WP.Count);
+            nextWP = Random.Range(0, WP.Count);
+            agent = GetComponent<NavMeshAgent>();
+            agent.updateRotation = false;
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+            if(nextWP == currentWP)
+            {
+                nextWP = Random.Range(0, WP.Count);
+                
+            }
+            //npc.transform.rotation = Quaternion.RotateTowards(WP[currentWP].transform.rotation, WP[nextWP].transform.rotation, 360);
+            if (PH == true)
+            {
+                MoveToNewPosition();
+            }
+            if(!agent.isStopped)
+            {
+                var targetPosition = WP[nextWP].transform.position;
+                var targetPoint = WP[nextWP].transform.position;
+                var _direction = (targetPoint - targetPosition).normalized;
+                var _lookRotation = Quaternion.LookRotation(_direction);
+
+                npc.transform.rotation = Quaternion.RotateTowards(WP[currentWP].transform.rotation, WP[nextWP].transform.rotation, 360);
+            }
+        }
+
+        public void MoveToNewPosition()
+        {
+            
+            if (nextWP != currentWP && WP.Count != 0)
+            {
+                Vector3 targetDir = WP[nextWP].transform.position - npc.transform.position;
+                print("Hit new WP");
+                PH = false;
+                agent.SetDestination(WP[nextWP].transform.position);
+                float step = 2.0f * Time.deltaTime;
+                newDir = Vector3.RotateTowards(npc.transform.position, WP[nextWP].transform.position, step, 0.0f);
+                StartCoroutine(Seconds());
+                currentWP = nextWP;
+            }
+        }
+
+        IEnumerator Seconds()
+        {
+            yield return new WaitForSecondsRealtime(6);
+            PH = true;
         }
     }
-
-    public void MoveToNewPosition()
-    {
-        nextWP = Random.Range(0, WP.Count);
-        if (nextWP != currentWP)
-        {
-            print("Hit new WP");
-            npc.transform.position = WP[nextWP].transform.position;
-            currentWP = nextWP;
-            PH = false;
-            StartCoroutine(Seconds());
-        }
-    }
-
-    IEnumerator Seconds()
-    {
-        yield return new WaitForSecondsRealtime(3);
-        PH = true;
-    }
-
 }
+
+
