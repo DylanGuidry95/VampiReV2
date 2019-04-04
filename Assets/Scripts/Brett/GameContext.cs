@@ -17,6 +17,11 @@ namespace Assets.Scripts.Brett
             CurrentState.OnEnter();
         }
 
+        public override void Start()
+        {
+            CurrentState.OnEnter();
+        }
+
         public override void Update()
         {
             StateName = CurrentState.ToString();

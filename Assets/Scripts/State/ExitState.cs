@@ -7,6 +7,7 @@ namespace Assets.Scripts.Brett
 	{
 		public override void OnEnter()
 		{
+            Application.Quit();
 		}
 
 		public override void OnExit()

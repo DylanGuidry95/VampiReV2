@@ -7,7 +7,9 @@ namespace Assets.Scripts.Brett
 	{
 		public override void OnEnter()
 		{
-		}
+            var gameEvent = Resources.Load<GameEvent>("Game Events/OnGameStart");
+            gameEvent.Raise();
+        }
 
 		public override void OnExit()
 		{
