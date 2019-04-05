@@ -19,6 +19,7 @@ namespace Assets.Scripts.Brett
         void Start()
         {
             Context.CurrentState = GAMESTATEREF.StateField;
+            Context.Start();
 
         }
 
