@@ -387,7 +387,6 @@ GameObject:
   - component: {fileID: 4123609711415096}
   - component: {fileID: 54288529133929912}
   - component: {fileID: 136163198960267080}
-  - component: {fileID: 114576031537943090}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1315,7 +1314,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!81 &81024583289775206
 AudioListener:
@@ -1863,17 +1862,6 @@ MonoBehaviour:
   easeRotationX: 1
   easeRotationY: 1
   easeRotationZ: 1
---- !u!114 &114576031537943090
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1552381936563192}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc1326b5df69d094986088948e948dbc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114599880739618292
 MonoBehaviour:
   m_ObjectHideFlags: 1
