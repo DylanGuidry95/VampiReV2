@@ -13,9 +13,7 @@ namespace Assets.Scripts.Brett
 
         private void OnEnable()
         {
-
-            var events = AssetDatabase.FindAssets("t:GameEvent").Select(guid => AssetDatabase.GUIDToAssetPath(guid))
-                .Select(path => AssetDatabase.LoadAssetAtPath<GameEvent>(path)).Where(gameevent => gameevent).ToList();
+            var events = Resources.LoadAll("Game Events");
 
             foreach (var e in events)
             {
