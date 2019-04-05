@@ -14,7 +14,7 @@ namespace Assets.Scripts.Matt
         NavMeshAgent agent;
         public Vector3 newDir;
 
-        NewWayPoint NWP;
+        private NewWayPoint NWP;
 
         // Use this for initialization
         void Start()
@@ -37,14 +37,30 @@ namespace Assets.Scripts.Matt
             {
                 MoveToNewPosition();
             }
-            
+
             if (npc.transform.position == WP[currentWP].transform.position)
             {
                 RotateToNewPosition();
-                if(npc.transform.position.x < 1 || npc.transform.position.x > -1)
+                if (npc.transform.position.x < 1 || npc.transform.position.x > -1)
                 {
                     RotateToNewPosition();
                 }
+            }
+            if (Input.GetMouseButtonDown(0))
+            {
+                MoveToItemPosition();
+            }
+
+        }
+
+        public void MoveToItemPosition()
+        {
+            RaycastHit hit;
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray, out hit))
+            {
+                agent.SetDestination(hit.point);
+                StopCoroutine(Seconds());
             }
         }
 
@@ -71,6 +87,7 @@ namespace Assets.Scripts.Matt
 
         IEnumerator Seconds()
         {
+            
             yield return new WaitForSecondsRealtime(6);
             PH = true;
         }
