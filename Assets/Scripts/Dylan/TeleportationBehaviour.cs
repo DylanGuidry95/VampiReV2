@@ -11,6 +11,9 @@ public class TeleportationBehaviour : MonoBehaviour
 
 	GameObject TeleportDestination;
 
+	Assets.Scripts.Brett.GameEvent TeleportEvent;
+	
+
 	/// <summary>
 	/// Awake is called when the script instance is being loaded.
 	/// </summary>
@@ -39,14 +42,17 @@ public class TeleportationBehaviour : MonoBehaviour
 		}
 		else if(TeleportDestination != null)
 		{
-				Destroy(TeleportDestination);
-				TeleportationLine.SetPosition(1, transform.position);
+			Destroy(TeleportDestination);
+			TeleportationLine.SetPosition(1, transform.position);
 		}
 	}
 
 	public void Teleport(GameObject teleportObject)
 	{
 		if(TeleportDestination != null)
+		{
 			teleportObject.transform.position = TeleportDestination.transform.position;
+			TeleportEvent.Raise();
+		}
 	}
 }
