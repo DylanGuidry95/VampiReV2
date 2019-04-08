@@ -23,7 +23,7 @@ public class TeleportationBehaviour : MonoBehaviour
 		MaxTeleportDistance = MaxTeleportDistance < 0 ? 1 : MaxTeleportDistance;
 	}
 
-	private void Update() 
+	public void StartTeleport() 
 	{
 		TeleportationLine.SetPosition(0, transform.position);
 		RaycastHit hit;
