@@ -55,7 +55,7 @@ public class TeleportationBehaviour : MonoBehaviour
 		if(TeleportDestination != null)
 		{
 			teleportObject.transform.position = TeleportDestination.transform.position;
-			TeleportEvent.Raise();
+			//TeleportEvent.Raise();
 		}
 	}
 }
