@@ -42,7 +42,10 @@ public class TeleportationBehaviour : MonoBehaviour
 		}
 		else if(TeleportDestination != null)
 		{
-			Destroy(TeleportDestination);
+			Destroy(TeleportDestination);			
+		}
+		else
+		{
 			TeleportationLine.SetPosition(1, transform.position);
 		}
 	}
