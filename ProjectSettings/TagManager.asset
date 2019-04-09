@@ -4,9 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - Grabbable
   - Throwable
   - Ground
-  - Enemy
   layers:
   - Default
   - TransparentFX
