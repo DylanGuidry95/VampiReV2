@@ -1,11 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using Assets.Scripts.Brett;
-using TMPro;
+﻿using Assets.Scripts.Brett;
 using UnityEngine;
-using UnityEngine.Serialization;
-
-[RequireComponent(typeof(Collider))]
+namespace Ralenski
+{
+    [RequireComponent(typeof(Collider))]
 public class OnTriggerEventSystem : MonoBehaviour
 {
     public string playerTag;
@@ -37,4 +34,5 @@ public class OnTriggerEventSystem : MonoBehaviour
         }
     }
     
+}
 }
