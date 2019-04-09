@@ -1,9 +1,8 @@
-﻿using System.Collections.Generic;
-using System.Reflection;
-using Assets.Scripts.Brett;
+﻿using Assets.Scripts.Brett;
 using UnityEditor;
-using UnityEngine;
-[CustomEditor(typeof(EditorGUILayout)) ]
+namespace Ralenski
+{
+    [CustomEditor(typeof(EditorGUILayout)) ]
 public class EditorWindowScript  :  Editor
 {
     public bool onTriggerEnterToggle;
@@ -19,7 +18,6 @@ public class EditorWindowScript  :  Editor
         onTriggerStayToggle = EditorGUILayout.Toggle("On Trigger Stay", onTriggerStayToggle);
         base.OnInspectorGUI();
     }
-
     private void RasieEvents()
     {
         if (onTriggerEnterToggle == true)
@@ -37,14 +35,13 @@ public class EditorWindowScript  :  Editor
             OnTriggerStay.Raise();
         }
     }
-
     void Start()
     {
 
     }
-
     void Update()
     {
         RasieEvents();
     }
+}
 }
