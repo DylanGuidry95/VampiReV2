@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Assets.Scripts.Brett
 {
-    public class NpcBehaviour : MonoBehaviour
+    public class GuestNPCBehaviour : MonoBehaviour
     {
         public Transform Target;
         public float AngleOfView;
