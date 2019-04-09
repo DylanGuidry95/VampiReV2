@@ -12,7 +12,7 @@ namespace Assets.Scripts.Matt
         public GameObject npc;
         bool PH = true;
         NavMeshAgent agent;
-        public Vector3 newDir;
+        Quaternion rotateValue;
 
         private NewWayPoint NWP;
 
@@ -41,16 +41,18 @@ namespace Assets.Scripts.Matt
             if (npc.transform.position == WP[currentWP].transform.position)
             {
                 RotateToNewPosition();
-                if (npc.transform.position.x < 1 || npc.transform.position.x > -1)
-                {
-                    RotateToNewPosition();
-                }
+
             }
+
+            if (npc.transform.position.x < 1 || npc.transform.position.x > -1)
+            {
+                RotateToNewPosition();
+            }
+
             if (Input.GetMouseButtonDown(0))
             {
                 MoveToItemPosition();
             }
-
         }
 
         public void MoveToItemPosition()
@@ -66,7 +68,6 @@ namespace Assets.Scripts.Matt
 
         public void MoveToNewPosition()
         {
-
             if (nextWP != currentWP && WP.Count != 0)
             {
                 print("Hit new WP");
@@ -79,15 +80,15 @@ namespace Assets.Scripts.Matt
 
         public void RotateToNewPosition()
         {
-            Vector3 relP = WP[nextWP].transform.position - npc.transform.position;
-            Quaternion rotation = Quaternion.LookRotation(relP, Vector3.up);
-            npc.transform.rotation = rotation;
+            rotateValue = Quaternion.FromToRotation(npc.transform.position, WP[nextWP].transform.position);
+            //npc.transform.rotation = rotateValue;
+            npc.transform.rotation = Quaternion.AngleAxis(rotateValue.x, Vector3.right);
+            //npc.transform.rotation = new Quaternion(0, rotateValue.y, 0, 0);
             StartCoroutine(Rotate());
         }
 
         IEnumerator Seconds()
         {
-            
             yield return new WaitForSecondsRealtime(6);
             PH = true;
         }
