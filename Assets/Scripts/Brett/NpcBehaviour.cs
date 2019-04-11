@@ -56,7 +56,7 @@ namespace Assets.Scripts.Brett
             var targetDir = Target.position - transform.position;
             float angle = Vector3.Angle(targetDir, transform.forward);
             float distance = Vector3.Distance(Target.position, transform.position);
-            print(distance + ": between target and npc");
+            //print(distance + ": between target and npc");
             if (angle <= AngleOfView && distance <= DistanceOfView)
             {
                 Debug.DrawLine(transform.position, Target.transform.position, Color.blue);
@@ -64,7 +64,7 @@ namespace Assets.Scripts.Brett
                 {
                     if (_hit.collider.CompareTag("Player"))
                     {
-                        print("NPC can see player");
+                        //print("NPC can see player");
                         ICanSeeThePlayer = true;
                     }
                     else
