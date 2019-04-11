@@ -1,0 +1,175 @@
+fileFormatVersion: 2
+guid: 6180eb33b605a834bb79e09c8624af39
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: L_index_01
+    100002: L_index_02
+    100004: L_index_03
+    100006: L_index_04
+    100008: L_index_05
+    100010: L_middle_01
+    100012: L_middle_02
+    100014: L_middle_03
+    100016: L_middle_04
+    100018: L_middle_05
+    100020: L_NosferatuHand_mesh
+    100022: L_pinky_01
+    100024: L_pinky_02
+    100026: L_pinky_03
+    100028: L_pinky_04
+    100030: L_pinky_05
+    100032: L_ring_01
+    100034: L_ring_02
+    100036: L_ring_03
+    100038: L_ring_04
+    100040: L_ring_05
+    100042: L_thumb_01
+    100044: L_thumb_02
+    100046: L_thumb_03
+    100048: L_thumb_04
+    100050: //RootNode
+    100052: Root
+    400000: L_index_01
+    400002: L_index_02
+    400004: L_index_03
+    400006: L_index_04
+    400008: L_index_05
+    400010: L_middle_01
+    400012: L_middle_02
+    400014: L_middle_03
+    400016: L_middle_04
+    400018: L_middle_05
+    400020: L_NosferatuHand_mesh
+    400022: L_pinky_01
+    400024: L_pinky_02
+    400026: L_pinky_03
+    400028: L_pinky_04
+    400030: L_pinky_05
+    400032: L_ring_01
+    400034: L_ring_02
+    400036: L_ring_03
+    400038: L_ring_04
+    400040: L_ring_05
+    400042: L_thumb_01
+    400044: L_thumb_02
+    400046: L_thumb_03
+    400048: L_thumb_04
+    400050: //RootNode
+    400052: Root
+    2100000: lambert2
+    4300000: L_NosferatuHand_mesh
+    7400000: Rest
+    9500000: //RootNode
+    13700000: L_NosferatuHand_mesh
+  externalObjects: {}
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Rest
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
