@@ -16,6 +16,8 @@ namespace Assets.Scripts.Brett
 
         private RaycastHit _hit;
 
+        public GameEvent OnGameExit;
+
         private void Start()
         {
             _anim = GetComponent<Animator>();
@@ -30,7 +32,8 @@ namespace Assets.Scripts.Brett
             if (_feedingBehaviour._npcIsDead)
             {
                 Debug.Log("NPC is dead.");
-                _anim.SetBool("isDead", true);
+                //_anim.SetBool("isDead", true);
+                OnGameExit.Raise();
             }
         }
 
