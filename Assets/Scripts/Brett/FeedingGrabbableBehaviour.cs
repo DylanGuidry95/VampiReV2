@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class FeedingGrabbableBehaviour : GrabbableBehaviour
 {
-    private Material BaseMaterial;
-
     public bool isGrabbed;
 
 	
@@ -18,10 +16,5 @@ public class FeedingGrabbableBehaviour : GrabbableBehaviour
     public override void LetGo(Vector3 travelVelocity)
     {
         isGrabbed = false;
-    }
-
-    public void HighLight(bool isHighlighted)
-    {
-        GetComponent<MeshRenderer>().material = (isHighlighted) ? HighLightMaterial : BaseMaterial;
     }
 }
