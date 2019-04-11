@@ -7,18 +7,19 @@ namespace Assets.Scripts.Brett
     public class GuestNPCBehaviour : MonoBehaviour
     {
         public Transform Target;
+
         public float AngleOfView;
         public float DistanceOfView;
-        public bool IsDead;
-        public bool RightShoulderGrabbed;
-        public bool LeftShoulderGrabbed;
+
+        private FeedingBehaviour _feedingBehaviour;
         private Animator _anim;
+
         private RaycastHit _hit;
 
         private void Start()
         {
             _anim = GetComponent<Animator>();
-            IsDead = false;
+            _feedingBehaviour = gameObject.GetComponent<FeedingBehaviour>();
         }
 
         private void Update()
@@ -26,25 +27,9 @@ namespace Assets.Scripts.Brett
 
             PlayerDetection();
 
-            //if (Input.GetKey(KeyCode.A))
-            //{
-            //    leftShoulderGrabbed = true;
-            //}
-            //else
-            //{
-            //    leftShoulderGrabbed = false;
-            //}
-            //if (Input.GetKey(KeyCode.D))
-            //{
-            //    rightShoulderGrabbed = true;
-            //}
-            //else
-            //{
-            //    rightShoulderGrabbed = false;
-            //}
-            if (Input.GetKey(KeyCode.Space))
+            if (_feedingBehaviour._npcIsDead)
             {
-                IsDead = true;
+                Debug.Log("NPC is dead.");
                 _anim.SetBool("isDead", true);
             }
         }
