@@ -41,6 +41,7 @@ namespace Assets.Scripts.Dylan
 				HighLightedObject = null;
 			}
 
+			LineRendererRef.enabled = IsDrawingLine;				
 			LineRendererRef.SetPosition(0, transform.position);
 			LineRendererRef.SetPosition(1, (IsDrawingLine) ? transform.position + (transform.forward * MaxGrabDistance) : transform.position);
 		}
