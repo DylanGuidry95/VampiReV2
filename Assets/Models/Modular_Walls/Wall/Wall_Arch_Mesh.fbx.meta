@@ -1,26 +1,45 @@
 fileFormatVersion: 2
-guid: 4ca9d94eff7deac4698ad78452284874
+guid: c8ff479d8eb8fca4eb2e976088db09d6
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: Small_Window_Glass
-    100004: Small_Window_Glass1
-    100006: Small_Window_Pane
-    400000: //RootNode
-    400002: Small_Window_Glass
-    400004: Small_Window_Glass1
-    400006: Small_Window_Pane
+    100000: Arch
+    100002: Arch 1
+    100004: group1
+    100006: group1_Arch
+    100008: group1_Wall_Arch
+    100010: group2
+    100012: group3
+    100014: transform1
+    100016: transform2
+    100018: transform3
+    100020: transform4
+    100022: //RootNode
+    100024: Wall_Arch
+    100026: Wall_Arch 1
+    400000: Arch
+    400002: Arch 1
+    400004: group1
+    400006: group1_Arch
+    400008: group1_Wall_Arch
+    400010: group2
+    400012: group3
+    400014: transform1
+    400016: transform2
+    400018: transform3
+    400020: transform4
+    400022: //RootNode
+    400024: Wall_Arch
+    400026: Wall_Arch 1
     2100000: lambert2
-    2300000: Small_Window_Glass
-    2300002: Small_Window_Glass1
-    2300004: Small_Window_Pane
-    3300000: Small_Window_Glass
-    3300002: Small_Window_Glass1
-    3300004: Small_Window_Pane
-    4300000: Small_Window_Glass
-    4300002: Small_Window_Pane
-    4300004: Small_Window_Glass1
+    2100002: lambert3
+    2100004: lambert1
+    2300000: group1_Arch
+    2300002: group1_Wall_Arch
+    3300000: group1_Arch
+    3300002: group1_Wall_Arch
+    4300000: group1_Wall_Arch
+    4300002: group1_Arch
   externalObjects: {}
   materials:
     importMaterials: 1

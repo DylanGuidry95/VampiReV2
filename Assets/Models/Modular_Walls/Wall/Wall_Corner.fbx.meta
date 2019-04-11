@@ -1,26 +1,14 @@
 fileFormatVersion: 2
-guid: 4ca9d94eff7deac4698ad78452284874
+guid: 129e366105b5d174cb694c537dd3b51b
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
-    100002: Small_Window_Glass
-    100004: Small_Window_Glass1
-    100006: Small_Window_Pane
     400000: //RootNode
-    400002: Small_Window_Glass
-    400004: Small_Window_Glass1
-    400006: Small_Window_Pane
-    2100000: lambert2
-    2300000: Small_Window_Glass
-    2300002: Small_Window_Glass1
-    2300004: Small_Window_Pane
-    3300000: Small_Window_Glass
-    3300002: Small_Window_Glass1
-    3300004: Small_Window_Pane
-    4300000: Small_Window_Glass
-    4300002: Small_Window_Pane
-    4300004: Small_Window_Glass1
+    2100000: lambert1
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Wall_Corner
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -60,7 +48,7 @@ ModelImporter:
     importCameras: 1
     importLights: 1
     swapUVChannels: 0
-    generateSecondaryUV: 1
+    generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0
