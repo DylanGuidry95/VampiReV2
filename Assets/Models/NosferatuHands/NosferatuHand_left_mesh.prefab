@@ -666,7 +666,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1482190111412586}
-  m_LocalRotation: {x: -3.6639088e-15, y: 0.00018549249, z: -0.22916262, w: 0.9733882}
+  m_LocalRotation: {x: -3.6638952e-15, y: 0.00018549249, z: -0.22916262, w: 0.9733882}
   m_LocalPosition: {x: -0.0007088554, y: 1.517883e-19, z: -3.7296553e-19}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -957,7 +957,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1643743882624930}
-  m_LocalRotation: {x: -6.123234e-17, y: 1, z: 6.123234e-17, w: -6.123234e-17}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children:
@@ -999,7 +999,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00f6c0d7b5a00aa4a8d38a09a0480032, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeletonAction: {fileID: 11400000, guid: 522d01bcece47cb4989a7833bda7218a, type: 2}
+  skeletonAction:
+    actionPath: 
+    needsReinit: 0
   inputSource: 1
   rangeOfMotion: 0
   skeletonRoot: {fileID: 0}
@@ -1007,6 +1009,31 @@ MonoBehaviour:
   updatePose: 1
   onlySetRotations: 0
   skeletonBlend: 1
+  onBoneTransformsUpdated:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Valve.VR.SteamVR_Behaviour_SkeletonEvent, SteamVR, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onTransformUpdated:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Valve.VR.SteamVR_Behaviour_SkeletonEvent, SteamVR, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onTransformChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Valve.VR.SteamVR_Behaviour_SkeletonEvent, SteamVR, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onConnectedChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Valve.VR.SteamVR_Behaviour_Skeleton_ConnectedChangedEvent, SteamVR,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  onTrackingChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Valve.VR.SteamVR_Behaviour_Skeleton_TrackingChangedEvent, SteamVR,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   mirroring: 2
 --- !u!137 &137065436801697662
 SkinnedMeshRenderer:
@@ -1081,6 +1108,6 @@ SkinnedMeshRenderer:
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 4997196036419574}
   m_AABB:
-    m_Center: {x: 0.000069630696, y: -0.00013263032, z: 0.0002429309}
-    m_Extent: {x: 0.0005328489, y: 0.0008828619, z: 0.0015148497}
+    m_Center: {x: 0.00011125504, y: 0.00007685396, z: 0.0007606817}
+    m_Extent: {x: 0.0004912245, y: 0.00065554114, z: 0.0009970989}
   m_DirtyAABB: 0
