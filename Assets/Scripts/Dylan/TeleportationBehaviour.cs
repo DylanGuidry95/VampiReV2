@@ -37,15 +37,18 @@ public class TeleportationBehaviour : MonoBehaviour
 					Destroy(TeleportDestination.GetComponent<Collider>());
 				}
 				TeleportDestination.transform.position = hit.point;
+				TeleportationLine.enabled = true;
 				TeleportationLine.SetPosition(1, hit.point);
 			}
-		}
-		else if(TeleportDestination != null)
-		{
+			else if(TeleportDestination != null)
+			{
+			TeleportationLine.enabled = false;
 			Destroy(TeleportDestination);			
+			}
 		}
 		else
-		{
+		{	
+			TeleportationLine.enabled = false;
 			TeleportationLine.SetPosition(1, transform.position);
 		}
 	}
@@ -55,6 +58,8 @@ public class TeleportationBehaviour : MonoBehaviour
 		if(TeleportDestination != null)
 		{
 			teleportObject.transform.position = TeleportDestination.transform.position;
+			TeleportationLine.enabled = false;
+			Destroy(TeleportDestination);	
 			//TeleportEvent.Raise();
 		}
 	}
