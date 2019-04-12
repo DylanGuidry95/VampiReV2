@@ -12,7 +12,7 @@ namespace Assets.Scripts.Dylan{
 		private InteractionRaycastBehaviour RayCastBehaviourRef;
 
 		Vector3 GrabberVelocity;
-		Vector3 LastFramePosition;
+		Vector3 LastFramePosition;		
 
 		/// <summary>
 		/// Awake is called when the script instance is being loaded.

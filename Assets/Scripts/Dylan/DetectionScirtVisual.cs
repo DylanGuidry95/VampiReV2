@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DetectionScirtVisual : MonoBehaviour {
-	public Assets.Scripts.Brett.NpcBehaviour BehaviourRef;
+	public Assets.Scripts.Brett.GuestNPCBehaviour BehaviourRef;
 	public List<Vector3> Verts;
 	List<int> TriPoints;
 	List<Vector3> SurfaceNormals;
@@ -18,7 +18,7 @@ public class DetectionScirtVisual : MonoBehaviour {
 	/// </summary>
 	void Awake()
 	{
-		BehaviourRef = GetComponentInParent<Assets.Scripts.Brett.NpcBehaviour>();
+		BehaviourRef = GetComponentInParent<Assets.Scripts.Brett.GuestNPCBehaviour>();
 		Verts = new List<Vector3>();
 		TriPoints = new List<int>();
 		SurfaceNormals = new List<Vector3>();
@@ -84,7 +84,7 @@ public class DetectionScirtVisual : MonoBehaviour {
 	{
 		Verts = new List<Vector3>();
 		if(BehaviourRef == null)
-			BehaviourRef = GetComponentInParent<Assets.Scripts.Brett.NpcBehaviour>();
+			BehaviourRef = GetComponentInParent<Assets.Scripts.Brett.GuestNPCBehaviour>();
 		var angle = BehaviourRef.AngleOfView;
 		var Distance = BehaviourRef.DistanceOfView;
 
