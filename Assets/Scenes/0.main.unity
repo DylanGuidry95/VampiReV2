@@ -1259,11 +1259,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4746030138455498, guid: 1ef0fe91f5a472d4e88d75d5a59dc108,
     type: 2}
   m_PrefabInternal: {fileID: 158959334}
---- !u!4 &159830319 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4527084901539614, guid: 2e232090c400a894784f0dee0a9e17b2,
-    type: 2}
-  m_PrefabInternal: {fileID: 1861471292}
 --- !u!1001 &174009166
 Prefab:
   m_ObjectHideFlags: 0
@@ -1489,8 +1484,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f753025abc16bb45bbc83939f863bfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 2080356346}
-  pivot: {fileID: 159830319}
+  target: {fileID: 0}
+  pivot: {fileID: 0}
   fadeDuration: 0.3
   m_reticleMaterial: {fileID: 0}
   teleportButton: 1
@@ -2011,8 +2006,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f753025abc16bb45bbc83939f863bfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 2080356346}
-  pivot: {fileID: 159830319}
+  target: {fileID: 0}
+  pivot: {fileID: 0}
   fadeDuration: 0.3
   m_reticleMaterial: {fileID: 0}
   teleportButton: 1
@@ -6027,8 +6022,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f753025abc16bb45bbc83939f863bfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 2080356346}
-  pivot: {fileID: 159830319}
+  target: {fileID: 0}
+  pivot: {fileID: 0}
   fadeDuration: 0.3
   m_reticleMaterial: {fileID: 0}
   teleportButton: 1
@@ -6473,8 +6468,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f753025abc16bb45bbc83939f863bfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 2080356346}
-  pivot: {fileID: 159830319}
+  target: {fileID: 0}
+  pivot: {fileID: 0}
   fadeDuration: 0.3
   m_reticleMaterial: {fileID: 0}
   teleportButton: 1
@@ -6666,6 +6661,48 @@ Transform:
   m_Father: {fileID: 1110971056}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1567668276
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4388231852819246, guid: f0d7a7ca57e1e4b45867c414ff43de54, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.13499069
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388231852819246, guid: f0d7a7ca57e1e4b45867c414ff43de54, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.3586266
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388231852819246, guid: f0d7a7ca57e1e4b45867c414ff43de54, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0.11604643
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388231852819246, guid: f0d7a7ca57e1e4b45867c414ff43de54, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388231852819246, guid: f0d7a7ca57e1e4b45867c414ff43de54, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388231852819246, guid: f0d7a7ca57e1e4b45867c414ff43de54, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388231852819246, guid: f0d7a7ca57e1e4b45867c414ff43de54, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388231852819246, guid: f0d7a7ca57e1e4b45867c414ff43de54, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f0d7a7ca57e1e4b45867c414ff43de54, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1001 &1588949463
 Prefab:
   m_ObjectHideFlags: 0
@@ -7346,8 +7383,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f753025abc16bb45bbc83939f863bfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 2080356346}
-  pivot: {fileID: 159830319}
+  target: {fileID: 0}
+  pivot: {fileID: 0}
   fadeDuration: 0.3
   m_reticleMaterial: {fileID: 0}
   teleportButton: 1
@@ -7501,6 +7538,7 @@ GameObject:
   - component: {fileID: 1763063614}
   - component: {fileID: 1763063613}
   - component: {fileID: 1763063612}
+  - component: {fileID: 1763063616}
   m_Layer: 0
   m_Name: End_Position
   m_TagString: Untagged
@@ -7575,6 +7613,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1763063616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1763063611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4923f9859a12da542b3c48786d08c3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: d8832f90544982d4e9381ec430d58402, type: 2}
 --- !u!1001 &1780280595
 Prefab:
   m_ObjectHideFlags: 0
@@ -8042,53 +8092,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f753025abc16bb45bbc83939f863bfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 2080356346}
-  pivot: {fileID: 159830319}
+  target: {fileID: 0}
+  pivot: {fileID: 0}
   fadeDuration: 0.3
   m_reticleMaterial: {fileID: 0}
   teleportButton: 1
---- !u!1001 &1861471292
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4556270492707188, guid: 2e232090c400a894784f0dee0a9e17b2, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4556270492707188, guid: 2e232090c400a894784f0dee0a9e17b2, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4556270492707188, guid: 2e232090c400a894784f0dee0a9e17b2, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4556270492707188, guid: 2e232090c400a894784f0dee0a9e17b2, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4556270492707188, guid: 2e232090c400a894784f0dee0a9e17b2, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4556270492707188, guid: 2e232090c400a894784f0dee0a9e17b2, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4556270492707188, guid: 2e232090c400a894784f0dee0a9e17b2, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4556270492707188, guid: 2e232090c400a894784f0dee0a9e17b2, type: 2}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 2e232090c400a894784f0dee0a9e17b2, type: 2}
-  m_IsPrefabAsset: 0
 --- !u!1001 &1913114821
 Prefab:
   m_ObjectHideFlags: 0
@@ -8361,8 +8369,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f753025abc16bb45bbc83939f863bfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 2080356346}
-  pivot: {fileID: 159830319}
+  target: {fileID: 0}
+  pivot: {fileID: 0}
   fadeDuration: 0.3
   m_reticleMaterial: {fileID: 0}
   teleportButton: 1
@@ -8796,11 +8804,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4823154588653814, guid: 6476d564a53d6e24cad7dc46de99f848,
     type: 2}
   m_PrefabInternal: {fileID: 2042132487}
---- !u!4 &2080356346 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4556270492707188, guid: 2e232090c400a894784f0dee0a9e17b2,
-    type: 2}
-  m_PrefabInternal: {fileID: 1861471292}
 --- !u!1001 &2081287611
 Prefab:
   m_ObjectHideFlags: 0
