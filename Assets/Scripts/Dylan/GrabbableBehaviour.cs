@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 namespace Assets.Scripts.Dylan
 {
-public class GrabbableBehaviour : MonoBehaviour 
+public class GrabbableBehaviour : MonoBehaviour
 {
 		private Material BaseMaterial;
 		public Material HighLightMaterial;

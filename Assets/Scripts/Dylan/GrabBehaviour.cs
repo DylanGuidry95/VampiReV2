@@ -26,7 +26,7 @@ namespace Assets.Scripts.Dylan{
 		{
 			if(GrabbedObject != null)
 			{
-				GrabbedObject.transform.position = this.transform.position;
+				//GrabbedObject.transform.position = this.transform.position;
 			}
 		}
 
