@@ -61,7 +61,7 @@ namespace Assets.Scripts.Dylan{
 		{
 			if(GrabbedObject == null)
 				return;
-			GrabbedObject.LetGo(GrabberVelocity * maxVelocity);			
+			GrabbedObject.LetGo(GrabberVelocity * maxVelocity, this);			
 			GrabbedObject = null;
 		}
 	}
