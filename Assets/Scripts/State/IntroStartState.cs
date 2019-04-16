@@ -3,12 +3,12 @@ using UnityEngine;
 namespace Assets.Scripts.Brett
 {
 	[System.Serializable]
-	public class GameRunningState : State
+	public class IntroStartState : State
 	{
 		public override void OnEnter()
 		{
-            var gameEvent = Resources.Load<GameEvent>("Game Events/OnFadeIn");
             GameObject.Instantiate(Resources.Load("Prefabs/Player"), new Vector3(0, 0, 0), Quaternion.identity);
+            var gameEvent = Resources.Load<GameEvent>("Game Events/OnIntroRun");
             gameEvent.Raise();
         }
 
@@ -21,10 +21,10 @@ namespace Assets.Scripts.Brett
 			for (int i = 0; i < conditionScriptable.conditions.Count; i++)
 
 			{
-				if(conditionScriptable.conditions[i].name == "OnGameEnd" && conditionScriptable.conditions[i].isRaised)
+				if(conditionScriptable.conditions[i].name == "OnIntroRun" && conditionScriptable.conditions[i].isRaised)
 				{
-					c.ChangeState(new GameEndState());
-					conditionScriptable.Toggle("OnGameEnd");
+					c.ChangeState(new IntroRunningState());
+					conditionScriptable.Toggle("OnIntroRun");
 				}
 
 			}

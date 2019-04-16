@@ -3,13 +3,11 @@ using UnityEngine;
 namespace Assets.Scripts.Brett
 {
 	[System.Serializable]
-	public class InitState : State
+	public class GameEndState : State
 	{
 		public override void OnEnter()
 		{
-            var gameEvent = Resources.Load<GameEvent>("Game Events/OnIntroStart");
-            gameEvent.Raise();
-        }
+		}
 
 		public override void OnExit()
 		{
@@ -20,6 +18,12 @@ namespace Assets.Scripts.Brett
 			for (int i = 0; i < conditionScriptable.conditions.Count; i++)
 
 			{
+				if(conditionScriptable.conditions[i].name == "OnExit" && conditionScriptable.conditions[i].isRaised)
+				{
+					c.ChangeState(new ExitState());
+					conditionScriptable.Toggle("OnExit");
+				}
+
 				if(conditionScriptable.conditions[i].name == "OnIntroStart" && conditionScriptable.conditions[i].isRaised)
 				{
 					c.ChangeState(new IntroStartState());
