@@ -62,6 +62,7 @@ namespace Assets.Scripts.Matt
             }
             yield return new WaitForSeconds(seconds);
             _navMeshAgent.SetDestination(currentDestination);
+            yield return new WaitForSeconds(3);
 
         }
         public void Test()
@@ -99,7 +100,14 @@ namespace Assets.Scripts.Matt
             }
             else
             {
-                var randomindex = Random.Range(0, 4);
+                var randomindex = Random.Range(0, WayPoints.Count);
+
+                if (currentWP == randomindex)
+                {
+                    randomindex = Random.Range(0, WayPoints.Count);
+                }
+                currentWP = randomindex;
+
                 yield return StartCoroutine("UpdateRotation", WayPoints[randomindex].position);
             }
             yield return null;
