@@ -3,54 +3,40 @@ guid: cf311856a80ab694a85ad7bc038c4f9f
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: Hand_Held_Lantern:Body27
-    100002: //RootNode
-    100004: Lamp_Glass_Mesh
-    100006: Lamp_Handle
-    100008: Lamp_Handle_Controller
-    100010: Lamp_Handle_Controller1
-    100012: Lamp_Handle_Hand_Joint
-    100014: Lamp_Handle_Hand_Joint1
-    100016: Lamp_Handle_Joint
-    100018: Lamp_mesh
-    100020: Lamp_Root
-    100022: Lamp_Root_Controller
-    100024: polySurface4
-    100026: polySurface4 1
-    100028: polySurface5
-    100030: Root_Controller
-    100032: transform15
-    100034: transform22
-    100036: transform23
-    100038: transform24
-    100040: transform3
-    100042: transform31
-    100044: transform5
-    100046: transform6
-    400000: Hand_Held_Lantern:Body27
-    400002: //RootNode
-    400004: Lamp_Glass_Mesh
-    400006: Lamp_Handle
-    400008: Lamp_Handle_Controller
-    400010: Lamp_Handle_Controller1
-    400012: Lamp_Handle_Hand_Joint
-    400014: Lamp_Handle_Hand_Joint1
-    400016: Lamp_Handle_Joint
-    400018: Lamp_mesh
-    400020: Lamp_Root
-    400022: Lamp_Root_Controller
-    400024: polySurface4
-    400026: polySurface4 1
-    400028: polySurface5
-    400030: Root_Controller
-    400032: transform15
-    400034: transform22
-    400036: transform23
-    400038: transform24
-    400040: transform3
-    400042: transform31
-    400044: transform5
-    400046: transform6
+    100000: //RootNode
+    100002: Lamp_Glass_Mesh
+    100004: Lamp_Handle
+    100006: Lamp_Handle_Controller
+    100008: Lamp_Handle_Controller1
+    100010: Lamp_Handle_Hand_Joint
+    100012: Lamp_Handle_Hand_Joint1
+    100014: Lamp_Handle_Joint
+    100016: Lamp_mesh
+    100018: Lamp_Root
+    100020: Lamp_Root_Controller
+    100022: Root_Controller
+    100024: transform22
+    100026: transform23
+    100028: transform24
+    100030: transform3
+    100032: transform31
+    400000: //RootNode
+    400002: Lamp_Glass_Mesh
+    400004: Lamp_Handle
+    400006: Lamp_Handle_Controller
+    400008: Lamp_Handle_Controller1
+    400010: Lamp_Handle_Hand_Joint
+    400012: Lamp_Handle_Hand_Joint1
+    400014: Lamp_Handle_Joint
+    400016: Lamp_mesh
+    400018: Lamp_Root
+    400020: Lamp_Root_Controller
+    400022: Root_Controller
+    400024: transform22
+    400026: transform23
+    400028: transform24
+    400030: transform3
+    400032: transform31
     2100000: lambert1
     4300000: Lamp_Glass_Mesh
     4300002: Lamp_mesh
