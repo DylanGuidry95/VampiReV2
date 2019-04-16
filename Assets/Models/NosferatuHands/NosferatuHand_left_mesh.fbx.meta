@@ -60,6 +60,7 @@ ModelImporter:
     100108: L_thumb_02
     100110: L_thumb_03
     100112: L_thumb_04
+    100114: L_Hand_CTRL
     400000: finger_index_0_l
     400002: finger_index_1_l
     400004: finger_index_2_l
@@ -117,6 +118,7 @@ ModelImporter:
     400108: L_thumb_02
     400110: L_thumb_03
     400112: L_thumb_04
+    400114: L_Hand_CTRL
     2100000: lambert1
     4300000: L_NosferatuHand_mesh
     9500000: //RootNode

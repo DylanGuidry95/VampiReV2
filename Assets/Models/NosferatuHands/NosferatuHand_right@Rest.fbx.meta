@@ -30,6 +30,36 @@ ModelImporter:
     100048: R_thumb_03
     100050: R_thumb_04
     100052: Root
+    100054: finger_index_0_r
+    100056: finger_index_1_r
+    100058: finger_index_2_r
+    100060: finger_index_meta_r
+    100062: finger_index_r_aux
+    100064: finger_index_r_end
+    100066: finger_middle_0_r
+    100068: finger_middle_1_r
+    100070: finger_middle_2_r
+    100072: finger_middle_meta_r
+    100074: finger_middle_r_aux
+    100076: finger_middle_r_end
+    100078: finger_pinky_0_r
+    100080: finger_pinky_1_r
+    100082: finger_pinky_2_r
+    100084: finger_pinky_meta_r
+    100086: finger_pinky_r_aux
+    100088: finger_pinky_r_end
+    100090: finger_ring_0_r
+    100092: finger_ring_1_r
+    100094: finger_ring_2_r
+    100096: finger_ring_meta_r
+    100098: finger_ring_r_aux
+    100100: finger_ring_r_end
+    100102: finger_thumb_0_r
+    100104: finger_thumb_1_r
+    100106: finger_thumb_2_r
+    100108: finger_thumb_r_aux
+    100110: finger_thumb_r_end
+    100112: wrist_r
     400000: //RootNode
     400002: R_index_01
     400004: R_index_02
@@ -57,6 +87,36 @@ ModelImporter:
     400048: R_thumb_03
     400050: R_thumb_04
     400052: Root
+    400054: finger_index_0_r
+    400056: finger_index_1_r
+    400058: finger_index_2_r
+    400060: finger_index_meta_r
+    400062: finger_index_r_aux
+    400064: finger_index_r_end
+    400066: finger_middle_0_r
+    400068: finger_middle_1_r
+    400070: finger_middle_2_r
+    400072: finger_middle_meta_r
+    400074: finger_middle_r_aux
+    400076: finger_middle_r_end
+    400078: finger_pinky_0_r
+    400080: finger_pinky_1_r
+    400082: finger_pinky_2_r
+    400084: finger_pinky_meta_r
+    400086: finger_pinky_r_aux
+    400088: finger_pinky_r_end
+    400090: finger_ring_0_r
+    400092: finger_ring_1_r
+    400094: finger_ring_2_r
+    400096: finger_ring_meta_r
+    400098: finger_ring_r_aux
+    400100: finger_ring_r_end
+    400102: finger_thumb_0_r
+    400104: finger_thumb_1_r
+    400106: finger_thumb_2_r
+    400108: finger_thumb_r_aux
+    400110: finger_thumb_r_end
+    400112: wrist_r
     2100000: lambert2
     4300000: R_NosferatuHand_mesh
     7400000: Rest
