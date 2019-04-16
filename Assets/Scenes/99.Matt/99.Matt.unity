@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 190003423}
   - component: {fileID: 190003422}
   - component: {fileID: 190003421}
+  - component: {fileID: 190003424}
   m_Layer: 5
   m_Name: 1
   m_TagString: Untagged
@@ -189,7 +190,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1811386238}
+      - m_Target: {fileID: 0}
         m_MethodName: NewPosition
         m_Mode: 3
         m_Arguments:
@@ -236,6 +237,43 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 190003419}
   m_CullTransparentMesh: 0
+--- !u!114 &190003424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 190003419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c739babf655648345abd844c2303d030, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentDestination: {x: 0, y: 0, z: 0}
+  Responses:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 190003424}
+        m_MethodName: NewPosition
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  seconds: 1
+  dotproduct: 0
+  maxdelta: 10
+  timer: 0
+  WayPoints: []
+  currentWP: 0
+  nextWP: 0
+  remainingdistance: 0
+  WAYPOINTSTRAVEL: 0
 --- !u!1 &265949181
 GameObject:
   m_ObjectHideFlags: 0
@@ -484,7 +522,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &505344511
 GameObject:
@@ -615,9 +653,6 @@ MonoBehaviour:
   - {fileID: 377381054}
   - {fileID: 1531400771}
   npc: {fileID: 505344511}
-  MinVerticalRotation: 0
-  MaxVerticalRotation: 0
-  dirToPoint: {x: 0, y: 0, z: 0}
 --- !u!54 &505344518
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -644,6 +679,7 @@ GameObject:
   - component: {fileID: 605587499}
   - component: {fileID: 605587498}
   - component: {fileID: 605587497}
+  - component: {fileID: 605587500}
   m_Layer: 5
   m_Name: 3
   m_TagString: Untagged
@@ -708,18 +744,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 605587498}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1811386238}
-        m_MethodName: NewPosition
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &605587498
@@ -756,6 +781,43 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 605587495}
   m_CullTransparentMesh: 0
+--- !u!114 &605587500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 605587495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c739babf655648345abd844c2303d030, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentDestination: {x: 0, y: 0, z: 0}
+  Responses:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 605587500}
+        m_MethodName: NewPosition
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  seconds: 1
+  dotproduct: 0
+  maxdelta: 10
+  timer: 0
+  WayPoints: []
+  currentWP: 0
+  nextWP: 0
+  remainingdistance: 0
+  WAYPOINTSTRAVEL: 0
 --- !u!1 &697616871
 GameObject:
   m_ObjectHideFlags: 0
@@ -833,147 +895,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!1001 &707950554
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 114839324261895408, guid: a4ed524e03d6cde4eb113cde07025684,
-        type: 2}
-      propertyPath: WayPoints.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114839324261895408, guid: a4ed524e03d6cde4eb113cde07025684,
-        type: 2}
-      propertyPath: Responses.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4447629627630390, guid: a4ed524e03d6cde4eb113cde07025684, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4447629627630390, guid: a4ed524e03d6cde4eb113cde07025684, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -0.08333333
-      objectReference: {fileID: 0}
-    - target: {fileID: 4447629627630390, guid: a4ed524e03d6cde4eb113cde07025684, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -2.34
-      objectReference: {fileID: 0}
-    - target: {fileID: 4447629627630390, guid: a4ed524e03d6cde4eb113cde07025684, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4447629627630390, guid: a4ed524e03d6cde4eb113cde07025684, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4447629627630390, guid: a4ed524e03d6cde4eb113cde07025684, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4447629627630390, guid: a4ed524e03d6cde4eb113cde07025684, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4447629627630390, guid: a4ed524e03d6cde4eb113cde07025684, type: 2}
-      propertyPath: m_RootOrder
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1295047388284670, guid: a4ed524e03d6cde4eb113cde07025684, type: 2}
-      propertyPath: m_Name
-      value: NPC_Guard (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 114839324261895408, guid: a4ed524e03d6cde4eb113cde07025684,
-        type: 2}
-      propertyPath: Responses.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114839324261895408, guid: a4ed524e03d6cde4eb113cde07025684,
-        type: 2}
-      propertyPath: Responses.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114839324261895408, guid: a4ed524e03d6cde4eb113cde07025684,
-        type: 2}
-      propertyPath: Responses.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1811386238}
-    - target: {fileID: 114839324261895408, guid: a4ed524e03d6cde4eb113cde07025684,
-        type: 2}
-      propertyPath: Responses.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: NewPosition
-      objectReference: {fileID: 0}
-    - target: {fileID: 114839324261895408, guid: a4ed524e03d6cde4eb113cde07025684,
-        type: 2}
-      propertyPath: Responses.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 114839324261895408, guid: a4ed524e03d6cde4eb113cde07025684,
-        type: 2}
-      propertyPath: Responses.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114839324261895408, guid: a4ed524e03d6cde4eb113cde07025684,
-        type: 2}
-      propertyPath: Responses.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114839324261895408, guid: a4ed524e03d6cde4eb113cde07025684,
-        type: 2}
-      propertyPath: Responses.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 1811386238}
-    - target: {fileID: 114839324261895408, guid: a4ed524e03d6cde4eb113cde07025684,
-        type: 2}
-      propertyPath: Responses.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: WaitAndGo
-      objectReference: {fileID: 0}
-    - target: {fileID: 114839324261895408, guid: a4ed524e03d6cde4eb113cde07025684,
-        type: 2}
-      propertyPath: Responses.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 114839324261895408, guid: a4ed524e03d6cde4eb113cde07025684,
-        type: 2}
-      propertyPath: WayPoints.Array.data[0]
-      value: 
-      objectReference: {fileID: 1390682236}
-    - target: {fileID: 114839324261895408, guid: a4ed524e03d6cde4eb113cde07025684,
-        type: 2}
-      propertyPath: WayPoints.Array.data[1]
-      value: 
-      objectReference: {fileID: 869312777}
-    - target: {fileID: 114839324261895408, guid: a4ed524e03d6cde4eb113cde07025684,
-        type: 2}
-      propertyPath: WayPoints.Array.data[2]
-      value: 
-      objectReference: {fileID: 851846086}
-    - target: {fileID: 114839324261895408, guid: a4ed524e03d6cde4eb113cde07025684,
-        type: 2}
-      propertyPath: WayPoints.Array.data[3]
-      value: 
-      objectReference: {fileID: 377381055}
-    - target: {fileID: 114839324261895408, guid: a4ed524e03d6cde4eb113cde07025684,
-        type: 2}
-      propertyPath: WayPoints.Array.data[4]
-      value: 
-      objectReference: {fileID: 1531400772}
-    - target: {fileID: 114839324261895408, guid: a4ed524e03d6cde4eb113cde07025684,
-        type: 2}
-      propertyPath: seconds
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 195737551700509914, guid: a4ed524e03d6cde4eb113cde07025684,
-        type: 2}
-      propertyPath: m_StoppingDistance
-      value: 0.1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: a4ed524e03d6cde4eb113cde07025684, type: 2}
-  m_IsPrefabAsset: 0
 --- !u!1 &851846085
 GameObject:
   m_ObjectHideFlags: 0
@@ -1270,13 +1191,81 @@ RectTransform:
   m_Children:
   - {fileID: 1261290410}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1045325993 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100154, guid: 313c0ab651dee934ba16098914b567f8,
+    type: 3}
+  m_PrefabInternal: {fileID: 1566317400}
+--- !u!195 &1045325994
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1045325993}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &1045325995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1045325993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c739babf655648345abd844c2303d030, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentDestination: {x: 0, y: 0, z: 0}
+  Responses:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1045325995}
+        m_MethodName: NewPosition
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  seconds: 1
+  dotproduct: 0
+  maxdelta: 10
+  timer: 0
+  WayPoints:
+  - {fileID: 1390682236}
+  - {fileID: 869312777}
+  - {fileID: 851846086}
+  - {fileID: 377381055}
+  - {fileID: 1531400772}
+  currentWP: 0
+  nextWP: 0
+  remainingdistance: 0
+  WAYPOINTSTRAVEL: 0
 --- !u!1 &1193614529
 GameObject:
   m_ObjectHideFlags: 0
@@ -1288,6 +1277,7 @@ GameObject:
   - component: {fileID: 1193614533}
   - component: {fileID: 1193614532}
   - component: {fileID: 1193614531}
+  - component: {fileID: 1193614534}
   m_Layer: 5
   m_Name: 2
   m_TagString: Untagged
@@ -1353,7 +1343,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1811386238}
+      - m_Target: {fileID: 0}
         m_MethodName: NewPosition
         m_Mode: 3
         m_Arguments:
@@ -1400,6 +1390,43 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1193614529}
   m_CullTransparentMesh: 0
+--- !u!114 &1193614534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1193614529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c739babf655648345abd844c2303d030, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentDestination: {x: 0, y: 0, z: 0}
+  Responses:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1193614534}
+        m_MethodName: NewPosition
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  seconds: 1
+  dotproduct: 0
+  maxdelta: 10
+  timer: 0
+  WayPoints: []
+  currentWP: 0
+  nextWP: 0
+  remainingdistance: 0
+  WAYPOINTSTRAVEL: 0
 --- !u!1 &1261290409
 GameObject:
   m_ObjectHideFlags: 0
@@ -1647,9 +1674,6 @@ MonoBehaviour:
   - {fileID: 377381054}
   - {fileID: 1531400771}
   npc: {fileID: 505344511}
-  MinVerticalRotation: 0
-  MaxVerticalRotation: 0
-  dirToPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &1526649775
 GameObject:
   m_ObjectHideFlags: 0
@@ -1753,6 +1777,48 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1566317400
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400154, guid: 313c0ab651dee934ba16098914b567f8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400154, guid: 313c0ab651dee934ba16098914b567f8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400154, guid: 313c0ab651dee934ba16098914b567f8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400154, guid: 313c0ab651dee934ba16098914b567f8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400154, guid: 313c0ab651dee934ba16098914b567f8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400154, guid: 313c0ab651dee934ba16098914b567f8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400154, guid: 313c0ab651dee934ba16098914b567f8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400154, guid: 313c0ab651dee934ba16098914b567f8, type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 313c0ab651dee934ba16098914b567f8, type: 3}
+  m_IsPrefabAsset: 0
 --- !u!1 &1768113670
 GameObject:
   m_ObjectHideFlags: 0
@@ -1903,12 +1969,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1802161185}
   m_CullTransparentMesh: 0
---- !u!114 &1811386238 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114839324261895408, guid: a4ed524e03d6cde4eb113cde07025684,
-    type: 2}
-  m_PrefabInternal: {fileID: 707950554}
-  m_Script: {fileID: 11500000, guid: c739babf655648345abd844c2303d030, type: 3}
 --- !u!1 &1839182400
 GameObject:
   m_ObjectHideFlags: 0
@@ -1920,6 +1980,7 @@ GameObject:
   - component: {fileID: 1839182404}
   - component: {fileID: 1839182403}
   - component: {fileID: 1839182402}
+  - component: {fileID: 1839182405}
   m_Layer: 5
   m_Name: 4
   m_TagString: Untagged
@@ -1985,7 +2046,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1811386238}
+      - m_Target: {fileID: 0}
         m_MethodName: NewPosition
         m_Mode: 3
         m_Arguments:
@@ -2032,6 +2093,43 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1839182400}
   m_CullTransparentMesh: 0
+--- !u!114 &1839182405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1839182400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c739babf655648345abd844c2303d030, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentDestination: {x: 0, y: 0, z: 0}
+  Responses:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1839182405}
+        m_MethodName: NewPosition
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  seconds: 1
+  dotproduct: 0
+  maxdelta: 10
+  timer: 0
+  WayPoints: []
+  currentWP: 0
+  nextWP: 0
+  remainingdistance: 0
+  WAYPOINTSTRAVEL: 0
 --- !u!1 &1989870239
 GameObject:
   m_ObjectHideFlags: 0
@@ -2043,6 +2141,7 @@ GameObject:
   - component: {fileID: 1989870243}
   - component: {fileID: 1989870242}
   - component: {fileID: 1989870241}
+  - component: {fileID: 1989870244}
   m_Layer: 5
   m_Name: 0
   m_TagString: Untagged
@@ -2108,7 +2207,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1811386238}
+      - m_Target: {fileID: 0}
         m_MethodName: NewPosition
         m_Mode: 3
         m_Arguments:
@@ -2155,3 +2254,40 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1989870239}
   m_CullTransparentMesh: 0
+--- !u!114 &1989870244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1989870239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c739babf655648345abd844c2303d030, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentDestination: {x: 0, y: 0, z: 0}
+  Responses:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1989870244}
+        m_MethodName: NewPosition
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  seconds: 1
+  dotproduct: 0
+  maxdelta: 10
+  timer: 0
+  WayPoints: []
+  currentWP: 0
+  nextWP: 0
+  remainingdistance: 0
+  WAYPOINTSTRAVEL: 0

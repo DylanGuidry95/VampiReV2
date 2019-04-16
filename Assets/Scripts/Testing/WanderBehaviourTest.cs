@@ -9,10 +9,9 @@ namespace Assets.Scripts.Matt
         private NavMeshAgent _navMeshAgent;
         public Vector3 currentDestination;
         public UnityEngine.Events.UnityEvent Responses;
-        public int seconds = 6;
+        public int seconds = 1;
 
 
-        public bool work = true;
         public float dotproduct;
         public float maxdelta = 10;
         private Vector3 targetdir;
@@ -27,7 +26,7 @@ namespace Assets.Scripts.Matt
         {
             _navMeshAgent = GetComponent<NavMeshAgent>();
             targetdir = transform.forward;
-            currentWP = Random.Range(0, WayPoints.Count + 1);
+            currentWP = Random.Range(0, WayPoints.Count);
             StartCoroutine("PatrolRoutine");
         }
 
@@ -37,7 +36,7 @@ namespace Assets.Scripts.Matt
             while (true)
             {
                 Responses.Invoke();
-                if(WAYPOINTSTRAVEL)
+                if (WAYPOINTSTRAVEL)
                     yield return StartCoroutine("SearchRoutine");
                 yield return null;
             }
@@ -57,14 +56,12 @@ namespace Assets.Scripts.Matt
             targetdir = Vector3.ProjectOnPlane(currentDestination - transform.position, Vector3.up);
             while (Quaternion.Dot(transform.rotation, Quaternion.LookRotation(targetdir)) < 1)
             {
+                WAYPOINTSTRAVEL = true;
                 transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(targetdir), maxdelta);
                 yield return null;
             }
-
             yield return new WaitForSeconds(seconds);
-
             _navMeshAgent.SetDestination(currentDestination);
-
 
         }
         public void Test()
@@ -74,25 +71,36 @@ namespace Assets.Scripts.Matt
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit))
             {
-
                 StartCoroutine("UpdateRotation", hit.point);
             }
         }
 
         public void NewPosition(int index)
         {
+            index = currentWP;
             StartCoroutine("UpdateRotation", WayPoints[index].position);
         }
 
         public IEnumerator SearchRoutine()
         {
+            WAYPOINTSTRAVEL = false;
             remainingdistance = Vector3.Distance(transform.position, currentDestination);
             //if you are close and not already searching then find a new point
-            if (_navMeshAgent.remainingDistance < _navMeshAgent.stoppingDistance)
+            if (_navMeshAgent.stoppingDistance < _navMeshAgent.remainingDistance)
+            {
+                var randomindex = Random.Range(0, WayPoints.Count);
+
+                if (currentWP == randomindex)
+                {
+                    randomindex = Random.Range(0, WayPoints.Count);
+                }
+                currentWP = randomindex;
+                yield return StartCoroutine("UpdateRotation", WayPoints[randomindex].position);
+            }
+            else
             {
                 var randomindex = Random.Range(0, 4);
                 yield return StartCoroutine("UpdateRotation", WayPoints[randomindex].position);
-                //NewPosition(randomindex);
             }
             yield return null;
         }
