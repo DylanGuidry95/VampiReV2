@@ -21,7 +21,10 @@ public class GrabbableBehaviour : MonoBehaviour
 		public virtual void Grabbed(GrabBehaviour grabber = null)
 		{						
 			GetComponent<Rigidbody>().useGravity = false;			
-			GetComponent<Rigidbody>().isKinematic = false;			
+			GetComponent<Rigidbody>().isKinematic = false;
+			GetComponent<Rigidbody>().velocity = Vector3.zero;
+			GetComponent<Rigidbody>().Sleep();
+			GetComponent<Rigidbody>().WakeUp();
 		}	
 
 		public virtual void LetGo(Vector3 travelVelocity, GrabBehaviour grabber = null)
