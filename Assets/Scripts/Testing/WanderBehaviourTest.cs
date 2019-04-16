@@ -9,7 +9,8 @@ namespace Assets.Scripts.Matt
         private NavMeshAgent _navMeshAgent;
         public Vector3 currentDestination;
         public UnityEngine.Events.UnityEvent Responses;
-        public int seconds = 1;
+        public int seconds = 6;
+        public float secondsToWalk = 3.5f;
 
 
         public float dotproduct;
@@ -62,7 +63,7 @@ namespace Assets.Scripts.Matt
             }
             yield return new WaitForSeconds(seconds);
             _navMeshAgent.SetDestination(currentDestination);
-            yield return new WaitForSeconds(3);
+            yield return new WaitForSeconds(secondsToWalk);
 
         }
         public void Test()
@@ -107,7 +108,6 @@ namespace Assets.Scripts.Matt
                     randomindex = Random.Range(0, WayPoints.Count);
                 }
                 currentWP = randomindex;
-
                 yield return StartCoroutine("UpdateRotation", WayPoints[randomindex].position);
             }
             yield return null;
