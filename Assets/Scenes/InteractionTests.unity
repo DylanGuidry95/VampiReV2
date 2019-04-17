@@ -216,6 +216,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceBack: 1
+  OnObstacleCollisionEnter: {fileID: 11400000, guid: 726ceaa1ffb903143ab34b368340f82e,
+    type: 2}
+  OnObstacleCollisionExit: {fileID: 11400000, guid: e1ed15280abdd654d9745bd448dfa0d8,
+    type: 2}
 --- !u!1 &20630146
 GameObject:
   m_ObjectHideFlags: 0
@@ -319,6 +323,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceBack: 1
+  OnObstacleCollisionEnter: {fileID: 11400000, guid: 726ceaa1ffb903143ab34b368340f82e,
+    type: 2}
+  OnObstacleCollisionExit: {fileID: 11400000, guid: e1ed15280abdd654d9745bd448dfa0d8,
+    type: 2}
 --- !u!1 &21747067
 GameObject:
   m_ObjectHideFlags: 0
@@ -422,6 +430,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceBack: 1
+  OnObstacleCollisionEnter: {fileID: 11400000, guid: 726ceaa1ffb903143ab34b368340f82e,
+    type: 2}
+  OnObstacleCollisionExit: {fileID: 11400000, guid: e1ed15280abdd654d9745bd448dfa0d8,
+    type: 2}
 --- !u!1 &24239140
 GameObject:
   m_ObjectHideFlags: 0
@@ -525,6 +537,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceBack: 1
+  OnObstacleCollisionEnter: {fileID: 11400000, guid: 726ceaa1ffb903143ab34b368340f82e,
+    type: 2}
+  OnObstacleCollisionExit: {fileID: 11400000, guid: e1ed15280abdd654d9745bd448dfa0d8,
+    type: 2}
 --- !u!1 &29282805
 GameObject:
   m_ObjectHideFlags: 0
@@ -980,6 +996,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceBack: 1
+  OnObstacleCollisionEnter: {fileID: 11400000, guid: 726ceaa1ffb903143ab34b368340f82e,
+    type: 2}
+  OnObstacleCollisionExit: {fileID: 11400000, guid: e1ed15280abdd654d9745bd448dfa0d8,
+    type: 2}
 --- !u!1 &58386989
 GameObject:
   m_ObjectHideFlags: 0
@@ -1083,6 +1103,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceBack: 1
+  OnObstacleCollisionEnter: {fileID: 11400000, guid: 726ceaa1ffb903143ab34b368340f82e,
+    type: 2}
+  OnObstacleCollisionExit: {fileID: 11400000, guid: e1ed15280abdd654d9745bd448dfa0d8,
+    type: 2}
 --- !u!1 &83334881
 GameObject:
   m_ObjectHideFlags: 0
@@ -1587,6 +1611,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceBack: 1
+  OnObstacleCollisionEnter: {fileID: 11400000, guid: 726ceaa1ffb903143ab34b368340f82e,
+    type: 2}
+  OnObstacleCollisionExit: {fileID: 11400000, guid: e1ed15280abdd654d9745bd448dfa0d8,
+    type: 2}
 --- !u!1 &148038342
 GameObject:
   m_ObjectHideFlags: 0
@@ -1856,6 +1884,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceBack: 1
+  OnObstacleCollisionEnter: {fileID: 11400000, guid: 726ceaa1ffb903143ab34b368340f82e,
+    type: 2}
+  OnObstacleCollisionExit: {fileID: 11400000, guid: e1ed15280abdd654d9745bd448dfa0d8,
+    type: 2}
 --- !u!1 &156035724
 GameObject:
   m_ObjectHideFlags: 0
@@ -2035,6 +2067,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceBack: 1
+  OnObstacleCollisionEnter: {fileID: 11400000, guid: 726ceaa1ffb903143ab34b368340f82e,
+    type: 2}
+  OnObstacleCollisionExit: {fileID: 11400000, guid: e1ed15280abdd654d9745bd448dfa0d8,
+    type: 2}
 --- !u!1 &191328628
 GameObject:
   m_ObjectHideFlags: 0
@@ -2185,6 +2221,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceBack: 1
+  OnObstacleCollisionEnter: {fileID: 11400000, guid: 726ceaa1ffb903143ab34b368340f82e,
+    type: 2}
+  OnObstacleCollisionExit: {fileID: 11400000, guid: e1ed15280abdd654d9745bd448dfa0d8,
+    type: 2}
 --- !u!1 &194893002
 GameObject:
   m_ObjectHideFlags: 0
@@ -2690,6 +2730,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceBack: 1
+  OnObstacleCollisionEnter: {fileID: 11400000, guid: 726ceaa1ffb903143ab34b368340f82e,
+    type: 2}
+  OnObstacleCollisionExit: {fileID: 11400000, guid: e1ed15280abdd654d9745bd448dfa0d8,
+    type: 2}
 --- !u!1 &272503081
 GameObject:
   m_ObjectHideFlags: 0
@@ -2840,6 +2884,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceBack: 1
+  OnObstacleCollisionEnter: {fileID: 11400000, guid: 726ceaa1ffb903143ab34b368340f82e,
+    type: 2}
+  OnObstacleCollisionExit: {fileID: 11400000, guid: e1ed15280abdd654d9745bd448dfa0d8,
+    type: 2}
 --- !u!1 &284602511
 GameObject:
   m_ObjectHideFlags: 0
@@ -3111,6 +3159,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceBack: 1
+  OnObstacleCollisionEnter: {fileID: 11400000, guid: 726ceaa1ffb903143ab34b368340f82e,
+    type: 2}
+  OnObstacleCollisionExit: {fileID: 11400000, guid: e1ed15280abdd654d9745bd448dfa0d8,
+    type: 2}
 --- !u!1 &313244006
 GameObject:
   m_ObjectHideFlags: 0
@@ -3187,6 +3239,11 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 313244006}
   m_Mesh: {fileID: 4300000, guid: 2d6b2d29b6119584980103685cc089d2, type: 3}
+--- !u!1 &314133214 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1609501759616410, guid: 2e232090c400a894784f0dee0a9e17b2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1885568488}
 --- !u!1 &314456256
 GameObject:
   m_ObjectHideFlags: 0
@@ -3322,6 +3379,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceBack: 1
+  OnObstacleCollisionEnter: {fileID: 11400000, guid: 726ceaa1ffb903143ab34b368340f82e,
+    type: 2}
+  OnObstacleCollisionExit: {fileID: 11400000, guid: e1ed15280abdd654d9745bd448dfa0d8,
+    type: 2}
 --- !u!1 &342521603
 GameObject:
   m_ObjectHideFlags: 0
@@ -4218,6 +4279,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceBack: 1
+  OnObstacleCollisionEnter: {fileID: 11400000, guid: 726ceaa1ffb903143ab34b368340f82e,
+    type: 2}
+  OnObstacleCollisionExit: {fileID: 11400000, guid: e1ed15280abdd654d9745bd448dfa0d8,
+    type: 2}
 --- !u!1 &467498909
 GameObject:
   m_ObjectHideFlags: 0
@@ -4321,6 +4386,95 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceBack: 1
+  OnObstacleCollisionEnter: {fileID: 11400000, guid: 726ceaa1ffb903143ab34b368340f82e,
+    type: 2}
+  OnObstacleCollisionExit: {fileID: 11400000, guid: e1ed15280abdd654d9745bd448dfa0d8,
+    type: 2}
+--- !u!1 &475894658 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1936886232634380, guid: 2e232090c400a894784f0dee0a9e17b2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1885568488}
+--- !u!114 &475894662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 475894658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3c662113df7858499848b3c4bdded4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: e1ed15280abdd654d9745bd448dfa0d8, type: 2}
+  Notes: 
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1679432335}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 314133214}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &475894663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 475894658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3c662113df7858499848b3c4bdded4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 726ceaa1ffb903143ab34b368340f82e, type: 2}
+  Notes: 
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1679432335}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 314133214}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &480943482
 GameObject:
   m_ObjectHideFlags: 0
@@ -4556,6 +4710,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceBack: 1
+  OnObstacleCollisionEnter: {fileID: 11400000, guid: 726ceaa1ffb903143ab34b368340f82e,
+    type: 2}
+  OnObstacleCollisionExit: {fileID: 11400000, guid: e1ed15280abdd654d9745bd448dfa0d8,
+    type: 2}
 --- !u!1 &516840120
 GameObject:
   m_ObjectHideFlags: 0
@@ -4735,6 +4893,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceBack: 1
+  OnObstacleCollisionEnter: {fileID: 11400000, guid: 726ceaa1ffb903143ab34b368340f82e,
+    type: 2}
+  OnObstacleCollisionExit: {fileID: 11400000, guid: e1ed15280abdd654d9745bd448dfa0d8,
+    type: 2}
 --- !u!1 &520650001
 GameObject:
   m_ObjectHideFlags: 0
@@ -4914,6 +5076,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceBack: 1
+  OnObstacleCollisionEnter: {fileID: 11400000, guid: 726ceaa1ffb903143ab34b368340f82e,
+    type: 2}
+  OnObstacleCollisionExit: {fileID: 11400000, guid: e1ed15280abdd654d9745bd448dfa0d8,
+    type: 2}
 --- !u!1 &529968871
 GameObject:
   m_ObjectHideFlags: 0
@@ -5263,6 +5429,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceBack: 1
+  OnObstacleCollisionEnter: {fileID: 11400000, guid: 726ceaa1ffb903143ab34b368340f82e,
+    type: 2}
+  OnObstacleCollisionExit: {fileID: 11400000, guid: e1ed15280abdd654d9745bd448dfa0d8,
+    type: 2}
 --- !u!1 &595993992
 GameObject:
   m_ObjectHideFlags: 0
@@ -5366,6 +5536,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceBack: 1
+  OnObstacleCollisionEnter: {fileID: 11400000, guid: 726ceaa1ffb903143ab34b368340f82e,
+    type: 2}
+  OnObstacleCollisionExit: {fileID: 11400000, guid: e1ed15280abdd654d9745bd448dfa0d8,
+    type: 2}
 --- !u!1 &603868154
 GameObject:
   m_ObjectHideFlags: 0
@@ -5469,6 +5643,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceBack: 1
+  OnObstacleCollisionEnter: {fileID: 11400000, guid: 726ceaa1ffb903143ab34b368340f82e,
+    type: 2}
+  OnObstacleCollisionExit: {fileID: 11400000, guid: e1ed15280abdd654d9745bd448dfa0d8,
+    type: 2}
 --- !u!1 &604912208
 GameObject:
   m_ObjectHideFlags: 0
@@ -5758,6 +5936,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceBack: 1
+  OnObstacleCollisionEnter: {fileID: 11400000, guid: 726ceaa1ffb903143ab34b368340f82e,
+    type: 2}
+  OnObstacleCollisionExit: {fileID: 11400000, guid: e1ed15280abdd654d9745bd448dfa0d8,
+    type: 2}
 --- !u!1 &617155096
 GameObject:
   m_ObjectHideFlags: 0
@@ -5861,6 +6043,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceBack: 1
+  OnObstacleCollisionEnter: {fileID: 11400000, guid: 726ceaa1ffb903143ab34b368340f82e,
+    type: 2}
+  OnObstacleCollisionExit: {fileID: 11400000, guid: e1ed15280abdd654d9745bd448dfa0d8,
+    type: 2}
 --- !u!1 &659655808
 GameObject:
   m_ObjectHideFlags: 0
@@ -5964,6 +6150,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceBack: 1
+  OnObstacleCollisionEnter: {fileID: 11400000, guid: 726ceaa1ffb903143ab34b368340f82e,
+    type: 2}
+  OnObstacleCollisionExit: {fileID: 11400000, guid: e1ed15280abdd654d9745bd448dfa0d8,
+    type: 2}
 --- !u!1 &668515189
 GameObject:
   m_ObjectHideFlags: 0
@@ -6143,6 +6333,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceBack: 1
+  OnObstacleCollisionEnter: {fileID: 11400000, guid: 726ceaa1ffb903143ab34b368340f82e,
+    type: 2}
+  OnObstacleCollisionExit: {fileID: 11400000, guid: e1ed15280abdd654d9745bd448dfa0d8,
+    type: 2}
 --- !u!1 &721746032
 GameObject:
   m_ObjectHideFlags: 0
@@ -6322,6 +6516,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceBack: 1
+  OnObstacleCollisionEnter: {fileID: 11400000, guid: 726ceaa1ffb903143ab34b368340f82e,
+    type: 2}
+  OnObstacleCollisionExit: {fileID: 11400000, guid: e1ed15280abdd654d9745bd448dfa0d8,
+    type: 2}
 --- !u!1 &730899205
 GameObject:
   m_ObjectHideFlags: 0
@@ -6517,6 +6715,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceBack: 1
+  OnObstacleCollisionEnter: {fileID: 11400000, guid: 726ceaa1ffb903143ab34b368340f82e,
+    type: 2}
+  OnObstacleCollisionExit: {fileID: 11400000, guid: e1ed15280abdd654d9745bd448dfa0d8,
+    type: 2}
 --- !u!1 &737852747
 GameObject:
   m_ObjectHideFlags: 0
@@ -6620,6 +6822,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceBack: 1
+  OnObstacleCollisionEnter: {fileID: 11400000, guid: 726ceaa1ffb903143ab34b368340f82e,
+    type: 2}
+  OnObstacleCollisionExit: {fileID: 11400000, guid: e1ed15280abdd654d9745bd448dfa0d8,
+    type: 2}
 --- !u!1 &743126945
 GameObject:
   m_ObjectHideFlags: 0
@@ -6723,6 +6929,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceBack: 1
+  OnObstacleCollisionEnter: {fileID: 11400000, guid: 726ceaa1ffb903143ab34b368340f82e,
+    type: 2}
+  OnObstacleCollisionExit: {fileID: 11400000, guid: e1ed15280abdd654d9745bd448dfa0d8,
+    type: 2}
 --- !u!1 &766319877
 GameObject:
   m_ObjectHideFlags: 0
@@ -6902,6 +7112,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceBack: 1
+  OnObstacleCollisionEnter: {fileID: 11400000, guid: 726ceaa1ffb903143ab34b368340f82e,
+    type: 2}
+  OnObstacleCollisionExit: {fileID: 11400000, guid: e1ed15280abdd654d9745bd448dfa0d8,
+    type: 2}
 --- !u!1 &778637431
 GameObject:
   m_ObjectHideFlags: 0
@@ -7817,6 +8031,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceBack: 1
+  OnObstacleCollisionEnter: {fileID: 11400000, guid: 726ceaa1ffb903143ab34b368340f82e,
+    type: 2}
+  OnObstacleCollisionExit: {fileID: 11400000, guid: e1ed15280abdd654d9745bd448dfa0d8,
+    type: 2}
 --- !u!1 &842873663
 GameObject:
   m_ObjectHideFlags: 0
@@ -8162,6 +8380,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceBack: 1
+  OnObstacleCollisionEnter: {fileID: 11400000, guid: 726ceaa1ffb903143ab34b368340f82e,
+    type: 2}
+  OnObstacleCollisionExit: {fileID: 11400000, guid: e1ed15280abdd654d9745bd448dfa0d8,
+    type: 2}
 --- !u!1 &864032148
 GameObject:
   m_ObjectHideFlags: 0
@@ -8532,6 +8754,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceBack: 1
+  OnObstacleCollisionEnter: {fileID: 11400000, guid: 726ceaa1ffb903143ab34b368340f82e,
+    type: 2}
+  OnObstacleCollisionExit: {fileID: 11400000, guid: e1ed15280abdd654d9745bd448dfa0d8,
+    type: 2}
 --- !u!1 &946960949
 GameObject:
   m_ObjectHideFlags: 0
@@ -8863,6 +9089,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceBack: 1
+  OnObstacleCollisionEnter: {fileID: 11400000, guid: 726ceaa1ffb903143ab34b368340f82e,
+    type: 2}
+  OnObstacleCollisionExit: {fileID: 11400000, guid: e1ed15280abdd654d9745bd448dfa0d8,
+    type: 2}
 --- !u!1 &995126843
 GameObject:
   m_ObjectHideFlags: 0
@@ -9042,6 +9272,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceBack: 1
+  OnObstacleCollisionEnter: {fileID: 11400000, guid: 726ceaa1ffb903143ab34b368340f82e,
+    type: 2}
+  OnObstacleCollisionExit: {fileID: 11400000, guid: e1ed15280abdd654d9745bd448dfa0d8,
+    type: 2}
 --- !u!1 &1002641572
 GameObject:
   m_ObjectHideFlags: 0
@@ -9297,6 +9531,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceBack: 1
+  OnObstacleCollisionEnter: {fileID: 11400000, guid: 726ceaa1ffb903143ab34b368340f82e,
+    type: 2}
+  OnObstacleCollisionExit: {fileID: 11400000, guid: e1ed15280abdd654d9745bd448dfa0d8,
+    type: 2}
 --- !u!1 &1030433319
 GameObject:
   m_ObjectHideFlags: 0
@@ -9552,6 +9790,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceBack: 1
+  OnObstacleCollisionEnter: {fileID: 11400000, guid: 726ceaa1ffb903143ab34b368340f82e,
+    type: 2}
+  OnObstacleCollisionExit: {fileID: 11400000, guid: e1ed15280abdd654d9745bd448dfa0d8,
+    type: 2}
 --- !u!1 &1053006512
 GameObject:
   m_ObjectHideFlags: 0
@@ -9655,6 +9897,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceBack: 1
+  OnObstacleCollisionEnter: {fileID: 11400000, guid: 726ceaa1ffb903143ab34b368340f82e,
+    type: 2}
+  OnObstacleCollisionExit: {fileID: 11400000, guid: e1ed15280abdd654d9745bd448dfa0d8,
+    type: 2}
 --- !u!1 &1070682964
 GameObject:
   m_ObjectHideFlags: 0
@@ -10018,6 +10264,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceBack: 1
+  OnObstacleCollisionEnter: {fileID: 11400000, guid: 726ceaa1ffb903143ab34b368340f82e,
+    type: 2}
+  OnObstacleCollisionExit: {fileID: 11400000, guid: e1ed15280abdd654d9745bd448dfa0d8,
+    type: 2}
 --- !u!1 &1101875714
 GameObject:
   m_ObjectHideFlags: 0
@@ -10121,6 +10371,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceBack: 1
+  OnObstacleCollisionEnter: {fileID: 11400000, guid: 726ceaa1ffb903143ab34b368340f82e,
+    type: 2}
+  OnObstacleCollisionExit: {fileID: 11400000, guid: e1ed15280abdd654d9745bd448dfa0d8,
+    type: 2}
 --- !u!1 &1132923146
 GameObject:
   m_ObjectHideFlags: 0
@@ -10300,6 +10554,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceBack: 1
+  OnObstacleCollisionEnter: {fileID: 11400000, guid: 726ceaa1ffb903143ab34b368340f82e,
+    type: 2}
+  OnObstacleCollisionExit: {fileID: 11400000, guid: e1ed15280abdd654d9745bd448dfa0d8,
+    type: 2}
 --- !u!1 &1160430802
 GameObject:
   m_ObjectHideFlags: 0
@@ -10403,6 +10661,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceBack: 1
+  OnObstacleCollisionEnter: {fileID: 11400000, guid: 726ceaa1ffb903143ab34b368340f82e,
+    type: 2}
+  OnObstacleCollisionExit: {fileID: 11400000, guid: e1ed15280abdd654d9745bd448dfa0d8,
+    type: 2}
 --- !u!1 &1164252311
 GameObject:
   m_ObjectHideFlags: 0
@@ -10837,6 +11099,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceBack: 1
+  OnObstacleCollisionEnter: {fileID: 11400000, guid: 726ceaa1ffb903143ab34b368340f82e,
+    type: 2}
+  OnObstacleCollisionExit: {fileID: 11400000, guid: e1ed15280abdd654d9745bd448dfa0d8,
+    type: 2}
 --- !u!1 &1222370148
 GameObject:
   m_ObjectHideFlags: 0
@@ -10987,6 +11253,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceBack: 1
+  OnObstacleCollisionEnter: {fileID: 11400000, guid: 726ceaa1ffb903143ab34b368340f82e,
+    type: 2}
+  OnObstacleCollisionExit: {fileID: 11400000, guid: e1ed15280abdd654d9745bd448dfa0d8,
+    type: 2}
 --- !u!1 &1260573998
 GameObject:
   m_ObjectHideFlags: 0
@@ -11557,6 +11827,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceBack: 1
+  OnObstacleCollisionEnter: {fileID: 11400000, guid: 726ceaa1ffb903143ab34b368340f82e,
+    type: 2}
+  OnObstacleCollisionExit: {fileID: 11400000, guid: e1ed15280abdd654d9745bd448dfa0d8,
+    type: 2}
 --- !u!1 &1305155868
 GameObject:
   m_ObjectHideFlags: 0
@@ -12016,6 +12290,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceBack: 1
+  OnObstacleCollisionEnter: {fileID: 11400000, guid: 726ceaa1ffb903143ab34b368340f82e,
+    type: 2}
+  OnObstacleCollisionExit: {fileID: 11400000, guid: e1ed15280abdd654d9745bd448dfa0d8,
+    type: 2}
 --- !u!1 &1380486568
 GameObject:
   m_ObjectHideFlags: 0
@@ -12285,6 +12563,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceBack: 1
+  OnObstacleCollisionEnter: {fileID: 11400000, guid: 726ceaa1ffb903143ab34b368340f82e,
+    type: 2}
+  OnObstacleCollisionExit: {fileID: 11400000, guid: e1ed15280abdd654d9745bd448dfa0d8,
+    type: 2}
 --- !u!1 &1399976849
 GameObject:
   m_ObjectHideFlags: 0
@@ -12482,6 +12764,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceBack: 1
+  OnObstacleCollisionEnter: {fileID: 11400000, guid: 726ceaa1ffb903143ab34b368340f82e,
+    type: 2}
+  OnObstacleCollisionExit: {fileID: 11400000, guid: e1ed15280abdd654d9745bd448dfa0d8,
+    type: 2}
 --- !u!1 &1420760883
 GameObject:
   m_ObjectHideFlags: 0
@@ -12771,6 +13057,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceBack: 1
+  OnObstacleCollisionEnter: {fileID: 11400000, guid: 726ceaa1ffb903143ab34b368340f82e,
+    type: 2}
+  OnObstacleCollisionExit: {fileID: 11400000, guid: e1ed15280abdd654d9745bd448dfa0d8,
+    type: 2}
 --- !u!1 &1461291620
 GameObject:
   m_ObjectHideFlags: 0
@@ -13067,6 +13357,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceBack: 1
+  OnObstacleCollisionEnter: {fileID: 11400000, guid: 726ceaa1ffb903143ab34b368340f82e,
+    type: 2}
+  OnObstacleCollisionExit: {fileID: 11400000, guid: e1ed15280abdd654d9745bd448dfa0d8,
+    type: 2}
 --- !u!1 &1465706567
 GameObject:
   m_ObjectHideFlags: 0
@@ -13369,6 +13663,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceBack: 1
+  OnObstacleCollisionEnter: {fileID: 11400000, guid: 726ceaa1ffb903143ab34b368340f82e,
+    type: 2}
+  OnObstacleCollisionExit: {fileID: 11400000, guid: e1ed15280abdd654d9745bd448dfa0d8,
+    type: 2}
 --- !u!1 &1526378009
 GameObject:
   m_ObjectHideFlags: 0
@@ -13585,6 +13883,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceBack: 1
+  OnObstacleCollisionEnter: {fileID: 11400000, guid: 726ceaa1ffb903143ab34b368340f82e,
+    type: 2}
+  OnObstacleCollisionExit: {fileID: 11400000, guid: e1ed15280abdd654d9745bd448dfa0d8,
+    type: 2}
 --- !u!1 &1544146120
 GameObject:
   m_ObjectHideFlags: 0
@@ -14068,6 +14370,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceBack: 1
+  OnObstacleCollisionEnter: {fileID: 11400000, guid: 726ceaa1ffb903143ab34b368340f82e,
+    type: 2}
+  OnObstacleCollisionExit: {fileID: 11400000, guid: e1ed15280abdd654d9745bd448dfa0d8,
+    type: 2}
 --- !u!1 &1586062527
 GameObject:
   m_ObjectHideFlags: 0
@@ -14171,6 +14477,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceBack: 1
+  OnObstacleCollisionEnter: {fileID: 11400000, guid: 726ceaa1ffb903143ab34b368340f82e,
+    type: 2}
+  OnObstacleCollisionExit: {fileID: 11400000, guid: e1ed15280abdd654d9745bd448dfa0d8,
+    type: 2}
 --- !u!1 &1593568101
 GameObject:
   m_ObjectHideFlags: 0
@@ -14412,6 +14722,11 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1671256702}
   m_Mesh: {fileID: 4300000, guid: 2d6b2d29b6119584980103685cc089d2, type: 3}
+--- !u!1 &1679432335 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1681655927375192, guid: 2e232090c400a894784f0dee0a9e17b2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1885568488}
 --- !u!1 &1679510679
 GameObject:
   m_ObjectHideFlags: 0
@@ -14667,6 +14982,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceBack: 1
+  OnObstacleCollisionEnter: {fileID: 11400000, guid: 726ceaa1ffb903143ab34b368340f82e,
+    type: 2}
+  OnObstacleCollisionExit: {fileID: 11400000, guid: e1ed15280abdd654d9745bd448dfa0d8,
+    type: 2}
 --- !u!1 &1716783734
 GameObject:
   m_ObjectHideFlags: 0
@@ -15093,6 +15412,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceBack: 1
+  OnObstacleCollisionEnter: {fileID: 11400000, guid: 726ceaa1ffb903143ab34b368340f82e,
+    type: 2}
+  OnObstacleCollisionExit: {fileID: 11400000, guid: e1ed15280abdd654d9745bd448dfa0d8,
+    type: 2}
 --- !u!1 &1743665148
 GameObject:
   m_ObjectHideFlags: 0
@@ -15228,6 +15551,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceBack: 1
+  OnObstacleCollisionEnter: {fileID: 11400000, guid: 726ceaa1ffb903143ab34b368340f82e,
+    type: 2}
+  OnObstacleCollisionExit: {fileID: 11400000, guid: e1ed15280abdd654d9745bd448dfa0d8,
+    type: 2}
 --- !u!1 &1790825551
 GameObject:
   m_ObjectHideFlags: 0
@@ -15407,43 +15734,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceBack: 1
---- !u!1 &1794129881 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1029687005977074, guid: 2e232090c400a894784f0dee0a9e17b2,
+  OnObstacleCollisionEnter: {fileID: 11400000, guid: 726ceaa1ffb903143ab34b368340f82e,
     type: 2}
-  m_PrefabInternal: {fileID: 1885568488}
+  OnObstacleCollisionExit: {fileID: 11400000, guid: e1ed15280abdd654d9745bd448dfa0d8,
+    type: 2}
 --- !u!4 &1794129882 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4527084901539614, guid: 2e232090c400a894784f0dee0a9e17b2,
     type: 2}
   m_PrefabInternal: {fileID: 1885568488}
---- !u!135 &1794129883
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1794129881}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &1794129884
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1794129881}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &1813305922
 GameObject:
   m_ObjectHideFlags: 0
@@ -15791,6 +16090,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceBack: 1
+  OnObstacleCollisionEnter: {fileID: 11400000, guid: 726ceaa1ffb903143ab34b368340f82e,
+    type: 2}
+  OnObstacleCollisionExit: {fileID: 11400000, guid: e1ed15280abdd654d9745bd448dfa0d8,
+    type: 2}
 --- !u!1 &1825576096
 GameObject:
   m_ObjectHideFlags: 0
@@ -16304,6 +16607,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceBack: 1
+  OnObstacleCollisionEnter: {fileID: 11400000, guid: 726ceaa1ffb903143ab34b368340f82e,
+    type: 2}
+  OnObstacleCollisionExit: {fileID: 11400000, guid: e1ed15280abdd654d9745bd448dfa0d8,
+    type: 2}
 --- !u!1 &1852196810
 GameObject:
   m_ObjectHideFlags: 0
@@ -16520,6 +16827,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceBack: 1
+  OnObstacleCollisionEnter: {fileID: 11400000, guid: 726ceaa1ffb903143ab34b368340f82e,
+    type: 2}
+  OnObstacleCollisionExit: {fileID: 11400000, guid: e1ed15280abdd654d9745bd448dfa0d8,
+    type: 2}
 --- !u!1 &1866206615
 GameObject:
   m_ObjectHideFlags: 0
@@ -16871,11 +17182,43 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1881705832}
   m_Mesh: {fileID: 4300002, guid: ef1b913816bde4e4fa0162ee1df287a7, type: 3}
+--- !u!1 &1885205300 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1855650089683978, guid: 2e232090c400a894784f0dee0a9e17b2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1885568488}
 --- !u!4 &1885205301 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4556270492707188, guid: 2e232090c400a894784f0dee0a9e17b2,
     type: 2}
   m_PrefabInternal: {fileID: 1885568488}
+--- !u!135 &1885205302
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1885205300}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &1885205303
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1885205300}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!1001 &1885568488
 Prefab:
   m_ObjectHideFlags: 0
@@ -16915,7 +17258,13 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 1936886232634380, guid: 2e232090c400a894784f0dee0a9e17b2, type: 2}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 54180306959184796, guid: 2e232090c400a894784f0dee0a9e17b2, type: 2}
+    - {fileID: 136491915041652452, guid: 2e232090c400a894784f0dee0a9e17b2, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 2e232090c400a894784f0dee0a9e17b2, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &1891324465
@@ -17021,6 +17370,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceBack: 1
+  OnObstacleCollisionEnter: {fileID: 11400000, guid: 726ceaa1ffb903143ab34b368340f82e,
+    type: 2}
+  OnObstacleCollisionExit: {fileID: 11400000, guid: e1ed15280abdd654d9745bd448dfa0d8,
+    type: 2}
 --- !u!1 &1906776451
 GameObject:
   m_ObjectHideFlags: 0
@@ -17124,6 +17477,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceBack: 1
+  OnObstacleCollisionEnter: {fileID: 11400000, guid: 726ceaa1ffb903143ab34b368340f82e,
+    type: 2}
+  OnObstacleCollisionExit: {fileID: 11400000, guid: e1ed15280abdd654d9745bd448dfa0d8,
+    type: 2}
 --- !u!1 &1939068852
 GameObject:
   m_ObjectHideFlags: 0
@@ -17395,6 +17752,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceBack: 1
+  OnObstacleCollisionEnter: {fileID: 11400000, guid: 726ceaa1ffb903143ab34b368340f82e,
+    type: 2}
+  OnObstacleCollisionExit: {fileID: 11400000, guid: e1ed15280abdd654d9745bd448dfa0d8,
+    type: 2}
 --- !u!1 &1982462410
 GameObject:
   m_ObjectHideFlags: 0
@@ -17878,6 +18239,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceBack: 1
+  OnObstacleCollisionEnter: {fileID: 11400000, guid: 726ceaa1ffb903143ab34b368340f82e,
+    type: 2}
+  OnObstacleCollisionExit: {fileID: 11400000, guid: e1ed15280abdd654d9745bd448dfa0d8,
+    type: 2}
 --- !u!1 &2061061913
 GameObject:
   m_ObjectHideFlags: 0
@@ -18069,6 +18434,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceBack: 1
+  OnObstacleCollisionEnter: {fileID: 11400000, guid: 726ceaa1ffb903143ab34b368340f82e,
+    type: 2}
+  OnObstacleCollisionExit: {fileID: 11400000, guid: e1ed15280abdd654d9745bd448dfa0d8,
+    type: 2}
 --- !u!1 &2090170342
 GameObject:
   m_ObjectHideFlags: 0
@@ -18172,6 +18541,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceBack: 1
+  OnObstacleCollisionEnter: {fileID: 11400000, guid: 726ceaa1ffb903143ab34b368340f82e,
+    type: 2}
+  OnObstacleCollisionExit: {fileID: 11400000, guid: e1ed15280abdd654d9745bd448dfa0d8,
+    type: 2}
 --- !u!1 &2096776291
 GameObject:
   m_ObjectHideFlags: 0
@@ -18427,6 +18800,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceBack: 1
+  OnObstacleCollisionEnter: {fileID: 11400000, guid: 726ceaa1ffb903143ab34b368340f82e,
+    type: 2}
+  OnObstacleCollisionExit: {fileID: 11400000, guid: e1ed15280abdd654d9745bd448dfa0d8,
+    type: 2}
 --- !u!1 &2113951110
 GameObject:
   m_ObjectHideFlags: 0
