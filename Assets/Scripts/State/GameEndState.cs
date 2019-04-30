@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Assets.Scripts.Brett
 {
@@ -28,7 +29,9 @@ namespace Assets.Scripts.Brett
 				{
 					c.ChangeState(new IntroStartState());
 					conditionScriptable.Toggle("OnIntroStart");
-				}
+
+                    SceneManager.LoadScene("1.Intro");
+                }
 
 			}
 		}

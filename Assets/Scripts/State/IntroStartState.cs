@@ -7,7 +7,6 @@ namespace Assets.Scripts.Brett
 	{
 		public override void OnEnter()
 		{
-            GameObject.Instantiate(Resources.Load("Prefabs/Player"), new Vector3(0, 0, 0), Quaternion.identity);
             var gameEvent = Resources.Load<GameEvent>("Game Events/OnIntroRun");
             gameEvent.Raise();
         }
