@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Assets.Scripts.Brett
 {
@@ -15,15 +16,30 @@ namespace Assets.Scripts.Brett
 		{
 		}
 
-		public override void Update(Context c, ConditionScriptable conditionScriptable)
+        private float timer = 3.0f;
+        private bool isRaised = false;
+
+        public override void Update(Context c, ConditionScriptable conditionScriptable)
 		{
 			for (int i = 0; i < conditionScriptable.conditions.Count; i++)
 
 			{
 				if(conditionScriptable.conditions[i].name == "OnGameEnd" && conditionScriptable.conditions[i].isRaised)
-				{
-					c.ChangeState(new GameEndState());
-					conditionScriptable.Toggle("OnGameEnd");
+                {
+                    timer -= Time.deltaTime;
+
+                    if (isRaised == false)
+                    {
+                        Resources.Load<GameEvent>("Game Events/OnFadeOut").Raise();
+                    }
+
+                    if (timer < 0)
+                    {
+                        c.ChangeState(new GameEndState());
+                        conditionScriptable.Toggle("OnGameEnd");
+
+                        SceneManager.LoadScene("2.End");
+                    }
 				}
 
 			}

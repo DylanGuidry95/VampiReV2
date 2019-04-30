@@ -10,7 +10,6 @@ public class FadeInAndOutBehaviour : MonoBehaviour
     public bool FadeOut = false;
 
     public Texture2D fadeTexture;
-    public GameEvent OnFadeOutFinished;
 
     float fadeSpeed = 0.2f;
 
@@ -21,7 +20,6 @@ public class FadeInAndOutBehaviour : MonoBehaviour
     private float FadeInAlpha = 1.0f;
     private float FadeOutAlpha = 0.0f;
 
-    private bool fadeOutFinished = false;
 
     void Start ()
     {
@@ -29,10 +27,7 @@ public class FadeInAndOutBehaviour : MonoBehaviour
 	
 	void Update ()
     {
-        if (fadeOutFinished)
-        {
-            OnFadeOutFinished.Raise();
-        }
+
 	}
 
     private void OnGUI()
@@ -61,10 +56,6 @@ public class FadeInAndOutBehaviour : MonoBehaviour
 
             GUI.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), fadeTexture);
 
-            if (FadeOutAlpha == 1.0f)
-            {
-                fadeOutFinished = true;
-            }
         }
     }
 
