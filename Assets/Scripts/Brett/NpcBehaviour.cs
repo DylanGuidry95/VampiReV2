@@ -62,7 +62,7 @@ namespace Assets.Scripts.Brett
                 Debug.DrawLine(transform.position, Target.transform.position, Color.blue);
                 if (Physics.Linecast(transform.position, Target.transform.position, out _hit))
                 {
-                    if (_hit.collider.CompareTag("Player"))
+                    if (_hit.collider.CompareTag("physicsListener"))
                     {
                         print("NPC can see player");
                         ICanSeeThePlayer = true;

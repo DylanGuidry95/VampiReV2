@@ -10,18 +10,20 @@ namespace Ralenski
         public GameEvent TriggerEnter;
         public GameEvent TriggerExit;
         public GameEvent TriggerStay;
+        public GameObject TriggerSystemOBJ;
+        
         void OnTriggerEnter(Collider other)
         {//the other collider's attached rigidbodies game object's name.
-            if (other.gameObject.name=="Player")
+            if (other.gameObject.CompareTag("Trigger"))
             {
-                TriggerEnter.Raise();
+               TriggerEnter.Raise();
                 Debug.Log("Trigger Enter Raised");
             }
         }
 
         void OnTriggerExit(Collider other)
         {
-            if (other.gameObject.name == "Player")
+            if (other.gameObject.CompareTag("Trigger"))
             {
                 TriggerExit.Raise();
                 Debug.Log("Trigger Exit Raised");
@@ -30,14 +32,12 @@ namespace Ralenski
 
         void OnTriggerStay(Collider other)
         {
-            if (other.gameObject.name == "Player")
+            if (other.gameObject.CompareTag("Trigger"))
             {
                 TriggerStay.Raise();
                 Debug.Log("Trigger Stay Raised");
             }
          }
-
-
         // Use this for initialization
         void Start()
         {

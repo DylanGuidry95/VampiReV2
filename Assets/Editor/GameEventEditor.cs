@@ -77,7 +77,7 @@ namespace Lobodestroyo.Editor
                     
                     if(target != null)
                     {
-                        EditorGUILayout.ObjectField("Listener", target.gameObject, typeof(GameObject), true,
+                        EditorGUILayout.ObjectField("ListeningOBJS", target.gameObject, typeof(GameObject), true,
                             GUILayout.MaxWidth(500 - EditorGUI.indentLevel));
                     }
                     else

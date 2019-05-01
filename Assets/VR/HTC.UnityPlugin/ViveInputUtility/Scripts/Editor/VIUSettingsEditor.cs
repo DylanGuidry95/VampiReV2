@@ -515,7 +515,7 @@ namespace HTC.UnityPlugin.Vive
                 if (PlayerSettings.bundleIdentifier.Equals("com.Company.ProductName"))
 #endif
                 {
-                    EditorGUILayout.HelpBox("Cannot build using default package name. Change at Edit -> Project Settings -> Player -> Android settings -> Other Settings -> Identification(Package Name)", MessageType.Warning);
+                    EditorGUILayout.HelpBox("Cannot build using default package name. Change at Edit -> Project Settings -> physicsListener -> Android settings -> Other Settings -> Identification(Package Name)", MessageType.Warning);
                 }
 
                 EditorGUI.indentLevel -= 2;
