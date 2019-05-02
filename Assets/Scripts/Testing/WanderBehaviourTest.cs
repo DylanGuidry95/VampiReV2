@@ -7,21 +7,26 @@ namespace Assets.Scripts.Matt
     public class WanderBehaviourTest : MonoBehaviour
     {
         private NavMeshAgent _navMeshAgent;
-        public Vector3 currentDestination;
+        [Header("Time until guard moves")]
         public UnityEngine.Events.UnityEvent Responses;
+        public Vector3 currentDestination;
         public int seconds = 6;
         public float secondsToWalk = 3.5f;
+        WithinRadiusTest wrt;
 
-
-        public float dotproduct;
-        public float maxdelta = 10;
+        protected float dotproduct;
+        protected float maxdelta = 10;
         private Vector3 targetdir;
-        public float timer = 0.0f;
         [Header("Waypoint Info")]
         public List<Transform> WayPoints;
         public int currentWP, nextWP;
         [Range(0, 100)]
         public float remainingdistance;
+
+        [Header("Range of Player from Guard")]
+        public GameObject target;
+        public float minRange, maxRange;
+        public Vector3 targetTran;
         // Use this for initialization
         void Start()
         {
@@ -29,9 +34,23 @@ namespace Assets.Scripts.Matt
             targetdir = transform.forward;
             currentWP = Random.Range(0, WayPoints.Count);
             StartCoroutine("PatrolRoutine");
+            //target = GameObject.FindWithTag("Player");
+            targetTran = target.transform.position;
         }
 
-        public bool WAYPOINTSTRAVEL = false;
+        void Update()
+        {
+            targetTran = target.transform.position;
+            bool inRange = Vector3.Distance(transform.position, targetTran) < maxRange && Vector3.Distance(transform.position, targetTran) > minRange;
+            var infront = Vector2.Dot(target.transform.forward, transform.forward) < 0;
+            if (inRange && infront)
+            {
+                transform.LookAt(targetTran);
+                transform.Translate(Vector3.forward * Time.deltaTime * 4.25f);
+            }
+        }
+
+        protected bool WAYPOINTSTRAVEL = false;
         IEnumerator PatrolRoutine()
         {
             while (true)
@@ -88,7 +107,7 @@ namespace Assets.Scripts.Matt
             WAYPOINTSTRAVEL = false;
             remainingdistance = Vector3.Distance(transform.position, currentDestination);
             //if you are close and not already searching then find a new point
-            if (_navMeshAgent.stoppingDistance < _navMeshAgent.remainingDistance)
+            if (_navMeshAgent.stoppingDistance <= _navMeshAgent.remainingDistance)
             {
                 var randomindex = Random.Range(0, WayPoints.Count);
 
@@ -111,6 +130,12 @@ namespace Assets.Scripts.Matt
                 yield return StartCoroutine("UpdateRotation", WayPoints[randomindex].position);
             }
             yield return null;
+        }
+
+        public void GuardFollowRoutine(Vector3 targ)
+        {
+            transform.LookAt(targ);
+            transform.Translate(Vector3.forward * Time.deltaTime);
         }
     }
 }
