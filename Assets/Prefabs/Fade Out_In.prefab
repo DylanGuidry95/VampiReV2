@@ -59,7 +59,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114294346857907696}
-        m_MethodName: TurnOnFadeIn
+        m_MethodName: FadeIn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -82,10 +82,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adf21410500704549a91bf9508e0cf89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FadeIn: 0
-  FadeOut: 0
-  fadeTexture: {fileID: 2800000, guid: b99c0530af8d73f4ba14b9eb17bb6013, type: 3}
-  OnFadeOutFinished: {fileID: 11400000, guid: 5df52dad718a8c347b29fb17d89526e8, type: 2}
 --- !u!114 &114316956884878124
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -103,7 +99,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114294346857907696}
-        m_MethodName: TurnOnFadeOut
+        m_MethodName: FadeOut
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
