@@ -24,6 +24,7 @@ public class FadeInAndOutBehaviour : MonoBehaviour
 
     void Start ()
     {
+        FadeIn();
 	}
 	
 	void Update ()
