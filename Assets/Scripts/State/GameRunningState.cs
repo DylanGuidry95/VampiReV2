@@ -1,48 +1,52 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Valve.VR;
 
 namespace Assets.Scripts.Brett
 {
-	[System.Serializable]
-	public class GameRunningState : State
-	{
-		public override void OnEnter()
-		{
-            Resources.Load<GameEvent>("Game Events/OnFadeIn").Raise();
+    [System.Serializable]
+    public class GameRunningState : State
+    {
+        public override void OnEnter()
+        {
             GameObject.Instantiate(Resources.Load("Prefabs/Player"), new Vector3(0, 0, 0), Quaternion.identity);
+            //Resources.Load<GameEvent>("Game Events/OnFadeIn").Raise();
+            SceneFadeUtility.FadeIn(3);
         }
 
-		public override void OnExit()
-		{
-		}
+        public override void OnExit()
+        {
+        }
 
         private float timer = 3.0f;
-        private bool isRaised = false;
+        private bool fading = false;
 
         public override void Update(Context c, ConditionScriptable conditionScriptable)
-		{
-			for (int i = 0; i < conditionScriptable.conditions.Count; i++)
+        {
+            for (int i = 0; i < conditionScriptable.conditions.Count; i++)
 
-			{
-				if(conditionScriptable.conditions[i].name == "OnGameEnd" && conditionScriptable.conditions[i].isRaised)
+            {
+                if (conditionScriptable.conditions[i].name == "OnGameEnd" &&
+                   conditionScriptable.conditions[i].isRaised)
                 {
                     timer -= Time.deltaTime;
-
-                    if (isRaised == false)
+                    Debug.Log(timer);
+                    if (!fading)
                     {
-                        Resources.Load<GameEvent>("Game Events/OnFadeOut").Raise();
+                        SceneFadeUtility.FadeOut(3);
+                        fading = true;
                     }
-
+                    
                     if (timer < 0)
                     {
                         c.ChangeState(new GameEndState());
                         conditionScriptable.Toggle("OnGameEnd");
-
                         SceneManager.LoadScene("2.End");
                     }
-				}
+                }
+            }
+        }
+    }
 
-			}
-		}
-	}
+
 }

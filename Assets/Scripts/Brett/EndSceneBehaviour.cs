@@ -19,8 +19,8 @@ public class EndSceneBehaviour : MonoBehaviour
 
     void Start ()
     {
-	    OnFadeIn.Raise();
         Instantiate(PlayerPrefab, new Vector3(0, 0, 0), Quaternion.identity);
+        OnFadeIn.Raise();
     }
 	
 	void Update ()

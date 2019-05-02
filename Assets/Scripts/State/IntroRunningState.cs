@@ -9,8 +9,8 @@ namespace Assets.Scripts.Brett
 
 		public override void OnEnter()
 		{
-            Resources.Load<GameEvent>("Game Events/OnFadeIn").Raise();
             GameObject.Instantiate(Resources.Load("Prefabs/Player"), new Vector3(0, 0, 0), Quaternion.identity);
+            Resources.Load<GameEvent>("Game Events/OnFadeIn").Raise();
         }
 
 		public override void OnExit()

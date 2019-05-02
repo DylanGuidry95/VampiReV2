@@ -1,5 +1,7 @@
 using UnityEngine;
+using UnityEngine.Experimental.PlayerLoop;
 using UnityEngine.SceneManagement;
+using Valve.VR;
 
 namespace Assets.Scripts.Brett
 {
@@ -8,11 +10,11 @@ namespace Assets.Scripts.Brett
 	{
 		public override void OnEnter()
 		{
-		}
+        }
 
 		public override void OnExit()
 		{
-		}
+        }
 
 		public override void Update(Context c, ConditionScriptable conditionScriptable)
 		{
@@ -29,8 +31,6 @@ namespace Assets.Scripts.Brett
 				{
 					c.ChangeState(new IntroStartState());
 					conditionScriptable.Toggle("OnIntroStart");
-
-
 
                     SceneManager.LoadScene("1.Intro");
                 }
