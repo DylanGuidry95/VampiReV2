@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e7a5578254942054ba8caac5fcd74ab5
+guid: 337d69b446612f346b29540127e3f884
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -771,13 +771,13 @@ ModelImporter:
         length: 0
         modified: 0
     skeleton:
-    - name: NPC_Guard_Walking_Lamp(Without)_V2(Clone)
+    - name: NPC_Guard_Walking(Clone)
       parentName: 
       position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Guard
-      parentName: NPC_Guard_Walking_Lamp(Without)_V2(Clone)
+      parentName: NPC_Guard_Walking(Clone)
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
@@ -867,7 +867,7 @@ ModelImporter:
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Guard_RIG_SHJntGrp
-      parentName: NPC_Guard_Walking_Lamp(Without)_V2(Clone)
+      parentName: NPC_Guard_Walking(Clone)
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
