@@ -1,52 +1,75 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using Assets.Scripts.Brett;
 using UnityEngine;
 
 namespace Ralenski
 {
-    [CreateAssetMenu]
+    [RequireComponent(typeof(Collider))]
     public class PhysicsTriggerSystem : MonoBehaviour
     {
-        public GameEvent TriggerEnter;
-        public GameEvent TriggerExit;
+
+        public string ListenerTag;
+        public GameEvent EnterTrigger;
+        public GameEvent ExitTrigger;
         public GameEvent TriggerStay;
-        public GameObject TriggerSystemOBJ;
-        
-        void OnTriggerEnter(Collider other)
-        {//the other collider's attached rigidbodies game object's name.
-            if (other.gameObject.CompareTag("Trigger"))
+        public GameEvent CollisionEnter;
+        public GameEvent CollisionExit;
+        public GameEvent CollisionStay;
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.CompareTag(ListenerTag))
             {
-               TriggerEnter.Raise();
-                Debug.Log("Trigger Enter Raised");
+                EnterTrigger.Raise();
+                Debug.Log("Raise OnTrigger Enter");
             }
         }
 
-        void OnTriggerExit(Collider other)
+        private void OnTriggerExit(Collider other)
         {
-            if (other.gameObject.CompareTag("Trigger"))
+            if (other.CompareTag(ListenerTag))
             {
-                TriggerExit.Raise();
-                Debug.Log("Trigger Exit Raised");
+                ExitTrigger.Raise();
+                Debug.Log("Raise OnTrigger Exit");
             }
         }
 
-        void OnTriggerStay(Collider other)
+        private void OnTriggerStay(Collider other)
         {
-            if (other.gameObject.CompareTag("Trigger"))
+            if (other.CompareTag(ListenerTag))
             {
                 TriggerStay.Raise();
-                Debug.Log("Trigger Stay Raised");
+                Debug.Log("Raise OnTrigger Stay");
             }
-         }
-        // Use this for initialization
-        void Start()
-        {
 
         }
-        // Update is called once per frame
-        void Update()
-        {
 
+        private void OnCollisionEnter(Collision other)
+        {
+            if (other.gameObject.CompareTag("Player"))
+            {
+                CollisionEnter.Raise();
+                Debug.Log("Raise OnCollision Enter");
+            }
+        }
+
+        private void OnCollisionExit(Collision other)
+        {
+            if (other.gameObject.CompareTag("Player"))
+            {
+                CollisionExit.Raise();
+                Debug.Log("Raise OnCollision Exit");
+            }
+        }
+
+        private void OnCollisionStay(Collision other)
+        {
+            if (other.gameObject.CompareTag("Player"))
+            {
+                CollisionStay.Raise();
+                Debug.Log("Raise OnCollision Stay");
+            }
         }
     }
 }
