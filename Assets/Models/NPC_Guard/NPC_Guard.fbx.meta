@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0d2f470137736a34b817597cc7751758
+guid: edda26604ed230745bf6cb02b45bfef1
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -107,7 +107,7 @@ ModelImporter:
     100202: Mask
     100204: Neck
     100206: //RootNode
-    100208: polySurface21
+    100208: Pants
     100210: R_Boot
     100212: R_Bracer
     100214: R_Glove
@@ -217,38 +217,18 @@ ModelImporter:
     400202: Mask
     400204: Neck
     400206: //RootNode
-    400208: polySurface21
+    400208: Pants
     400210: R_Boot
     400212: R_Bracer
     400214: R_Glove
     400216: Sache_1
     400218: Sache_2
     2100000: lambert1
-    2100002: Default_Material
-    2300000: Belt_3
-    2300002: Belt_4
-    2300004: Buckle_3
-    2300006: Buckle_3_1
-    2300008: Buckle_3_2
-    2300010: Buckle_3_3
-    2300012: Buckle_4
-    2300014: Buckle_4_1
-    2300016: Buckle_4_2
-    2300018: Buckle_4_3
-    2300020: L_Boot
-    2300022: R_Boot
-    3300000: Belt_3
-    3300002: Belt_4
-    3300004: Buckle_3
-    3300006: Buckle_3_1
-    3300008: Buckle_3_2
-    3300010: Buckle_3_3
-    3300012: Buckle_4
-    3300014: Buckle_4_1
-    3300016: Buckle_4_2
-    3300018: Buckle_4_3
-    3300020: L_Boot
-    3300022: R_Boot
+    2100002: lambert2
+    2300000: Buckle_3
+    2300002: Buckle_3_1
+    3300000: Buckle_3
+    3300002: Buckle_3_1
     4300000: Buckle_1
     4300002: Buckle_2_2
     4300004: Buckle_2
@@ -258,7 +238,7 @@ ModelImporter:
     4300012: Buckle_2_3
     4300014: L_Bracer
     4300016: Sache_1
-    4300018: polySurface21
+    4300018: Pants
     4300020: Sache_2
     4300022: Buckle_1_1
     4300024: Belt_1
@@ -285,25 +265,35 @@ ModelImporter:
     9500000: //RootNode
     13700000: Belt_1
     13700002: Belt_2
-    13700004: Buckle_1
-    13700006: Buckle_1_1
-    13700008: Buckle_1_2
-    13700010: Buckle_1_3
-    13700012: Buckle_2
-    13700014: Buckle_2_1
-    13700016: Buckle_2_2
-    13700018: Buckle_2_3
-    13700020: Helmet
-    13700022: Jacket
-    13700024: L_Bracer
-    13700026: L_Glove
-    13700028: Mask
-    13700030: Neck
-    13700032: polySurface21
-    13700034: R_Bracer
-    13700036: R_Glove
-    13700038: Sache_1
-    13700040: Sache_2
+    13700004: Belt_3
+    13700006: Belt_4
+    13700008: Buckle_1
+    13700010: Buckle_1_1
+    13700012: Buckle_1_2
+    13700014: Buckle_1_3
+    13700016: Buckle_2
+    13700018: Buckle_2_1
+    13700020: Buckle_2_2
+    13700022: Buckle_2_3
+    13700024: Buckle_3_2
+    13700026: Buckle_3_3
+    13700028: Buckle_4
+    13700030: Buckle_4_1
+    13700032: Buckle_4_2
+    13700034: Buckle_4_3
+    13700036: Helmet
+    13700038: Jacket
+    13700040: L_Boot
+    13700042: L_Bracer
+    13700044: L_Glove
+    13700046: Mask
+    13700048: Neck
+    13700050: Pants
+    13700052: R_Boot
+    13700054: R_Bracer
+    13700056: R_Glove
+    13700058: Sache_1
+    13700060: Sache_2
   externalObjects: {}
   materials:
     importMaterials: 1
