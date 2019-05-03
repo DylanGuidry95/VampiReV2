@@ -7,6 +7,7 @@ namespace Assets.Scripts.Brett
 	{
 		public override void OnEnter()
 		{
+			Debug.Log("Hit");
             Application.Quit();
 		}
 
