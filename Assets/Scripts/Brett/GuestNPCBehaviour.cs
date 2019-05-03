@@ -22,13 +22,15 @@ namespace Assets.Scripts.Brett
         {
             _anim = GetComponent<Animator>();
             _feedingBehaviour = gameObject.GetComponent<FeedingBehaviour>();
+            //Target = GameObject.FindGameObjectWithTag("Player").transform;
         }
 
         private void Update()
         {
 
             PlayerDetection();
-
+            if(_feedingBehaviour == null)
+                return;
             if (_feedingBehaviour._npcIsDead)
             {
                 Debug.Log("NPC is dead.");
@@ -41,6 +43,11 @@ namespace Assets.Scripts.Brett
 
         void PlayerDetection()
         {
+            if(Target == null)
+            {
+                GameObject.FindGameObjectWithTag("Player");
+                return;
+            }
             var targetDir = Target.position - transform.position;
             float angle = Vector3.Angle(targetDir, transform.forward);
             float distance = Vector3.Distance(Target.position, transform.position);

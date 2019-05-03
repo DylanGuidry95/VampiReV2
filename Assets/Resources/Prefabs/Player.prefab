@@ -179,9 +179,9 @@ GameObject:
   - component: {fileID: 4186227907525478}
   - component: {fileID: 114298453173084262}
   - component: {fileID: 114229755290096274}
-  - component: {fileID: 114078140724299028}
   - component: {fileID: 120020664150126840}
   - component: {fileID: 114357292764798700}
+  - component: {fileID: 114962069966036754}
   m_Layer: 0
   m_Name: RightHand
   m_TagString: Untagged
@@ -1236,11 +1236,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4930438355114734}
   - component: {fileID: 114667311750039558}
-  - component: {fileID: 54085701540485152}
   - component: {fileID: 114596119655484496}
   - component: {fileID: 120052331416821532}
   - component: {fileID: 114469052358067768}
-  - component: {fileID: 114314469457151726}
+  - component: {fileID: 114683417126023214}
   m_Layer: 0
   m_Name: LeftHand
   m_TagString: Untagged
@@ -2480,21 +2479,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!54 &54085701540485152
-Rigidbody:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1902357956259510}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!54 &54180306959184796
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -2672,30 +2656,6 @@ MonoBehaviour:
     m_roleTypeFullName: HTC.UnityPlugin.Vive.HandRole
     m_roleValueName: RightHand
     m_roleValueInt: 0
---- !u!114 &114078140724299028
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1120304444395502}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fdc450c311d1e94291658aa5ec57b9b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  posOffset: {x: 0, y: 0, z: 0}
-  rotOffset: {x: 0, y: 0, z: 0}
-  origin: {fileID: 0}
-  m_viveRole:
-    m_roleTypeFullName: HTC.UnityPlugin.Vive.HandRole
-    m_roleValueName: RightHand
-    m_roleValueInt: 0
-  onIsValidChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: HTC.UnityPlugin.Vive.VivePoseTracker+UnityEventBool, Assembly-CSharp,
-      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-  role: -2
 --- !u!114 &114171163881398956
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2721,6 +2681,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxGrabDistance: 2
   HighLightedObject: {fileID: 0}
+  HitLocation: {x: 0, y: 0, z: 0}
 --- !u!114 &114298453173084262
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2736,30 +2697,6 @@ MonoBehaviour:
     m_roleTypeFullName: HTC.UnityPlugin.Vive.HandRole
     m_roleValueName: RightHand
     m_roleValueInt: 0
---- !u!114 &114314469457151726
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1902357956259510}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fdc450c311d1e94291658aa5ec57b9b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  posOffset: {x: 0, y: 0, z: 0}
-  rotOffset: {x: 0, y: 0, z: 0}
-  origin: {fileID: 0}
-  m_viveRole:
-    m_roleTypeFullName: HTC.UnityPlugin.Vive.HandRole
-    m_roleValueName: LeftHand
-    m_roleValueInt: 0
-  onIsValidChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: HTC.UnityPlugin.Vive.VivePoseTracker+UnityEventBool, Assembly-CSharp,
-      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-  role: -2
 --- !u!114 &114318326192714634
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2917,6 +2854,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GrabbedObject: {fileID: 0}
+  GrabbedLocation: {x: 0, y: 0, z: 0}
+  Role: 0
   maxVelocity: 50
 --- !u!114 &114368456480129380
 MonoBehaviour:
@@ -2981,6 +2920,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GrabbedObject: {fileID: 0}
+  GrabbedLocation: {x: 0, y: 0, z: 0}
+  Role: 1
   maxVelocity: 50
 --- !u!114 &114517817040512600
 MonoBehaviour:
@@ -3142,6 +3083,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxGrabDistance: 2
   HighLightedObject: {fileID: 0}
+  HitLocation: {x: 0, y: 0, z: 0}
 --- !u!114 &114598402242802874
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3328,6 +3270,30 @@ MonoBehaviour:
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   m_toggleGameObjectOnVirtualClick: []
   m_toggleComponentOnVirtualClick: []
+--- !u!114 &114683417126023214
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1902357956259510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fdc450c311d1e94291658aa5ec57b9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  posOffset: {x: 0, y: 0, z: 0}
+  rotOffset: {x: 0, y: 0, z: 0}
+  origin: {fileID: 0}
+  m_viveRole:
+    m_roleTypeFullName: HTC.UnityPlugin.Vive.HandRole
+    m_roleValueName: LeftHand
+    m_roleValueInt: 1
+  onIsValidChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: HTC.UnityPlugin.Vive.VivePoseTracker+UnityEventBool, Assembly-CSharp,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  role: -2
 --- !u!114 &114700608820862084
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3522,13 +3488,37 @@ MonoBehaviour:
   m_deviceIndex: 0
   m_overrideModel: 0
   m_overrideShader: {fileID: 0}
+--- !u!114 &114962069966036754
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1120304444395502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fdc450c311d1e94291658aa5ec57b9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  posOffset: {x: 0, y: 0, z: 0}
+  rotOffset: {x: 0, y: 0, z: 0}
+  origin: {fileID: 0}
+  m_viveRole:
+    m_roleTypeFullName: HTC.UnityPlugin.Vive.HandRole
+    m_roleValueName: RightHand
+    m_roleValueInt: 0
+  onIsValidChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: HTC.UnityPlugin.Vive.VivePoseTracker+UnityEventBool, Assembly-CSharp,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  role: -2
 --- !u!120 &120020664150126840
 LineRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1120304444395502}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -3558,8 +3548,8 @@ LineRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Positions:
-  - {x: -1.4322382, y: 0.7886492, z: 0.24370486}
-  - {x: -3.3320646, y: 1.2932525, z: 0.6125362}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
   m_Parameters:
     serializedVersion: 2
     widthMultiplier: 1
@@ -3620,7 +3610,7 @@ LineRenderer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1902357956259510}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -3650,8 +3640,8 @@ LineRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Positions:
-  - {x: -1.4322382, y: 0.7886492, z: 0.24370486}
-  - {x: -3.3320646, y: 1.2932525, z: 0.6125362}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
   m_Parameters:
     serializedVersion: 2
     widthMultiplier: 1
@@ -3712,7 +3702,7 @@ LineRenderer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1854542171165624}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -3742,8 +3732,8 @@ LineRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Positions:
-  - {x: -1.4322382, y: 0.7886492, z: 0.24370486}
-  - {x: -3.3320646, y: 1.2932525, z: 0.6125362}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
   m_Parameters:
     serializedVersion: 2
     widthMultiplier: 1
@@ -3804,7 +3794,7 @@ LineRenderer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1595216739052756}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -3834,8 +3824,8 @@ LineRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Positions:
-  - {x: -1.4322382, y: 0.7886492, z: 0.24370486}
-  - {x: -3.3320646, y: 1.2932525, z: 0.6125362}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
   m_Parameters:
     serializedVersion: 2
     widthMultiplier: 1

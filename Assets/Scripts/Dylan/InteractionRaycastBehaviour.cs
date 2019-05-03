@@ -11,6 +11,7 @@ namespace Assets.Scripts.Dylan
 		public GrabbableBehaviour HighLightedObject;
 
 		private LineRenderer LineRendererRef;
+		public Vector3 HitLocation;
 		bool IsDrawingLine;
 
 		// Use this for initialization
@@ -31,6 +32,7 @@ namespace Assets.Scripts.Dylan
 			{
 				if(hit.transform.GetComponent<GrabbableBehaviour>() || hit.transform.gameObject != HighLightedObject?.gameObject)
 				{
+					HitLocation = hit.point;
 					HighLightedObject = hit.transform.GetComponent<GrabbableBehaviour>();
 					HighLightedObject?.HighLight(true);
 				}
