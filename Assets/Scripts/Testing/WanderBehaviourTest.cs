@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using Assets.Scripts.Brett;
 namespace Assets.Scripts.Matt
 {
     public class WanderBehaviourTest : MonoBehaviour
@@ -28,6 +29,8 @@ namespace Assets.Scripts.Matt
         public float minRange, maxRange;
         public Vector3 targetTran;
         // Use this for initialization
+
+        public GameEvent OnGameEnd;
         void Start()
         {
             _navMeshAgent = GetComponent<NavMeshAgent>();
@@ -43,10 +46,17 @@ namespace Assets.Scripts.Matt
             targetTran = target.transform.position;
             bool inRange = Vector3.Distance(transform.position, targetTran) < maxRange && Vector3.Distance(transform.position, targetTran) > minRange;
             var infront = Vector2.Dot(target.transform.forward, transform.forward) < 0;
+            bool isDead = Vector3.Distance(transform.position, targetTran) < .5f && Vector3.Distance(transform.position, targetTran) > minRange;
             if (inRange && infront)
             {
                 transform.LookAt(targetTran);
-                transform.Translate(Vector3.forward * Time.deltaTime * 4.25f);
+                transform.Translate(Vector3.forward * Time.deltaTime * 3f);
+                transform.LookAt(targetTran);
+                transform.Translate(Vector3.forward * Time.deltaTime * 5f);
+            }
+            if(isDead)
+            {
+                
             }
         }
 

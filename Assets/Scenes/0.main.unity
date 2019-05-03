@@ -126,7 +126,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4556270492707188, guid: 2e232090c400a894784f0dee0a9e17b2, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4556270492707188, guid: 2e232090c400a894784f0dee0a9e17b2, type: 2}
       propertyPath: m_LocalPosition.z
@@ -174,7 +174,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!1 &449211854
 GameObject:
