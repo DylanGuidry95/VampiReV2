@@ -10,12 +10,12 @@ namespace Assets.Scripts.Brett
         public override void OnEnter()
         {
             GameObject.Instantiate(Resources.Load("Prefabs/Player"), new Vector3(0, 0, 0), Quaternion.identity);
-            //Resources.Load<GameEvent>("Game Events/OnFadeIn").Raise();
-            SceneFadeUtility.FadeIn(3);
+            FadeUtility.FadeIn(3);
         }
 
         public override void OnExit()
         {
+
         }
 
         private float timer = 3.0f;
@@ -33,7 +33,7 @@ namespace Assets.Scripts.Brett
                     Debug.Log(timer);
                     if (!fading)
                     {
-                        SceneFadeUtility.FadeOut(3);
+                        FadeUtility.FadeOut(3);
                         fading = true;
                     }
                     

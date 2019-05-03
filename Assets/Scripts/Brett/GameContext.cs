@@ -29,19 +29,4 @@ namespace Assets.Scripts.Brett
             CurrentState.Update(this, conditions);
         }
     }
-
-    public class SceneFadeUtility
-    {
-        public static void FadeIn(float time)
-        {
-            SteamVR_Fade.Start(Color.black, 0f);
-            SteamVR_Fade.Start(Color.clear, time);
-        }
-
-        public static void FadeOut(float time)
-        {
-            SteamVR_Fade.Start(Color.clear, 0f);
-            SteamVR_Fade.Start(Color.black, time);
-        }
-    }
 }

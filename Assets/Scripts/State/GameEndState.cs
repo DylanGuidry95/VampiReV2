@@ -10,6 +10,7 @@ namespace Assets.Scripts.Brett
 	{
 		public override void OnEnter()
 		{
+
         }
 
 		public override void OnExit()
@@ -20,13 +21,7 @@ namespace Assets.Scripts.Brett
 		{
 			for (int i = 0; i < conditionScriptable.conditions.Count; i++)
 
-			{
-				if(conditionScriptable.conditions[i].name == "OnExit" && conditionScriptable.conditions[i].isRaised)
-				{
-					c.ChangeState(new ExitState());
-					conditionScriptable.Toggle("OnExit");
-				}
-
+            { 
 				if(conditionScriptable.conditions[i].name == "OnIntroStart" && conditionScriptable.conditions[i].isRaised)
 				{
 					c.ChangeState(new IntroStartState());
@@ -34,6 +29,8 @@ namespace Assets.Scripts.Brett
 
                     SceneManager.LoadScene("1.Intro");
                 }
+
+
 
 			}
 		}

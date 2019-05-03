@@ -10,7 +10,7 @@ namespace Assets.Scripts.Brett
 		public override void OnEnter()
 		{
             GameObject.Instantiate(Resources.Load("Prefabs/Player"), new Vector3(0, 0, 0), Quaternion.identity);
-            Resources.Load<GameEvent>("Game Events/OnFadeIn").Raise();
+            FadeUtility.FadeIn(3);
         }
 
 		public override void OnExit()
@@ -38,7 +38,7 @@ namespace Assets.Scripts.Brett
 
                     if (isRaised == false)
                     {
-                        Resources.Load<GameEvent>("Game Events/OnFadeOut").Raise();
+                        FadeUtility.FadeOut(3);
                     }
                     isRaised = true;
 

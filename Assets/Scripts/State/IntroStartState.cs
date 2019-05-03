@@ -7,8 +7,7 @@ namespace Assets.Scripts.Brett
 	{
 		public override void OnEnter()
 		{
-            var gameEvent = Resources.Load<GameEvent>("Game Events/OnIntroRun");
-            gameEvent.Raise();
+            Resources.Load<GameEvent>("Game Events/OnIntroRun").Raise();
         }
 
 		public override void OnExit()
@@ -25,7 +24,6 @@ namespace Assets.Scripts.Brett
 					c.ChangeState(new IntroRunningState());
 					conditionScriptable.Toggle("OnIntroRun");
 				}
-
 			}
 		}
 	}
