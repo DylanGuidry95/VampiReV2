@@ -5,9 +5,7 @@ using UnityEngine;
 namespace Assets.Scripts.Dylan
 {
 	public class ObstacleCollisionBehaviour : MonoBehaviour 
-	{
-		public float bounceBack;
-
+	{		
 		public Assets.Scripts.Brett.GameEvent OnObstacleCollisionEnter;
 		public Assets.Scripts.Brett.GameEvent OnObstacleCollisionExit;
 
