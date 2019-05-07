@@ -7,8 +7,7 @@ namespace Assets.Scripts.Brett
 	{
 		public override void OnEnter()
 		{
-            var gameEvent = Resources.Load<GameEvent>("Game Events/OnGameStart");
-            gameEvent.Raise();
+            Resources.Load<GameEvent>("Game Events/OnIntroStart").Raise();
         }
 
 		public override void OnExit()
@@ -20,10 +19,10 @@ namespace Assets.Scripts.Brett
 			for (int i = 0; i < conditionScriptable.conditions.Count; i++)
 
 			{
-				if(conditionScriptable.conditions[i].name == "OnGameStart" && conditionScriptable.conditions[i].isRaised)
+				if(conditionScriptable.conditions[i].name == "OnIntroStart" && conditionScriptable.conditions[i].isRaised)
 				{
-					c.ChangeState(new GameStartState());
-					conditionScriptable.Toggle("OnGameStart");
+					c.ChangeState(new IntroStartState());
+					conditionScriptable.Toggle("OnIntroStart");
 				}
 
 			}
