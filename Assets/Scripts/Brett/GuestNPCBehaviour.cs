@@ -16,7 +16,7 @@ namespace Assets.Scripts.Brett
 
         private RaycastHit _hit;
 
-        public GameEvent OnGameExit;
+        //public GameEvent OnGameExit;
 
         private void Start()
         {
@@ -29,12 +29,12 @@ namespace Assets.Scripts.Brett
 
             PlayerDetection();
 
-            if (_feedingBehaviour._npcIsDead)
-            {
-                Debug.Log("NPC is dead.");
-                //_anim.SetBool("isDead", true);
-                OnGameExit.Raise();
-            }
+            //if (_feedingBehaviour._npcIsDead)
+            //{
+            //    Debug.Log("NPC is dead.");
+            //    //_anim.SetBool("isDead", true);
+            //    OnGameExit.Raise();
+            //}
         }
 
         public bool ICanSeeThePlayer = false;

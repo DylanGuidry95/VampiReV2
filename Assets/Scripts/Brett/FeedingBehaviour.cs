@@ -35,6 +35,11 @@ namespace Assets.Scripts.Brett
             {
                 _npcIsDead = true;
             }
+
+            if (_leftShoulder.isGrabbed && _rightShoulder.isGrabbed)
+            {
+
+            }
         }
     }
 }
