@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using Valve.VR;
 
 namespace Assets.Scripts.Brett
 {
@@ -14,6 +15,11 @@ namespace Assets.Scripts.Brett
         {
             CurrentState.OnExit();
             CurrentState = s;
+            CurrentState.OnEnter();
+        }
+
+        public override void Start()
+        {
             CurrentState.OnEnter();
         }
 

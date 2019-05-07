@@ -18,8 +18,11 @@ namespace Assets.Scripts.Brett
 
         void Start()
         {
-            Context.CurrentState = GAMESTATEREF.StateField;
-
+            if (Context.CurrentState == null)
+            {
+                Context.CurrentState = GAMESTATEREF.StateField;
+                Context.Start();
+            }
         }
 
         private void Update()
