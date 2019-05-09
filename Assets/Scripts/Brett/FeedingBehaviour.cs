@@ -30,15 +30,14 @@ namespace Assets.Scripts.Brett
         {
             _neck = Neck.GetComponent<NeckColliderBehaviour>();
             _leftShoulder = LeftShoulder.GetComponent<FeedingGrabbableBehaviour>();
-            _rightShoulder = RightShoulder.GetComponent<FeedingGrabbableBehaviour>();
-            
-    
+            _rightShoulder = RightShoulder.GetComponent<FeedingGrabbableBehaviour>();    
         }
 
         private Vector3 currentAvgPos;
         private float timer = 3;
         private float bloodFadeTimer = .5f;
         private bool alreadyFaded = false;
+
 
 
         void Update()
@@ -49,7 +48,6 @@ namespace Assets.Scripts.Brett
                 _npcIsDead = true;
             }
 
-            var step = 1 * Time.deltaTime;
             if (_leftShoulder.isGrabbed && _rightShoulder.isGrabbed)
             {
                 var averagePos = (left.Value.transform.position + right.Value.transform.position) / 2;
@@ -74,7 +72,6 @@ namespace Assets.Scripts.Brett
                         FadeUtility.BloodFadeOut(0.5f);
                     }
                     alreadyFaded = true;
-
                 }
             }
         }
