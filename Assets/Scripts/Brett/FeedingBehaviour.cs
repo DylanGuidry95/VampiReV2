@@ -24,6 +24,8 @@ namespace Assets.Scripts.Brett
         public bool _npcIsDead = false;
         public GameObjectVariable left, right;
 
+        public GameEvent OnGameEnd;
+
         void Start()
         {
             _neck = Neck.GetComponent<NeckColliderBehaviour>();
@@ -34,11 +36,16 @@ namespace Assets.Scripts.Brett
         }
 
         private Vector3 currentAvgPos;
+        private float timer = 3;
+        private float bloodFadeTimer = .5f;
+        private bool alreadyFaded = false;
+
 
         void Update()
         {
             if (_neck.isCollidingWithPlayer && _leftShoulder.isGrabbed && _rightShoulder.isGrabbed)
             {
+                FadeUtility.BloodFadeIn(0.5f);
                 _npcIsDead = true;
             }
 
@@ -50,13 +57,26 @@ namespace Assets.Scripts.Brett
                 currentAvgPos = averagePos;
                 bone.transform.Rotate(new Vector3(0, 0, 1), -rotate.z * 20);
             }
+
+            if (_npcIsDead)
+            {
+                bloodFadeTimer -= Time.deltaTime;
+                timer -= Time.deltaTime;
+                if (timer < 0)
+                {
+                    OnGameEnd.Raise();
+                }
+
+                if (bloodFadeTimer < 0)
+                {
+                    if (!alreadyFaded)
+                    {
+                        FadeUtility.BloodFadeOut(0.5f);
+                    }
+                    alreadyFaded = true;
+
+                }
+            }
         }
     }
 }
-
-//===========Try============
-// get the average position of both hands
-// when shoulders are grabbed.
-// rotate the bone towards the average positon of the hands.
-// use vector3.RotateTowards.
-// then assign bone.Transform.rotation the returned direction
