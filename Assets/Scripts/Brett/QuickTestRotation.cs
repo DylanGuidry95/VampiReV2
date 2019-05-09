@@ -6,13 +6,24 @@ public class QuickTestRotation : MonoBehaviour
 {
     public GameObject bone;
 
-	// Use this for initialization
+    public GameObject target;
+
+    private float speed = 1;
+
 	void Start () {
 		
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		bone.transform.Rotate(new Vector3(0, 0, 1), -1.0f);
-	}
+
+    private Vector3 currentAvgPos;
+
+    void Update ()
+    {
+        var averagePos = target.transform.position;
+        Vector3 rotate = currentAvgPos - averagePos;
+        currentAvgPos = averagePos;
+        bone.transform.Rotate(new Vector3(0, 0, 1), -rotate.z * 20);
+        //bone.transform.LookAt(-target.transform.position, Vector3.down);
+        //bone.transform.Rotate(new Vector3(0, 0, 1), -1.0f);
+
+    }
 }
