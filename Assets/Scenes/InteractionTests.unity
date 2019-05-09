@@ -229,6 +229,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 308583709}
+  - component: {fileID: 308583710}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -249,6 +250,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &308583710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 308583708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e95b335d70493e42b85b503984bec0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: bd8cddfdca17bf949ab78d2c81fac390, type: 2}
+        m_MethodName: CreatePlayer
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1855650089683978, guid: 2e232090c400a894784f0dee0a9e17b2,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1001 &1181576516
 Prefab:
   m_ObjectHideFlags: 0
