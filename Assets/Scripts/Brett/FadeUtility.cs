@@ -22,5 +22,17 @@ namespace Assets.Scripts.Brett
             SteamVR_Fade.Start(Color.clear, 0f);
             SteamVR_Fade.Start(Color.black, time);
         }
+
+        public static void BloodFadeIn(float time)
+        {
+            SteamVR_Fade.Start(Color.clear, 0f);
+            SteamVR_Fade.Start(Color.red, time);
+        }
+
+        public static void BloodFadeOut(float time)
+        {
+            SteamVR_Fade.Start(Color.clear, 0f);
+            SteamVR_Fade.Start(Color.red, time);
+        }
     }
 }
