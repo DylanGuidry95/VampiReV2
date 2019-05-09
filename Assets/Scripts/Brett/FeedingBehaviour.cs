@@ -43,3 +43,10 @@ namespace Assets.Scripts.Brett
         }
     }
 }
+
+/////////////Try////////////
+/// get the average position of both hands
+/// when shoulders are grabbed.
+/// rotate the bone towards the average positon of the hands.
+/// use vector3.RotateTowards.
+/// then assign bone.Transform.rotation the returned direction
