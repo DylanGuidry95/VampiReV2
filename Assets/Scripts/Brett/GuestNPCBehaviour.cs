@@ -16,38 +16,31 @@ namespace Assets.Scripts.Brett
 
         private RaycastHit _hit;
 
-        public GameEvent OnGameExit;
+        //public GameEvent OnGameExit;
 
         private void Start()
         {
             _anim = GetComponent<Animator>();
             _feedingBehaviour = gameObject.GetComponent<FeedingBehaviour>();
-            //Target = GameObject.FindGameObjectWithTag("Player").transform;
         }
 
         private void Update()
         {
 
             PlayerDetection();
-            if(_feedingBehaviour == null)
-                return;
-            if (_feedingBehaviour._npcIsDead)
-            {
-                Debug.Log("NPC is dead.");
-                //_anim.SetBool("isDead", true);
-                OnGameExit.Raise();
-            }
+
+            //if (_feedingBehaviour._npcIsDead)
+            //{
+            //    Debug.Log("NPC is dead.");
+            //    //_anim.SetBool("isDead", true);
+            //    OnGameExit.Raise();
+            //}
         }
 
         public bool ICanSeeThePlayer = false;
 
         void PlayerDetection()
         {
-            if(Target == null)
-            {
-                GameObject.FindGameObjectWithTag("Player");
-                return;
-            }
             var targetDir = Target.position - transform.position;
             float angle = Vector3.Angle(targetDir, transform.forward);
             float distance = Vector3.Distance(Target.position, transform.position);
