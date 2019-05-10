@@ -19,7 +19,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4846884858459608}
-  - component: {fileID: 95088818798934412}
   m_Layer: 0
   m_Name: Lamp
   m_TagString: Untagged
@@ -506,24 +505,6 @@ Transform:
   m_Father: {fileID: 4650870089619812}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &95088818798934412
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1016279871016034}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: cf311856a80ab694a85ad7bc038c4f9f, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 1
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!137 &137248704991600572
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
