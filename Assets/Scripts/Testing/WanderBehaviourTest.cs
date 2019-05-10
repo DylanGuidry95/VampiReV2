@@ -50,7 +50,7 @@ namespace Assets.Scripts.Matt
             }
         }
 
-        protected bool WAYPOINTSTRAVEL = false;
+        public bool WAYPOINTSTRAVEL = true;
         IEnumerator PatrolRoutine()
         {
             while (true)
