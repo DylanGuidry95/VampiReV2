@@ -23955,12 +23955,6 @@ Prefab:
       propertyPath: m_Name
       value: FeedingTest (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 114716067415320056, guid: d3e91807b0ece1b44a3beae59a1d8d3d,
-        type: 2}
-      propertyPath: OnGameEnd
-      value: 
-      objectReference: {fileID: 11400000, guid: 5c39a935333028e4a88339ce2e514b12,
-        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3e91807b0ece1b44a3beae59a1d8d3d, type: 2}
   m_IsPrefabAsset: 0
