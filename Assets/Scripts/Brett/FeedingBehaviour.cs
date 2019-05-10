@@ -25,6 +25,7 @@ namespace Assets.Scripts.Brett
         public GameObjectVariable left, right;
 
         public GameEvent OnGameEnd;
+        public GameEvent OnNPCDead;
 
         void Start()
         {
@@ -51,6 +52,7 @@ namespace Assets.Scripts.Brett
                 }
                 alreadyFadedIn = true;
                 _npcIsDead = true;
+                OnNPCDead.Raise();
             }
 
             if (_leftShoulder.isGrabbed && _rightShoulder.isGrabbed)
