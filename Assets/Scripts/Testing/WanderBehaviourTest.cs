@@ -115,6 +115,10 @@ namespace Assets.Scripts.Matt
                 {
                     randomindex = Random.Range(0, WayPoints.Count);
                 }
+                if (currentWP == randomindex)
+                {
+                    randomindex = Random.Range(0, WayPoints.Count);
+                }
                 currentWP = randomindex;
                 yield return StartCoroutine("UpdateRotation", WayPoints[randomindex].position);
             }
@@ -122,6 +126,10 @@ namespace Assets.Scripts.Matt
             {
                 var randomindex = Random.Range(0, WayPoints.Count);
 
+                if (currentWP == randomindex)
+                {
+                    randomindex = Random.Range(0, WayPoints.Count);
+                }
                 if (currentWP == randomindex)
                 {
                     randomindex = Random.Range(0, WayPoints.Count);
