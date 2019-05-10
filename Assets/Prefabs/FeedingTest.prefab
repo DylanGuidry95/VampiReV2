@@ -3634,6 +3634,7 @@ MonoBehaviour:
   _npcIsDead: 0
   left: {fileID: 11400000, guid: 4d8b86de46345f9498f4d5d9b4b22611, type: 2}
   right: {fileID: 11400000, guid: 7d6abb44ad3ba9b448b24e5f27e5147e, type: 2}
+  OnGameEnd: {fileID: 11400000, guid: 5c39a935333028e4a88339ce2e514b12, type: 2}
 --- !u!114 &114796881247496598
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -34,9 +34,10 @@ namespace Assets.Scripts.Brett
         }
 
         private Vector3 currentAvgPos;
-        private float timer = 3;
-        private float bloodFadeTimer = .5f;
-        private bool alreadyFaded = false;
+        private float timer = 5;
+        private float bloodFadeTimer = 1;
+        private bool alreadyFadedOut = false;
+        private bool alreadyFadedIn = false;
 
 
 
@@ -44,7 +45,11 @@ namespace Assets.Scripts.Brett
         {
             if (_neck.isCollidingWithPlayer && _leftShoulder.isGrabbed && _rightShoulder.isGrabbed)
             {
-                FadeUtility.BloodFadeIn(0.5f);
+                if (!alreadyFadedIn)
+                {
+                    FadeUtility.BloodFadeIn(1);
+                }
+                alreadyFadedIn = true;
                 _npcIsDead = true;
             }
 
@@ -67,11 +72,11 @@ namespace Assets.Scripts.Brett
 
                 if (bloodFadeTimer < 0)
                 {
-                    if (!alreadyFaded)
+                    if (!alreadyFadedOut)
                     {
-                        FadeUtility.BloodFadeOut(0.5f);
+                        FadeUtility.BloodFadeOut(1);
                     }
-                    alreadyFaded = true;
+                    alreadyFadedOut = true;
                 }
             }
         }
