@@ -184,6 +184,7 @@ GameObject:
   - component: {fileID: 114078140724299028}
   - component: {fileID: 120020664150126840}
   - component: {fileID: 114357292764798700}
+  - component: {fileID: 114458920474665842}
   m_Layer: 0
   m_Name: RightHand
   m_TagString: Untagged
@@ -1243,6 +1244,7 @@ GameObject:
   - component: {fileID: 120052331416821532}
   - component: {fileID: 114469052358067768}
   - component: {fileID: 114314469457151726}
+  - component: {fileID: 114490787130383248}
   m_Layer: 0
   m_Name: LeftHand
   m_TagString: Untagged
@@ -2982,6 +2984,18 @@ MonoBehaviour:
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   m_toggleGameObjectOnVirtualClick: []
   m_toggleComponentOnVirtualClick: []
+--- !u!114 &114458920474665842
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1120304444395502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfdc638f402fe314088cc3a2a2376afc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Variable: {fileID: 11400000, guid: 7d6abb44ad3ba9b448b24e5f27e5147e, type: 2}
 --- !u!114 &114469052358067768
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2995,6 +3009,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GrabbedObject: {fileID: 0}
   maxVelocity: 50
+--- !u!114 &114490787130383248
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1902357956259510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfdc638f402fe314088cc3a2a2376afc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Variable: {fileID: 11400000, guid: 4d8b86de46345f9498f4d5d9b4b22611, type: 2}
 --- !u!114 &114517817040512600
 MonoBehaviour:
   m_ObjectHideFlags: 1

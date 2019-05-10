@@ -1,7 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using Assets.Scripts.Dylan;
+using HTC.UnityPlugin.Vive;
+using HTC.UnityPlugin.VRModuleManagement;
 using UnityEngine;
+using Valve.VR;
+using Valve.VR.InteractionSystem;
 
 namespace Assets.Scripts.Brett
 {
@@ -9,31 +13,66 @@ namespace Assets.Scripts.Brett
     public class FeedingBehaviour : MonoBehaviour
     {
         public GameObject Neck;
-
         public GameObject LeftShoulder;
-
         public GameObject RightShoulder;
+        public GameObject bone;
 
         private NeckColliderBehaviour _neck;
         private FeedingGrabbableBehaviour _leftShoulder;
         private FeedingGrabbableBehaviour _rightShoulder;
 
         public bool _npcIsDead = false;
+        public GameObjectVariable left, right;
 
-        // Use this for initialization
+        public GameEvent OnGameEnd;
+
         void Start()
         {
             _neck = Neck.GetComponent<NeckColliderBehaviour>();
             _leftShoulder = LeftShoulder.GetComponent<FeedingGrabbableBehaviour>();
-            _rightShoulder = RightShoulder.GetComponent<FeedingGrabbableBehaviour>();
+            _rightShoulder = RightShoulder.GetComponent<FeedingGrabbableBehaviour>();    
         }
 
-        // Update is called once per frame
+        private Vector3 currentAvgPos;
+        private float timer = 3;
+        private float bloodFadeTimer = .5f;
+        private bool alreadyFaded = false;
+
+
+
         void Update()
         {
             if (_neck.isCollidingWithPlayer && _leftShoulder.isGrabbed && _rightShoulder.isGrabbed)
             {
+                FadeUtility.BloodFadeIn(0.5f);
                 _npcIsDead = true;
+            }
+
+            if (_leftShoulder.isGrabbed && _rightShoulder.isGrabbed)
+            {
+                var averagePos = (left.Value.transform.position + right.Value.transform.position) / 2;
+                Vector3 rotate = currentAvgPos - averagePos;
+                currentAvgPos = averagePos;
+                bone.transform.Rotate(new Vector3(0, 0, 1), -rotate.z * 20);
+            }
+
+            if (_npcIsDead)
+            {
+                bloodFadeTimer -= Time.deltaTime;
+                timer -= Time.deltaTime;
+                if (timer < 0)
+                {
+                    OnGameEnd.Raise();
+                }
+
+                if (bloodFadeTimer < 0)
+                {
+                    if (!alreadyFaded)
+                    {
+                        FadeUtility.BloodFadeOut(0.5f);
+                    }
+                    alreadyFaded = true;
+                }
             }
         }
     }
