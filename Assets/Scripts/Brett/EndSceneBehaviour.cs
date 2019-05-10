@@ -8,7 +8,7 @@ namespace Assets.Scripts.Brett
 
     public class EndSceneBehaviour : MonoBehaviour
     {
-        public GameEvent OnIntroStart;
+        public GameEvent OnExit;
 
         public float LogoTimer;
 
@@ -39,7 +39,7 @@ namespace Assets.Scripts.Brett
                 if (timer < 0 && !isRaised2)
                 {
                     isRaised2 = true;
-                    OnIntroStart.Raise();
+                    OnExit.Raise();
                 }
             }
         }

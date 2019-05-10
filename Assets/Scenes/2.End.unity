@@ -219,9 +219,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ed1d55f9b439dd4aa91c3a1babd446c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnFadeIn: {fileID: 11400000, guid: 2912f4fa3612760448f7ee56b43c0382, type: 2}
-  OnFadeOut: {fileID: 11400000, guid: 22d08694596878c4fb76ef9d4343b72a, type: 2}
-  OnIntroStart: {fileID: 11400000, guid: 9891aad68ca0e1c48ba2289c1ef5dea9, type: 2}
+  OnExit: {fileID: 11400000, guid: d8832f90544982d4e9381ec430d58402, type: 2}
   LogoTimer: 10
   PlayerPrefab: {fileID: 1033669407660004, guid: 7ad02460a4559664d97ae64c7c0f9316,
     type: 2}

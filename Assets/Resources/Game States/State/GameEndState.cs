@@ -22,10 +22,10 @@ namespace Assets.Scripts.Brett
 			for (int i = 0; i < conditionScriptable.conditions.Count; i++)
 
             { 
-				if(conditionScriptable.conditions[i].name == "OnIntroStart" && conditionScriptable.conditions[i].isRaised)
+				if(conditionScriptable.conditions[i].name == "OnGameStart" && conditionScriptable.conditions[i].isRaised)
 				{
 					c.ChangeState(new IntroStartState());
-					conditionScriptable.Toggle("OnIntroStart");
+					conditionScriptable.Toggle("OnGameStart");
 
                     SceneManager.LoadScene("1.Intro");
                 }
