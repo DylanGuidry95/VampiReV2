@@ -40,6 +40,8 @@ namespace Assets.Scripts.Matt
 
         void Update()
         {
+            if (targetTran == null)
+                targetTran = GameObject.FindGameObjectWithTag("Player").transform.position;
             targetTran = target.transform.position;
             bool inRange = Vector3.Distance(transform.position, targetTran) < maxRange && Vector3.Distance(transform.position, targetTran) > minRange;
             var infront = Vector2.Dot(target.transform.forward, transform.forward) < 0;
