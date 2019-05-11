@@ -41,6 +41,8 @@ namespace Assets.Scripts.Brett
 
         void PlayerDetection()
         {
+            if (Target == null)
+                Target = GameObject.FindGameObjectWithTag("Player").transform;
             var targetDir = Target.position - transform.position;
             float angle = Vector3.Angle(targetDir, transform.forward);
             float distance = Vector3.Distance(Target.position, transform.position);
