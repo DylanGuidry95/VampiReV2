@@ -3058,7 +3058,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4981792936821116, guid: df59fe4743431c546b7640fbefc5d77e, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -5.02
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4981792936821116, guid: df59fe4743431c546b7640fbefc5d77e, type: 2}
       propertyPath: m_LocalPosition.y
@@ -7205,6 +7205,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c739babf655648345abd844c2303d030, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerAlive: 1
   Responses:
     m_PersistentCalls:
       m_Calls: []
@@ -7213,6 +7214,7 @@ MonoBehaviour:
   currentDestination: {x: 0, y: 0, z: 0}
   seconds: 1
   secondsToWalk: 20
+  OnPlayerDead: {fileID: 11400000, guid: 958da711c9695184895872fb982b00b0, type: 2}
   WayPoints:
   - {fileID: 1872408458}
   - {fileID: 1725696809}
@@ -7222,8 +7224,12 @@ MonoBehaviour:
   target: {fileID: 0}
   minRange: 0
   maxRange: 3
+  closeAF: 1
   targetTran: {x: 0, y: 0, z: 0}
   WAYPOINTSTRAVEL: 1
+  Target: {fileID: 0}
+  AngleOfView: 0
+  DistanceOfView: 0
 --- !u!195 &939965934
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -7254,7 +7260,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 939965930}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.02, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 365146757}
@@ -11193,6 +11199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c739babf655648345abd844c2303d030, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerAlive: 1
   Responses:
     m_PersistentCalls:
       m_Calls: []
@@ -11201,6 +11208,7 @@ MonoBehaviour:
   currentDestination: {x: 0, y: 0, z: 0}
   seconds: 1
   secondsToWalk: 12
+  OnPlayerDead: {fileID: 11400000, guid: 958da711c9695184895872fb982b00b0, type: 2}
   WayPoints:
   - {fileID: 567118253}
   - {fileID: 697452937}
@@ -11213,8 +11221,12 @@ MonoBehaviour:
   target: {fileID: 0}
   minRange: 0
   maxRange: 0
+  closeAF: 0
   targetTran: {x: 0, y: 0, z: 0}
   WAYPOINTSTRAVEL: 1
+  Target: {fileID: 0}
+  AngleOfView: 0
+  DistanceOfView: 0
 --- !u!195 &1547888974
 NavMeshAgent:
   m_ObjectHideFlags: 0

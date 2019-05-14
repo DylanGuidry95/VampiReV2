@@ -2756,9 +2756,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c739babf655648345abd844c2303d030, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerAlive: 1
+  Responses:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   currentDestination: {x: 0, y: 0, z: 0}
-  dotproduct: 0
-  maxdelta: 10
+  seconds: 6
+  secondsToWalk: 3.5
+  OnPlayerDead: {fileID: 11400000, guid: 958da711c9695184895872fb982b00b0, type: 2}
+  WayPoints: []
+  currentWP: 0
+  nextWP: 0
+  remainingdistance: 0
+  target: {fileID: 0}
+  minRange: 0
+  maxRange: 0
+  closeAF: 0
+  targetTran: {x: 0, y: 0, z: 0}
+  WAYPOINTSTRAVEL: 1
 --- !u!137 &137046321063092962
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
