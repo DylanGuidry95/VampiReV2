@@ -34,7 +34,8 @@ public class TeleportationBehaviour : MonoBehaviour
 				if(TeleportDestination == null)
 				{
 					TeleportDestination = GameObject.CreatePrimitive(PrimitiveType.Sphere);
-					Destroy(TeleportDestination.GetComponent<Collider>());
+                    TeleportDestination.GetComponent<MeshRenderer>().material = Resources.Load<Material>("Materials/teleportball");
+                    Destroy(TeleportDestination.GetComponent<Collider>());
 				}
 				TeleportDestination.transform.position = hit.point;
 				TeleportationLine.enabled = true;
