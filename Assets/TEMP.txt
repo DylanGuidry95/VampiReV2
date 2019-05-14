@@ -1,0 +1,1 @@
+Checking to see if current branch is new master
