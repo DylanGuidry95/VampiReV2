@@ -159,6 +159,7 @@ GameObject:
   - component: {fileID: 95076177176932340}
   - component: {fileID: 114835290928148804}
   - component: {fileID: 114725050742779124}
+  - component: {fileID: 114940735131066044}
   m_Layer: 0
   m_Name: NPC_Boss
   m_TagString: Untagged
@@ -2959,8 +2960,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1065553511975850}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 51.003, y: 0, z: 50}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -18.849, y: 0, z: 0.396}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4393054720852078}
@@ -2969,7 +2970,7 @@ Transform:
   - {fileID: 4773424630412050}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!4 &4903526074123576
 Transform:
   m_ObjectHideFlags: 1
@@ -3196,7 +3197,7 @@ Animator:
   m_GameObject: {fileID: 1065553511975850}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 8d1c64c327dcd654a8e1a65a09e2271f, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9ff056f828fa5eb45b8b29b094750696, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -3216,7 +3217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 480986510689d294b92a28ae10794038, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HighLightMaterial: {fileID: 2100000, guid: 38c5f53e7f1806a4a9fc159718f63db0, type: 2}
+  HighLightMaterial: {fileID: 2100000, guid: caed036fc30fd5b4f9f4633e2c30ea8e, type: 2}
   isGrabbed: 0
 --- !u!114 &114348715113518862
 MonoBehaviour:
@@ -3229,7 +3230,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 480986510689d294b92a28ae10794038, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HighLightMaterial: {fileID: 2100000, guid: 38c5f53e7f1806a4a9fc159718f63db0, type: 2}
+  HighLightMaterial: {fileID: 2100000, guid: caed036fc30fd5b4f9f4633e2c30ea8e, type: 2}
   isGrabbed: 0
 --- !u!114 &114725050742779124
 MonoBehaviour:
@@ -3250,6 +3251,7 @@ MonoBehaviour:
   left: {fileID: 11400000, guid: 4d8b86de46345f9498f4d5d9b4b22611, type: 2}
   right: {fileID: 11400000, guid: 7d6abb44ad3ba9b448b24e5f27e5147e, type: 2}
   OnGameEnd: {fileID: 11400000, guid: 5c39a935333028e4a88339ce2e514b12, type: 2}
+  OnNPCDead: {fileID: 11400000, guid: 69f77f90744978147bf7e9c3b3253025, type: 2}
 --- !u!114 &114835290928148804
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3265,6 +3267,35 @@ MonoBehaviour:
   AngleOfView: 0
   DistanceOfView: 0
   ICanSeeThePlayer: 0
+--- !u!114 &114940735131066044
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1065553511975850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3c662113df7858499848b3c4bdded4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 69f77f90744978147bf7e9c3b3253025, type: 2}
+  Notes: 
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 95076177176932340}
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: dead
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114998833893621066
 MonoBehaviour:
   m_ObjectHideFlags: 1
