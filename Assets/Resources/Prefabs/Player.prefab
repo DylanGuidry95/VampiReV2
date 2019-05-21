@@ -2921,7 +2921,7 @@ MonoBehaviour:
   GrabbedObject: {fileID: 0}
   GrabbedLocation: {x: 0, y: 0, z: 0}
   Role: 0
-  maxVelocity: 50
+  maxVelocity: 20
 --- !u!114 &114368456480129380
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2987,7 +2987,7 @@ MonoBehaviour:
   GrabbedObject: {fileID: 0}
   GrabbedLocation: {x: 0, y: 0, z: 0}
   Role: 1
-  maxVelocity: 50
+  maxVelocity: 20
 --- !u!114 &114482832049261766
 MonoBehaviour:
   m_ObjectHideFlags: 1
