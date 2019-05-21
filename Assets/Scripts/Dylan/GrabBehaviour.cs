@@ -9,7 +9,7 @@ namespace Assets.Scripts.Dylan{
 	public class GrabBehaviour : MonoBehaviour 
 	{
 		public GrabbableBehaviour GrabbedObject;
-		protected InteractionRaycastBehaviour RayCastBehaviourRef;
+		protected IPhysicsData RayCastBehaviourRef;
 
 		Vector3 GrabberVelocity;
 		Vector3 LastFramePosition;
@@ -65,4 +65,10 @@ namespace Assets.Scripts.Dylan{
 			GrabbedObject = null;
 		}
 	}
+
+    public interface IPhysicsData
+    {
+        GrabbableBehaviour HighLightedObject { get;  }
+        Vector3 HitLocation { get; }
+    }
 }
