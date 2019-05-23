@@ -5,7 +5,7 @@ using UnityEngine;
 namespace Assets.Scripts.Dylan
 {
 	[RequireComponent(typeof(LineRenderer))]
-	public class InteractionRaycastBehaviour : MonoBehaviour ,IPhysicsData
+	public class InteractionRaycastBehaviour : MonoBehaviour
 	{		
 		public float MaxGrabDistance;
 		public GrabbableBehaviour HighLightedObject;
@@ -59,14 +59,5 @@ namespace Assets.Scripts.Dylan
 			Gizmos.color = Color.red;
 			Gizmos.DrawRay(transform.position, transform.forward * MaxGrabDistance);	
 		}
-
-        GrabbableBehaviour IPhysicsData.HighLightedObject => HighLightedObject;
-
-        Vector3 IPhysicsData.HitLocation => HitLocation;
-
-        public class ColliderGrabBehaviour : IPhysicsData
-        {
-
-        }
     }
 }
