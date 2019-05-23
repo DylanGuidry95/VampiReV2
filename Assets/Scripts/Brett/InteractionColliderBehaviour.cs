@@ -3,32 +3,25 @@ using System.Collections.Generic;
 using Assets.Scripts.Dylan;
 using UnityEngine;
 
-public class InteractionColliderBehaviour : MonoBehaviour
+namespace Assets.Scripts.Brett
 {
-
-    public GrabbableBehaviour HighLightedObject;
-    public Vector3 HitLocation;
-
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
-    private void OnTriggerEnter(Collider other)
+    public class InteractionColliderBehaviour : MonoBehaviour
     {
-        HitLocation = other.transform.position;
-        HighLightedObject = other.GetComponent<GrabbableBehaviour>();
-        HighLightedObject?.HighLight(true);
-    }
 
-    private void OnTriggerExit(Collider other)
-    {
-        HighLightedObject?.HighLight(false);
-        HighLightedObject = null;
+        public GrabbableBehaviour HighLightedObject;
+        public Vector3 HitLocation;
+
+        private void OnTriggerEnter(Collider other)
+        {
+            HitLocation = other.transform.position;
+            HighLightedObject = other.GetComponent<GrabbableBehaviour>();
+            HighLightedObject?.HighLight(true);
+        }
+
+        private void OnTriggerExit(Collider other)
+        {
+            HighLightedObject?.HighLight(false);
+            HighLightedObject = null;
+        }
     }
 }
