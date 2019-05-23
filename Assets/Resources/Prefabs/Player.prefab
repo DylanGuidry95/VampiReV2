@@ -181,11 +181,12 @@ GameObject:
   m_Component:
   - component: {fileID: 4186227907525478}
   - component: {fileID: 114298453173084262}
-  - component: {fileID: 114229755290096274}
   - component: {fileID: 120020664150126840}
-  - component: {fileID: 114357292764798700}
   - component: {fileID: 114962069966036754}
   - component: {fileID: 135015630293556106}
+  - component: {fileID: 54555469284067694}
+  - component: {fileID: 114993265827648068}
+  - component: {fileID: 114511570391684816}
   m_Layer: 0
   m_Name: RightHand
   m_TagString: Untagged
@@ -1258,11 +1259,12 @@ GameObject:
   m_Component:
   - component: {fileID: 4930438355114734}
   - component: {fileID: 114667311750039558}
-  - component: {fileID: 114596119655484496}
   - component: {fileID: 120052331416821532}
-  - component: {fileID: 114469052358067768}
   - component: {fileID: 114683417126023214}
   - component: {fileID: 135391076247067618}
+  - component: {fileID: 54585881165449632}
+  - component: {fileID: 114754287047269330}
+  - component: {fileID: 114971214361439622}
   m_Layer: 0
   m_Name: LeftHand
   m_TagString: Untagged
@@ -1414,8 +1416,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1777181314200720}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_LocalPosition: {x: 0, y: 0, z: -0.16300002}
+  m_LocalScale: {x: 120, y: 120, z: 120}
   m_Children:
   - {fileID: 4789840440717934}
   - {fileID: 4680146344076726}
@@ -1670,8 +1672,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1037720202446548}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.113}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.0361}
+  m_LocalScale: {x: 1.25, y: 1.25, z: 1.25}
   m_Children:
   - {fileID: 4012312483799898}
   - {fileID: 4271069907543158}
@@ -1685,8 +1687,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1224528797905492}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_LocalPosition: {x: -0, y: 0, z: -0.163}
+  m_LocalScale: {x: 120, y: 120, z: 120}
   m_Children:
   - {fileID: 4674838095303914}
   - {fileID: 4569078105365244}
@@ -2173,7 +2175,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1707585784142398}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.1854}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4764434252555010}
@@ -2322,8 +2324,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1444819593297022}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.113}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.0361}
+  m_LocalScale: {x: 1.25, y: 1.25, z: 1.25}
   m_Children:
   - {fileID: 4672834822226380}
   - {fileID: 4049013433432502}
@@ -2533,6 +2535,36 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!54 &54555469284067694
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1120304444395502}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!54 &54585881165449632
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1902357956259510}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!54 &54708414054449846
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -2733,20 +2765,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_height: 1.3
---- !u!114 &114229755290096274
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1120304444395502}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b20504d154b8e3f418b5a8483ff301e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MaxGrabDistance: 2
-  HighLightedObject: {fileID: 0}
-  HitLocation: {x: 0, y: 0, z: 0}
 --- !u!114 &114298453173084262
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2793,7 +2811,7 @@ MonoBehaviour:
   m_onVirtualPressDown:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114469052358067768}
+      - m_Target: {fileID: 114754287047269330}
         m_MethodName: GrabObject
         m_Mode: 1
         m_Arguments:
@@ -2809,7 +2827,7 @@ MonoBehaviour:
   m_onVirtualPressUp:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114469052358067768}
+      - m_Target: {fileID: 114754287047269330}
         m_MethodName: LetGoObject
         m_Mode: 1
         m_Arguments:
@@ -2907,21 +2925,6 @@ MonoBehaviour:
   m_deviceIndex: 0
   m_overrideModel: 0
   m_overrideShader: {fileID: 0}
---- !u!114 &114357292764798700
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1120304444395502}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c05b471f1c99b7b4d9b3def9dd00ffa8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GrabbedObject: {fileID: 0}
-  GrabbedLocation: {x: 0, y: 0, z: 0}
-  Role: 0
-  maxVelocity: 50
 --- !u!114 &114368456480129380
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2948,8 +2951,8 @@ MonoBehaviour:
   m_onVirtualClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114596119655484496}
-        m_MethodName: ToggleLine
+      - m_Target: {fileID: 1902357956259510}
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2973,21 +2976,6 @@ MonoBehaviour:
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   m_toggleGameObjectOnVirtualClick: []
   m_toggleComponentOnVirtualClick: []
---- !u!114 &114469052358067768
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1902357956259510}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c05b471f1c99b7b4d9b3def9dd00ffa8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GrabbedObject: {fileID: 0}
-  GrabbedLocation: {x: 0, y: 0, z: 0}
-  Role: 1
-  maxVelocity: 50
 --- !u!114 &114482832049261766
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3014,6 +3002,19 @@ MonoBehaviour:
   _head: {fileID: 0}
   _ears: {fileID: 0}
   wireframe: 0
+--- !u!114 &114511570391684816
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1120304444395502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feab742e2167c664e8cebcbca9528c4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HighLightedObject: {fileID: 0}
+  HitLocation: {x: 0, y: 0, z: 0}
 --- !u!114 &114517817040512600
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3136,7 +3137,7 @@ MonoBehaviour:
   m_onVirtualClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114229755290096274}
+      - m_Target: {fileID: 0}
         m_MethodName: ToggleLine
         m_Mode: 1
         m_Arguments:
@@ -3161,20 +3162,6 @@ MonoBehaviour:
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   m_toggleGameObjectOnVirtualClick: []
   m_toggleComponentOnVirtualClick: []
---- !u!114 &114596119655484496
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1902357956259510}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b20504d154b8e3f418b5a8483ff301e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MaxGrabDistance: 2
-  HighLightedObject: {fileID: 0}
-  HitLocation: {x: 0, y: 0, z: 0}
 --- !u!114 &114598402242802874
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3253,7 +3240,7 @@ MonoBehaviour:
   m_onVirtualPressDown:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114357292764798700}
+      - m_Target: {fileID: 114993265827648068}
         m_MethodName: GrabObject
         m_Mode: 1
         m_Arguments:
@@ -3269,7 +3256,7 @@ MonoBehaviour:
   m_onVirtualPressUp:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114357292764798700}
+      - m_Target: {fileID: 114993265827648068}
         m_MethodName: LetGoObject
         m_Mode: 1
         m_Arguments:
@@ -3476,6 +3463,21 @@ MonoBehaviour:
     m_TypeName: Valve.VR.SteamVR_Behaviour_Skeleton_TrackingChangedEvent, SteamVR,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   mirroring: 0
+--- !u!114 &114754287047269330
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1902357956259510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cffdfc6dcd473c34f8f535b6b9432220, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GrabbedObject: {fileID: 0}
+  GrabbedLocation: {x: 0, y: 0, z: 0}
+  Role: 0
+  maxVelocity: 0
 --- !u!114 &114754545004937808
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3683,6 +3685,19 @@ MonoBehaviour:
     m_TypeName: HTC.UnityPlugin.Vive.VivePoseTracker+UnityEventBool, Assembly-CSharp,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   role: -2
+--- !u!114 &114971214361439622
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1902357956259510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feab742e2167c664e8cebcbca9528c4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HighLightedObject: {fileID: 0}
+  HitLocation: {x: 0, y: 0, z: 0}
 --- !u!114 &114992244632995972
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3695,6 +3710,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Variable: {fileID: 11400000, guid: 4d8b86de46345f9498f4d5d9b4b22611, type: 2}
+--- !u!114 &114993265827648068
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1120304444395502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cffdfc6dcd473c34f8f535b6b9432220, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GrabbedObject: {fileID: 0}
+  GrabbedLocation: {x: 0, y: 0, z: 0}
+  Role: 0
+  maxVelocity: 0
 --- !u!120 &120020664150126840
 LineRenderer:
   m_ObjectHideFlags: 1
@@ -4089,10 +4119,10 @@ SphereCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1120304444395502}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.1
+  m_Radius: 0.15
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!135 &135152386507065514
 SphereCollider:
@@ -4113,10 +4143,10 @@ SphereCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1902357956259510}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.1
+  m_Radius: 0.15
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!137 &137522289839023412
 SkinnedMeshRenderer:

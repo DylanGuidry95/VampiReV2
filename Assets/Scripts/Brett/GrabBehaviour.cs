@@ -61,5 +61,9 @@ namespace Assets.Scripts.Brett
             GrabbedObject.LetGo(GrabberVelocity * maxVelocity, this);
             GrabbedObject = null;
         }
+        public void Print()
+        {
+            Debug.Log("Trigger Pressed");
+        }
     }
 }
