@@ -6,7 +6,7 @@ namespace Ralenski
     {
         [Range(0, 10)]
         public float sliderVal;
-        
+
         [TextArea, SerializeField] private string Note;
         public SphereCollider throwableObjCollider;
         public LerpOBJ lerpOBJ;
@@ -47,7 +47,7 @@ namespace Ralenski
             public float Interprolant
             {
                 get;
-                set; 
+                set;
             }
             [SerializeField]
             private float _result;
@@ -63,7 +63,7 @@ namespace Ralenski
         // Use this for initialization
         void Start()
         {
-            
+
             timeOBJ = new TimeOBJ
             {
                 Max = 10,
@@ -75,17 +75,40 @@ namespace Ralenski
                 Ending = timeOBJ.Max,
                 Interprolant = timeOBJ.Value //set the ending of the lerp object
             };
-            
+
             throwableObjCollider = GetComponent<SphereCollider>();//add a collider and store the reference
             throwableObjCollider.radius = lerpOBJ.Result;//set the radius of the sphere collider
         }
+        public bool expand = false;
         // Update is called once per frame
         void Update()
         {
-            timeOBJ.Value += Time.deltaTime;//update the timer
-            sliderVal = timeOBJ.Value;//set the slider to the time objects value
-            lerpOBJ.Interprolant = sliderVal / timeOBJ.Max; //set the interprolant to the sliders value
-            throwableObjCollider.radius = lerpOBJ.Result;//set the result to be the lerp result
+            if (expand)
+            {
+
+
+                timeOBJ.Value += Time.deltaTime;//update the timer
+                sliderVal = timeOBJ.Value;//set the slider to the time objects value
+                lerpOBJ.Interprolant = sliderVal / timeOBJ.Max; //set the interprolant to the sliders value
+                throwableObjCollider.radius = lerpOBJ.Result;//set the result to be the lerp result
+            }
+            else
+            {
+                sliderVal = 0;
+                timeOBJ = new TimeOBJ
+                {
+                    Max = 10,
+                    Value = sliderVal
+                };
+                lerpOBJ = new LerpOBJ
+                {
+                    Beginning = 0,
+                    Ending = timeOBJ.Max,
+                    Interprolant = timeOBJ.Value //set the ending of the lerp object
+                };
+            }
         }
+
+
     }
 }

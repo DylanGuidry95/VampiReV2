@@ -9,10 +9,19 @@ namespace Assets.Scripts.Dylan{
 	public class GrabBehaviour : MonoBehaviour 
 	{
 		public GrabbableBehaviour GrabbedObject;
-		private InteractionRaycastBehaviour RayCastBehaviourRef;
+		protected InteractionRaycastBehaviour RayCastBehaviourRef;
 
 		Vector3 GrabberVelocity;
-		Vector3 LastFramePosition;		
+		Vector3 LastFramePosition;
+
+		public Vector3 GrabbedLocation;
+
+		public enum HandRole
+		{
+			right, left
+		}
+
+		public HandRole Role = HandRole.right;
 
 		/// <summary>
 		/// Awake is called when the script instance is being loaded.
@@ -24,10 +33,8 @@ namespace Assets.Scripts.Dylan{
 
 		private void Update() 
 		{
-			if(GrabbedObject != null)
-			{
-				//GrabbedObject.transform.position = this.transform.position;
-			}
+			if(GrabbedObject == null)
+				return;			
 		}
 
 		/// <summary>
@@ -41,20 +48,27 @@ namespace Assets.Scripts.Dylan{
 			LastFramePosition = transform.position;	
 		}
 
-		public void GrabObject()
+		public virtual void GrabObject()
 		{
 			if(RayCastBehaviourRef.HighLightedObject == null)
 				return;
 			GrabbedObject = RayCastBehaviourRef.HighLightedObject;
-			GrabbedObject.Grabbed(this.transform);
+			GrabbedLocation = RayCastBehaviourRef.HitLocation;
+			GrabbedObject.Grabbed(this);
 		}
 
-		public void LetGoObject()
+		public virtual void LetGoObject()
 		{
 			if(GrabbedObject == null)
-				return;			
-			GrabbedObject.LetGo(GrabberVelocity * maxVelocity);
+				return;
+			GrabbedObject.LetGo(GrabberVelocity * maxVelocity, this);			
 			GrabbedObject = null;
 		}
 	}
+
+    public interface IPhysicsData
+    {
+        GrabbableBehaviour HighLightedObject { get;  }
+        Vector3 HitLocation { get; }
+    }
 }
