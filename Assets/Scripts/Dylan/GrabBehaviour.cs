@@ -65,4 +65,10 @@ namespace Assets.Scripts.Dylan{
 			GrabbedObject = null;
 		}
 	}
+
+    public interface IPhysicsData
+    {
+        GrabbableBehaviour HighLightedObject { get;  }
+        Vector3 HitLocation { get; }
+    }
 }
