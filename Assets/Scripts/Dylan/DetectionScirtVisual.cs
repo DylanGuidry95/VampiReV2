@@ -71,13 +71,13 @@ public class DetectionScirtVisual : MonoBehaviour {
 	/// </summary>
 	void OnDrawGizmos()
 	{				
-		//GenerateConeOfView();
-		//Gizmos.color = Color.yellow;
-		//foreach (var vec in Verts)
-		//{
-		//	Gizmos.DrawLine(transform.position, vec);
-		//	Gizmos.DrawCube(vec, new Vector3(.25f,.25f,.25f));
-		//}
+		GenerateConeOfView();
+		Gizmos.color = Color.yellow;
+		foreach (var vec in Verts)
+		{
+			Gizmos.DrawLine(transform.position, vec);
+			Gizmos.DrawCube(vec, new Vector3(.25f,.25f,.25f));
+		}
 	}
 
 	void GenerateConeOfView()
@@ -89,7 +89,7 @@ public class DetectionScirtVisual : MonoBehaviour {
 		var Distance = BehaviourRef.DistanceOfView;
 
         List<Ray> rays = new List<Ray>();
-        for (float i = -angle; i < angle; i += 1f)
+        for (float i = -angle; i < angle; i += 2f)
         {
             Quaternion spread = Quaternion.AngleAxis(i, transform.up);
             Vector3 newVec = spread * transform.forward;

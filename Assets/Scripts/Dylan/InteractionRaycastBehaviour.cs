@@ -5,15 +5,17 @@ using UnityEngine;
 namespace Assets.Scripts.Dylan
 {
 	[RequireComponent(typeof(LineRenderer))]
-	public class InteractionRaycastBehaviour : MonoBehaviour 
+	public class InteractionRaycastBehaviour : MonoBehaviour
 	{		
 		public float MaxGrabDistance;
 		public GrabbableBehaviour HighLightedObject;
 
 		private LineRenderer LineRendererRef;
+		public Vector3 HitLocation;
 		bool IsDrawingLine;
 
-		// Use this for initialization
+
+        // Use this for initialization
 		void Awake () {
 			MaxGrabDistance = Mathf.Clamp(MaxGrabDistance, 0.01f, Mathf.Infinity);
 			LineRendererRef = GetComponent<LineRenderer>();			
@@ -31,6 +33,7 @@ namespace Assets.Scripts.Dylan
 			{
 				if(hit.transform.GetComponent<GrabbableBehaviour>() || hit.transform.gameObject != HighLightedObject?.gameObject)
 				{
+					HitLocation = hit.point;
 					HighLightedObject = hit.transform.GetComponent<GrabbableBehaviour>();
 					HighLightedObject?.HighLight(true);
 				}
@@ -55,6 +58,6 @@ namespace Assets.Scripts.Dylan
 		{
 			Gizmos.color = Color.red;
 			Gizmos.DrawRay(transform.position, transform.forward * MaxGrabDistance);	
-		}	
-	}
+		}
+    }
 }
