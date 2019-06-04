@@ -4,8 +4,17 @@ using UnityEngine;
 
 public class SoundWaveBehaviour : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+    public GameObject prefab;
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.collider.gameObject.CompareTag("Ground"))
+        {
+            Instantiate(prefab, transform.position, Quaternion.Euler(90, 0, 0));
+        }
+    }
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
