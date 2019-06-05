@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.AI;
 
-namespace Rain.Behaviour
+namespace Assets.Scripts.Matt
 {
     public class TurretBehavior : MonoBehaviour
     {
