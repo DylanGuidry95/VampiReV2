@@ -40,14 +40,14 @@ namespace Assets.Scripts.Matt
 
         void Update()
         {
-            targetTran = target.transform.position;
-            bool inRange = Vector3.Distance(transform.position, targetTran) < maxRange && Vector3.Distance(transform.position, targetTran) > minRange;
-            var infront = Vector2.Dot(target.transform.forward, transform.forward) < 0;
-            if (inRange && infront)
-            {
-                transform.LookAt(targetTran);
-                transform.Translate(Vector3.forward * Time.deltaTime * 4.25f);
-            }
+            //targetTran = target.transform.position;
+            //bool inRange = Vector3.Distance(transform.position, targetTran) < maxRange && Vector3.Distance(transform.position, targetTran) > minRange;
+            //var infront = Vector2.Dot(target.transform.forward, transform.forward) < 0;
+            //if (inRange && infront)
+            //{
+            //    transform.LookAt(targetTran);
+            //    transform.Translate(Vector3.forward * Time.deltaTime * 4.25f);
+            //}
         }
 
         public bool WAYPOINTSTRAVEL = true;
