@@ -34,12 +34,12 @@ namespace Assets.Scripts.Matt
             var closerplayer = Vector3.Distance(player.transform.position, transform.position);
             if (closerplayer < closercollider)
             {
-                Debug.Log("Is working");
+                Debug.Log("Player is closer");
                 IsItTho = true;
             }
             else
             {
-                Debug.Log("No working");
+                Debug.Log("Collider is closer");
                 IsItTho = false;
             }
 
