@@ -16,14 +16,15 @@ public class QuickTestRotation : MonoBehaviour
 
     private Vector3 currentAvgPos;
 
-    void Update ()
+    void LateUpdate()
     {
-        var averagePos = target.transform.position;
-        Vector3 rotate = currentAvgPos - averagePos;
-        currentAvgPos = averagePos;
-        bone.transform.Rotate(new Vector3(0, 0, 1), -rotate.z * 20);
+        //var averagePos = target.transform.position;
+        //Vector3 rotate = currentAvgPos - averagePos;
+        //currentAvgPos = averagePos;
+        //bone.transform.Rotate(new Vector3(0, 0, 1), -rotate.z * 20);
         //bone.transform.LookAt(-target.transform.position, Vector3.down);
-        //bone.transform.Rotate(new Vector3(0, 0, 1), -1.0f);
+        bone.transform.Rotate(new Vector3(0, 0, 1), -1.0f);
 
     }
+    
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using Assets.Scripts.Brett;
 namespace Assets.Scripts.Matt
 {
     public class WanderBehaviourTest : MonoBehaviour
@@ -15,6 +16,7 @@ namespace Assets.Scripts.Matt
         public float secondsToWalk = 3.5f;
         WithinRadiusTest wrt;
 
+        public GameEvent OnPlayerDead;
         protected float dotproduct;
         protected float maxdelta = 10;
         private Vector3 targetdir;
@@ -27,6 +29,7 @@ namespace Assets.Scripts.Matt
         [Header("Range of Player from Guard")]
         public GameObject target;
         public float minRange, maxRange;
+        public float closeAF = 1;
         public Vector3 targetTran;
         // Use this for initialization
         void Start()
@@ -36,7 +39,7 @@ namespace Assets.Scripts.Matt
             currentWP = Random.Range(0, WayPoints.Count);
             StartCoroutine("PatrolRoutine");
             //target = GameObject.FindWithTag("Player");
-            targetTran = target.transform.position;
+            //targetTran = target.transform.position;
         }
 
         void Update()
@@ -138,6 +141,39 @@ namespace Assets.Scripts.Matt
         {
             transform.LookAt(targ);
             transform.Translate(Vector3.forward * Time.deltaTime);
+        }
+
+
+
+        public Transform Target;
+
+        public float AngleOfView;
+        public float DistanceOfView;
+
+        private FeedingBehaviour _feedingBehaviour;
+        private Animator _anim;
+
+        private RaycastHit _hit;
+
+        private void PlayerDetection()
+        {
+            if (Target == null)
+                Target = GameObject.FindGameObjectWithTag("Player").transform;
+            var targetDir = Target.position - transform.position;
+            float angle = Vector3.Angle(targetDir, transform.forward);
+            float distance = Vector3.Distance(Target.position, transform.position);
+            //print(distance + ": between target and npc");
+            if (angle <= AngleOfView && distance <= DistanceOfView)
+            {
+                Debug.DrawLine(transform.position, Target.transform.position, Color.blue);
+                if (Physics.Linecast(transform.position, Target.transform.position, out _hit))
+                {
+                    if (_hit.collider.CompareTag("Player"))
+                    {
+                        OnPlayerDead.Raise();
+                    }
+                }
+            }
         }
     }
 }
