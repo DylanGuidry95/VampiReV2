@@ -79,18 +79,21 @@ namespace Ralenski
             throwableObjCollider = GetComponent<SphereCollider>();//add a collider and store the reference
             throwableObjCollider.radius = lerpOBJ.Result;//set the radius of the sphere collider
         }
-        public bool expand = false;
+        public bool expand = true;
         // Update is called once per frame
         void Update()
         {
             if (expand)
             {
-
-
                 timeOBJ.Value += Time.deltaTime;//update the timer
                 sliderVal = timeOBJ.Value;//set the slider to the time objects value
                 lerpOBJ.Interprolant = sliderVal / timeOBJ.Max; //set the interprolant to the sliders value
                 throwableObjCollider.radius = lerpOBJ.Result;//set the result to be the lerp result
+                if(throwableObjCollider.radius >= 10f)
+                {
+                    throwableObjCollider.radius = .8f;
+                    expand = false;
+                }
             }
             else
             {
@@ -108,7 +111,5 @@ namespace Ralenski
                 };
             }
         }
-
-
     }
 }

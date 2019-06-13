@@ -1,20 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using Assets.Scripts.Dylan;
 using UnityEngine;
-
-public class FeedingGrabbableBehaviour : GrabbableBehaviour
+namespace Assets.Scripts.Brett
 {
-    public bool isGrabbed;
-
-	
-    public override void Grabbed(GrabBehaviour grabber = null)
+    public class FeedingGrabbableBehaviour : GrabbableBehaviour
     {
-        isGrabbed = true;
-    }
+        public bool isGrabbed;
 
-    public override void LetGo(Vector3 travelVelocity, GrabBehaviour grabber = null)
-    {
-        isGrabbed = false;
+
+        public override void Grabbed(GrabBehaviour grabber = null)
+        {
+            isGrabbed = true;
+        }
+
+        public override void LetGo(Vector3 travelVelocity, GrabBehaviour grabber = null)
+        {
+            isGrabbed = false;
+        }
     }
 }
