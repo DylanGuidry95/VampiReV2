@@ -2,30 +2,26 @@
 using System.Collections.Generic;
 using Ralenski;
 using UnityEngine;
-
-public class TriggerLerp : MonoBehaviour
+namespace Ralenski
 {
-    public GameObject Throwable;
-    void OnTriggerEnter(Collider other)
+    public class TriggerLerp : MonoBehaviour
     {
-        if (other.gameObject.CompareTag("Ground"))
-        //if the other rigidbody's gameobject's tag is equal to Throwable is true.
+        LerpBehaviour lb;
+        void OnCollisionEnter(Collision coll)
         {
-            gameObject.GetComponent<LerpBehaviour>().enabled = true;
-            //enable the lerp behaviour script on the throwable object.
-            Debug.Log("Collision with throwable detected");
-            Debug.Log("Lerping should start now");
+            if (coll.gameObject.CompareTag("Ground"))
+            //if the other rigidbody's gameobject's tag is equal to Throwable is true.
+            {
+                lb.expand = true;
+            }
+        }
+
+        // Use this for initialization
+        void Start()
+        {
+            lb = GetComponent<LerpBehaviour>();
         }
     }
 
-    // Use this for initialization
-    void Start()
-    {
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-      
-    }
 }
+
