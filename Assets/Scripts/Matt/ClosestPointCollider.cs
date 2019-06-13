@@ -17,11 +17,12 @@ namespace Assets.Scripts.Matt
         {
             
         }
+        GameObject closestgameobj;
         void OnCollisionEnter(Collision coll)
         {
             if (coll.gameObject.CompareTag("HideAble"))
             {
-                var closestgameobj = coll.gameObject;
+                closestgameobj = coll.gameObject;
                 Debug.Log("Something hit" + closestgameobj);
                 closestpoint = closestgameobj.transform.position;
             }
