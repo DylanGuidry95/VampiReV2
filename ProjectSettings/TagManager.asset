@@ -8,6 +8,7 @@ TagManager:
   - Throwable
   - Ground
   - Obstacle
+  - HideAble
   layers:
   - Default
   - TransparentFX
