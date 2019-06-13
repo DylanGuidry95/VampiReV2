@@ -7,7 +7,7 @@ namespace Assets.Scripts.Matt
     public class ClosestPointCollider : MonoBehaviour
     {
         public static Vector3 closestpoint;
-        GameObject closestgameobj;
+        public GameObject guard;
         void Start()
         {
             
@@ -15,14 +15,14 @@ namespace Assets.Scripts.Matt
 
         void Update()
         {
-
+            
         }
-        void OnTriggerEnter(Collider coll)
+        void OnCollisionEnter(Collision coll)
         {
             if (coll.gameObject.CompareTag("HideAble"))
             {
-                closestgameobj = coll.gameObject;
-                Debug.Log("Something hit");
+                var closestgameobj = coll.gameObject;
+                Debug.Log("Something hit" + closestgameobj);
                 closestpoint = closestgameobj.transform.position;
             }
         }
@@ -30,16 +30,16 @@ namespace Assets.Scripts.Matt
         public bool WhosCloser(GameObject player)
         {
             bool IsItTho = false;
-            var closercollider = Vector3.Distance(closestpoint, transform.position);
-            var closerplayer = Vector3.Distance(player.transform.position, transform.position);
-            if (closerplayer < closercollider)
+            var closercollider = Vector3.Distance(closestpoint, guard.transform.position);
+            var closerplayer = Vector3.Distance(player.transform.position, guard.transform.position);
+            if (closerplayer > closercollider)
             {
-                Debug.Log("Player is closer");
+                Debug.Log("Collider is closer");
                 IsItTho = true;
             }
             else
             {
-                Debug.Log("Collider is closer");
+                Debug.Log("Player is closer");
                 IsItTho = false;
             }
 
