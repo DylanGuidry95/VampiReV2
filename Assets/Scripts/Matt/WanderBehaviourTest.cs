@@ -7,7 +7,7 @@ namespace Assets.Scripts.Matt
 {
     public class WanderBehaviourTest : MonoBehaviour
     {
-        public bool playerAlive = true;
+        
         private NavMeshAgent _navMeshAgent;
         [Header("Time until guard moves")]
         public UnityEngine.Events.UnityEvent Responses;
@@ -44,22 +44,7 @@ namespace Assets.Scripts.Matt
 
         void Update()
         {
-            PlayerDetection();
-            //if (target == null)
-            //    target = GameObject.FindGameObjectWithTag("Player");
-            //targetTran = target.transform.position;
-            //bool inRange = Vector3.Distance(transform.position, targetTran) < maxRange && Vector3.Distance(transform.position, targetTran) > minRange;
-            //bool toClose = Vector3.Distance(transform.position, targetTran) < closeAF;
-            //var infront = Vector2.Dot(target.transform.forward, transform.forward) < 0;
-            //if (inRange && infront)
-            //{
-            //    transform.LookAt(targetTran);
-            //    transform.Translate(Vector3.forward * Time.deltaTime * 4.25f);
-            //}
-            //if(toClose && infront)
-            //{
-            //    OnPlayerDead.Raise();
-            //}
+            
         }
 
         public bool WAYPOINTSTRAVEL = true;
