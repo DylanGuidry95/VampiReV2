@@ -57,10 +57,7 @@ namespace Assets.Scripts.Brett
 
             if (_leftShoulder.isGrabbed && _rightShoulder.isGrabbed)
             {
-                var averagePos = (left.Value.transform.position + right.Value.transform.position) / 2;
-                Vector3 rotate = currentAvgPos - averagePos;
-                currentAvgPos = averagePos;
-                bone.transform.Rotate(new Vector3(0, 0, 1), -rotate.z * 20);
+                //Translate the Gameobject towards the player
             }
 
             if (_npcIsDead)
@@ -81,6 +78,11 @@ namespace Assets.Scripts.Brett
                     alreadyFadedOut = true;
                 }
             }
+        }
+
+        private void SwapModelWithRagdoll()
+        {
+
         }
     }
 }
