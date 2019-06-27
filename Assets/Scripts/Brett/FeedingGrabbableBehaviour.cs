@@ -19,7 +19,7 @@ namespace Assets.Scripts.Brett
         protected override void OnDetachedFromHand(Hand hand)
         {
             isGrabbed = false;
-            Debug.Log("Is Let Go")
+            Debug.Log("Is Let Go");
         }
     }
 }
