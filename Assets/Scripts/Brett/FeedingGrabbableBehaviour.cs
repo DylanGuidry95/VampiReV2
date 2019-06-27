@@ -13,13 +13,28 @@ namespace Assets.Scripts.Brett
         protected override void OnAttachedToHand(Hand hand)
         {
             isGrabbed = true;
-            Debug.Log("Is Grabbed");
+            Debug.Log("Is  currently grabbed");
         }
 
         protected override void OnDetachedFromHand(Hand hand)
         {
             isGrabbed = false;
-            Debug.Log("Is Let Go");
+            Debug.Log("Is let go");
+        }
+
+        protected override void HandAttachedUpdate(Hand hand)
+        {
+            
+        }
+
+        protected override void OnHandFocusAcquired(Hand hand)
+        {
+            gameObject.SetActive(true);
+        }
+
+        protected override void OnHandFocusLost(Hand hand)
+        {
+            gameObject.SetActive(false);
         }
     }
 }
