@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Assets.Scripts.Dylan;
 using HTC.UnityPlugin.Vive;
 using HTC.UnityPlugin.VRModuleManagement;
+using Matthew;
 using UnityEngine;
 using Valve.VR;
 using Valve.VR.InteractionSystem;
@@ -15,7 +16,7 @@ namespace Assets.Scripts.Brett
         public GameObject Neck;
         public GameObject LeftShoulder;
         public GameObject RightShoulder;
-        public GameObject bone;
+        public GameObject ragdollHanger;
 
         private NeckColliderBehaviour _neck;
         private FeedingGrabbableBehaviour _leftShoulder;
@@ -26,12 +27,16 @@ namespace Assets.Scripts.Brett
 
         public GameEvent OnGameEnd;
         public GameEvent OnNPCDead;
+        public GameEvent OnActivateRagdoll;
+
+        public Vector3 avgHandPos;
+        public Vector3 startingPos;
 
         void Start()
         {
             _neck = Neck.GetComponent<NeckColliderBehaviour>();
             _leftShoulder = LeftShoulder.GetComponent<FeedingGrabbableBehaviour>();
-            _rightShoulder = RightShoulder.GetComponent<FeedingGrabbableBehaviour>();    
+            _rightShoulder = RightShoulder.GetComponent<FeedingGrabbableBehaviour>();
         }
 
         private Vector3 currentAvgPos;
@@ -44,7 +49,8 @@ namespace Assets.Scripts.Brett
 
         void Update()
         {
-            if (_neck.isCollidingWithPlayer && _leftShoulder.isGrabbed && _rightShoulder.isGrabbed)
+            startingPos = transform.position;
+            if (_neck.isCollidingWithPlayer && _leftShoulder.IsGrabbed && _rightShoulder.IsGrabbed)
             {
                 if (!alreadyFadedIn)
                 {
@@ -55,9 +61,11 @@ namespace Assets.Scripts.Brett
                 OnNPCDead.Raise();
             }
 
-            if (_leftShoulder.isGrabbed && _rightShoulder.isGrabbed)
+            if (_leftShoulder.IsGrabbed && _rightShoulder.IsGrabbed)
             {
-                //Translate the Gameobject towards the player
+                OnActivateRagdoll.Raise();
+                avgHandPos = (left.Value.transform.position + right.Value.transform.position) / 2;
+                ragdollHanger.transform.position = new Vector3(avgHandPos.x, startingPos.y, avgHandPos.z);
             }
 
             if (_npcIsDead)
@@ -78,11 +86,6 @@ namespace Assets.Scripts.Brett
                     alreadyFadedOut = true;
                 }
             }
-        }
-
-        private void SwapModelWithRagdoll()
-        {
-
         }
     }
 }
