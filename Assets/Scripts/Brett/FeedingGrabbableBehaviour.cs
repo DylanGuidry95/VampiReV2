@@ -1,21 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Valve.VR.InteractionSystem;
+
 namespace Assets.Scripts.Brett
 {
-    public class FeedingGrabbableBehaviour : GrabbableBehaviour
+    public class FeedingGrabbableBehaviour : Throwable
     {
         public bool isGrabbed;
 
 
-        public override void Grabbed(GrabBehaviour grabber = null)
+        protected override void OnAttachedToHand(Hand hand)
         {
             isGrabbed = true;
+            Debug.Log("Is Grabbed");
         }
 
-        public override void LetGo(Vector3 travelVelocity, GrabBehaviour grabber = null)
+        protected override void OnDetachedFromHand(Hand hand)
         {
             isGrabbed = false;
+            Debug.Log("Is Let Go")
         }
     }
 }
