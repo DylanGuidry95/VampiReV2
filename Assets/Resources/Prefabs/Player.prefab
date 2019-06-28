@@ -135,7 +135,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4991890685768396}
-  m_Layer: 26
+  m_Layer: 2
   m_Name: ObjectAttachmentPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -188,7 +188,7 @@ GameObject:
   - component: {fileID: 135912312098284650}
   - component: {fileID: 54500787010822350}
   - component: {fileID: 114050712969130918}
-  m_Layer: 26
+  m_Layer: 2
   m_Name: RightHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -219,7 +219,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4139833957226606}
   - component: {fileID: 114363871988837686}
-  m_Layer: 26
+  m_Layer: 2
   m_Name: ControllerButtonHints
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -234,7 +234,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4491917617839344}
-  m_Layer: 26
+  m_Layer: 2
   m_Name: HoverPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -347,7 +347,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4953291847052574}
   - component: {fileID: 114925172930683762}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ControllerHoverHighlight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -382,7 +382,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4190031152859746}
   - component: {fileID: 114352707456422384}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ControllerHoverHighlight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -529,7 +529,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4972020193124220}
   - component: {fileID: 114758378252234990}
-  m_Layer: 26
+  m_Layer: 2
   m_Name: ControllerButtonHints
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -559,7 +559,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4871205972281644}
-  m_Layer: 26
+  m_Layer: 2
   m_Name: HoverPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -694,7 +694,7 @@ GameObject:
   - component: {fileID: 135231725268855950}
   - component: {fileID: 54381730335003198}
   - component: {fileID: 114246516254781714}
-  m_Layer: 26
+  m_Layer: 2
   m_Name: LeftHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -792,7 +792,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4445401484908526}
-  m_Layer: 26
+  m_Layer: 2
   m_Name: ObjectAttachmentPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1090,7 +1090,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1254340226030654}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.25, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4871205972281644}
@@ -1381,7 +1381,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1802233236238438}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.25, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4491917617839344}
@@ -2786,10 +2786,12 @@ MonoBehaviour:
   RightShoulder: {fileID: 0}
   ragdollHanger: {fileID: 0}
   _npcIsDead: 0
+  RagdollIsActive: 0
   left: {fileID: 11400000, guid: 4d8b86de46345f9498f4d5d9b4b22611, type: 2}
   right: {fileID: 11400000, guid: 7d6abb44ad3ba9b448b24e5f27e5147e, type: 2}
   OnGameEnd: {fileID: 11400000, guid: 5c39a935333028e4a88339ce2e514b12, type: 2}
   OnNPCDead: {fileID: 11400000, guid: 69f77f90744978147bf7e9c3b3253025, type: 2}
+  OnActivateRagdoll: {fileID: 11400000, guid: 86addee1c66413c4490c005949bfefe2, type: 2}
   avgHandPos: {x: 0, y: 0, z: 0}
   startingPos: {x: 0, y: 0, z: 0}
 --- !u!114 &114560969630304754
@@ -3191,16 +3193,16 @@ LineRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0.37254903, g: 0.85882354, b: 0.95686275, a: 0.63529414}
-      key1: {r: 0.37254903, g: 0.85882354, b: 0.95686275, a: 0.63529414}
+      key0: {r: 0.26968986, g: 0.48859972, b: 0.99667037, a: 0.76862746}
+      key1: {r: 0.2688679, g: 0.48862255, b: 1, a: 0.76862746}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
       key5: {r: 0, g: 0, b: 0, a: 0}
       key6: {r: 0, g: 0, b: 0, a: 0}
       key7: {r: 0, g: 0, b: 0, a: 0}
-      ctime0: 0
-      ctime1: 65535
+      ctime0: 964
+      ctime1: 30069
       ctime2: 0
       ctime3: 0
       ctime4: 0
@@ -3243,7 +3245,7 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.1
-  m_Center: {x: 0, y: 0, z: 0.1}
+  m_Center: {x: 0, y: 0, z: 0.09}
 --- !u!135 &135312660641341086
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -3267,7 +3269,7 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.1
-  m_Center: {x: 0, y: 0, z: 0.1}
+  m_Center: {x: 0, y: 0, z: 0.09}
 --- !u!135 &135923773879192706
 SphereCollider:
   m_ObjectHideFlags: 1
