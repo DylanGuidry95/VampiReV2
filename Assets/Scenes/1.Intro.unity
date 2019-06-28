@@ -7456,6 +7456,19 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &769207624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 769207622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5cae0426174ed8408101948f690f578, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bone: {fileID: 344370411}
+  target: {fileID: 0}
 --- !u!95 &769207625 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 95076177176932340, guid: 1c793cf23e210774ab962f65c3a9de7e,

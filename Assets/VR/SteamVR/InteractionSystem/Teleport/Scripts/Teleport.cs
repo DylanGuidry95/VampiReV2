@@ -142,6 +142,9 @@ namespace Valve.VR.InteractionSystem
 		//-------------------------------------------------
 		void Awake()
         {
+
+            Teleport.instance.CancelTeleportHint(); //Disable Hint
+
             _instance = this;
 
 			chaperoneInfoInitializedAction = ChaperoneInfo.InitializedAction( OnChaperoneInfoInitialized );
