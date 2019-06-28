@@ -33,6 +33,7 @@ namespace Assets.Scripts.Brett
         public Vector3 avgHandPos;
         public Vector3 startingPos;
 
+
         void Start()
         {
             _neck = Neck.GetComponent<NeckColliderBehaviour>();
