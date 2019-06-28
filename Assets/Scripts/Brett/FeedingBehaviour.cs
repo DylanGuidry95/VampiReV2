@@ -23,6 +23,7 @@ namespace Assets.Scripts.Brett
         private FeedingGrabbableBehaviour _rightShoulder;
 
         public bool _npcIsDead = false;
+        public bool RagdollIsActive = false;
         public GameObjectVariable left, right;
 
         public GameEvent OnGameEnd;
@@ -49,8 +50,7 @@ namespace Assets.Scripts.Brett
 
         void Update()
         {
-            startingPos = transform.position;
-            if (_neck.isCollidingWithPlayer && _leftShoulder.IsGrabbed && _rightShoulder.IsGrabbed)
+            if (_neck.isCollidingWithPlayer)
             {
                 if (!alreadyFadedIn)
                 {
@@ -64,8 +64,13 @@ namespace Assets.Scripts.Brett
             if (_leftShoulder.IsGrabbed && _rightShoulder.IsGrabbed)
             {
                 OnActivateRagdoll.Raise();
+                RagdollIsActive = true;
+            }
+
+            if (RagdollIsActive)
+            {
                 avgHandPos = (left.Value.transform.position + right.Value.transform.position) / 2;
-                ragdollHanger.transform.position = new Vector3(avgHandPos.x, startingPos.y, avgHandPos.z);
+                ragdollHanger.transform.position = avgHandPos;
             }
 
             if (_npcIsDead)
