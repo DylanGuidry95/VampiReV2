@@ -11,7 +11,7 @@ namespace Ralenski
         public SphereCollider throwableObjCollider;
         public LerpOBJ lerpOBJ;
         public TimeOBJ timeOBJ;
-
+        public GameObject prefab;
         [Serializable]
         public struct TimeOBJ
         {
@@ -85,6 +85,7 @@ namespace Ralenski
         {
             if (expand)
             {
+                
                 timeOBJ.Value += Time.deltaTime;//update the timer
                 sliderVal = timeOBJ.Value;//set the slider to the time objects value
                 lerpOBJ.Interprolant = sliderVal / timeOBJ.Max; //set the interprolant to the sliders value
@@ -93,6 +94,7 @@ namespace Ralenski
                 {
                     throwableObjCollider.radius = .8f;
                     expand = false;
+
                 }
             }
             else
