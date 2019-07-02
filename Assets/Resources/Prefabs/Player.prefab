@@ -746,7 +746,6 @@ GameObject:
   - component: {fileID: 4797459003458446}
   - component: {fileID: 114216505764154402}
   - component: {fileID: 114365352782762458}
-  - component: {fileID: 114111073633572114}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -3080,7 +3079,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1329884624623484}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.6657662, y: 0.10892999, z: -6.8088264}
+  m_LocalPosition: {x: 1.4545298, y: 4.9111182e-17, z: 14.220228}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4386416755063046}
@@ -4348,30 +4347,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Variable: {fileID: 11400000, guid: 7d6abb44ad3ba9b448b24e5f27e5147e, type: 2}
---- !u!114 &114111073633572114
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1329884624623484}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a7b6ad16b761124a92d7c39ff32465c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Neck: {fileID: 0}
-  LeftShoulder: {fileID: 0}
-  RightShoulder: {fileID: 0}
-  ragdollHanger: {fileID: 0}
-  _npcIsDead: 0
-  RagdollIsActive: 0
-  left: {fileID: 11400000, guid: 4d8b86de46345f9498f4d5d9b4b22611, type: 2}
-  right: {fileID: 11400000, guid: 7d6abb44ad3ba9b448b24e5f27e5147e, type: 2}
-  OnGameEnd: {fileID: 11400000, guid: 5c39a935333028e4a88339ce2e514b12, type: 2}
-  OnNPCDead: {fileID: 11400000, guid: 69f77f90744978147bf7e9c3b3253025, type: 2}
-  OnActivateRagdoll: {fileID: 11400000, guid: 86addee1c66413c4490c005949bfefe2, type: 2}
-  avgHandPos: {x: 0, y: 0, z: 0}
-  startingPos: {x: 0, y: 0, z: 0}
 --- !u!114 &114119159053498988
 MonoBehaviour:
   m_ObjectHideFlags: 1
