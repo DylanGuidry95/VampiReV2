@@ -10010,7 +10010,7 @@ CharacterJoint:
   m_GameObject: {fileID: 1136187990620572}
   m_ConnectedBody: {fileID: 54414860345069606}
   m_Anchor: {x: 0, y: 0, z: 0}
-  m_Axis: {x: 0, y: 0, z: -1}
+  m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: -0.12506437, y: 0.36753651, z: -0.16767123}
   serializedVersion: 2
