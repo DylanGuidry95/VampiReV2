@@ -3309,7 +3309,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &277014468
 GameObject:
@@ -9143,45 +9143,6 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ef0fe91f5a472d4e88d75d5a59dc108, type: 2}
   m_IsPrefabAsset: 0
---- !u!1 &769207622 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1065553511975850, guid: 1c793cf23e210774ab962f65c3a9de7e,
-    type: 2}
-  m_PrefabInternal: {fileID: 1633323394}
---- !u!114 &769207623
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 769207622}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3c662113df7858499848b3c4bdded4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 69f77f90744978147bf7e9c3b3253025, type: 2}
-  Notes: 
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 769207625}
-        m_MethodName: SetTrigger
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: dead
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!95 &769207625 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 95076177176932340, guid: 1c793cf23e210774ab962f65c3a9de7e,
-    type: 2}
-  m_PrefabInternal: {fileID: 1633323394}
 --- !u!1001 &772929854
 Prefab:
   m_ObjectHideFlags: 0
@@ -11680,7 +11641,8 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114514262964917684, guid: 2e232090c400a894784f0dee0a9e17b2, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 2e232090c400a894784f0dee0a9e17b2, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &990419459
