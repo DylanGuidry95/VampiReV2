@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using Assets.Scripts.Dylan;
 using HTC.UnityPlugin.Vive;
 using HTC.UnityPlugin.VRModuleManagement;
-using Matthew;
 using UnityEngine;
 using Valve.VR;
 using Valve.VR.InteractionSystem;

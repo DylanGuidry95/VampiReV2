@@ -316,7 +316,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4432779027241452}
   - component: {fileID: 95650329836705742}
-  - component: {fileID: 114608863421487316}
   m_Layer: 0
   m_Name: NPC_Boss model
   m_TagString: Untagged
@@ -4955,7 +4954,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1602039129729510}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -16.453, y: 0, z: 7.899}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4432779027241452}
@@ -6709,7 +6708,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1853814236272038}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a12ccc5444e8f14c9c69c4c12b2aa3b, type: 3}
+  m_Script: {fileID: 11500000, guid: 480986510689d294b92a28ae10794038, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   IsGrabbed: 0
@@ -6917,47 +6916,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: dead
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1060491258671274}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!114 &114608863421487316
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1070612011492692}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3c662113df7858499848b3c4bdded4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 69f77f90744978147bf7e9c3b3253025, type: 2}
-  Notes: 
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 95650329836705742}
-        m_MethodName: SetTrigger
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: dead
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1060491258671274}
@@ -6981,7 +6940,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1487409486252278}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a12ccc5444e8f14c9c69c4c12b2aa3b, type: 3}
+  m_Script: {fileID: 11500000, guid: 480986510689d294b92a28ae10794038, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   IsGrabbed: 0
