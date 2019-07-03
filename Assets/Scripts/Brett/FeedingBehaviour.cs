@@ -41,7 +41,7 @@ namespace Assets.Scripts.Brett
         }
 
         private Vector3 currentAvgPos;
-        private float timer = 5;
+        private float timer = 4;
         private float bloodFadeTimer = 1;
         private bool alreadyFadedOut = false;
         private bool alreadyFadedIn = false;

@@ -143,8 +143,7 @@ namespace Valve.VR.InteractionSystem
 		void Awake()
         {
             _instance = this;
-
-			chaperoneInfoInitializedAction = ChaperoneInfo.InitializedAction( OnChaperoneInfoInitialized );
+            chaperoneInfoInitializedAction = ChaperoneInfo.InitializedAction( OnChaperoneInfoInitialized );
 
 			pointerLineRenderer = GetComponentInChildren<LineRenderer>();
 			teleportPointerObject = pointerLineRenderer.gameObject;
@@ -163,7 +162,9 @@ namespace Valve.VR.InteractionSystem
 			float invalidReticleStartingScale = invalidReticleTransform.localScale.x;
 			invalidReticleMinScale *= invalidReticleStartingScale;
 			invalidReticleMaxScale *= invalidReticleStartingScale;
-		}
+
+            Teleport.instance.CancelTeleportHint();
+        }
 
 
 		//-------------------------------------------------
