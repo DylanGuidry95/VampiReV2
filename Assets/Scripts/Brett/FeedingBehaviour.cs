@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using Assets.Scripts.Dylan;
 using HTC.UnityPlugin.Vive;
 using HTC.UnityPlugin.VRModuleManagement;
-using Matthew;
 using UnityEngine;
 using Valve.VR;
 using Valve.VR.InteractionSystem;
@@ -42,7 +41,7 @@ namespace Assets.Scripts.Brett
         }
 
         private Vector3 currentAvgPos;
-        private float timer = 5;
+        private float timer = 4;
         private float bloodFadeTimer = 1;
         private bool alreadyFadedOut = false;
         private bool alreadyFadedIn = false;

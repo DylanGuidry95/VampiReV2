@@ -1597,7 +1597,6 @@ namespace Valve.VR.InteractionSystem
             renderModelInstance.transform.localPosition = Vector3.zero;
             renderModelInstance.transform.localRotation = Quaternion.identity;
             renderModelInstance.transform.localScale = renderModelPrefab.transform.localScale;
-            renderModelInstance.transform.localPosition = new Vector3(0, 0, -0.15f);
 
             //TriggerHapticPulse(800);  //pulse on controller init
 

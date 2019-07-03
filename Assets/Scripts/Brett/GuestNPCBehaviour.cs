@@ -43,9 +43,6 @@ namespace Assets.Scripts.Brett
         {
             if (Target == null)
                 Target = GameObject.FindGameObjectWithTag("Player").transform;
-
-            if (Target == null)
-                return;
             var targetDir = Target.position - transform.position;
             float angle = Vector3.Angle(targetDir, transform.forward);
             float distance = Vector3.Distance(Target.position, transform.position);
